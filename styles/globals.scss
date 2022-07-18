@@ -1,0 +1,154 @@
+@import "./customBootstrap.scss";
+
+// ! iK this sass bootstrap is a setup for Outer-grid : header / main / footer
+//  You will need to create the component/element first & add the id's within
+// Outer-grid uses css grid & consist of header / main / footer
+
+// iK? xx-small small phones (above 360px)
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+
+// #####################################################
+// x-Small devices (small phones, 320px and up)
+STARTING BREAKPOINT
+// #####################################################
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// // * to get react component full 100 width & height of the screen
+root,
+html,
+body,
+#root,
+#root > div#OuterGrid {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+// * Setup up Outer-grid of the screen (OuterGrid.tsx component)
+#divBody {
+  display: grid;
+  grid-template-columns: 100%; // 1fr is a bit dodgy when it comes to navbar sandwich & does not take the 100% width like it is suppose to
+  grid-template-rows: 60px minmax(max-content, 1fr) 60px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  width: 100%;
+  height: 100vh;
+
+  background-color: aquamarine;
+}
+
+#Header {
+  grid-area: header;
+
+  background-color: red;
+}
+
+#Main {
+  grid-area: main;
+  overflow-x: auto; // prevents main from shifting any aside grid to make x unscrollable
+
+  width: 93%;
+  margin: 7px auto; // center the box
+
+  background-color: darkgreen;
+}
+
+#Footer {
+  grid-area: footer;
+
+  background-color: yellow;
+}
+
+// ! iK Beware I notice media query does not work accordingly unless your elements have higher specificity than < 576px. Not sure if this is a one off or not?
+// * However the other breakpoints are working fine with each other so you do not have to compete for specificity there
+
+// * breakpint of > 360px
+// @media screen and (min-width: 360px) {
+// } // breakpoint of > 360px
+
+// * breakpint of > 400px
+// @media screen and (min-width: 400px) {
+// } // breakpoint of > 400px
+
+// * breakpint of > 500px
+// @media screen and (min-width: 500px) {
+// } // breakpoint of > 500px
+
+// #####################################################
+// Small devices (landscape phones, 576px and up)
+// #####################################################
+@include media-breakpoint-up(sm) {
+  #OuterGrid {
+    grid-template-rows: 75px minmax(max-content, 1fr) 75px;
+
+    #OuterGrid-main {
+      width: 90%;
+      margin: 10px auto; // center the box
+    }
+  }
+}
+
+// * breakpint of > 576px
+// @media screen and (min-width: 576px) {
+// } // breakpoint of > 576px
+
+// #####################################################
+// Medium devices (tablets, 768px and up)
+// #####################################################
+// @include media-breakpoint-up(md) {
+// }
+
+// * breakpint of > 768px
+// @media screen and (min-width: 768px) {
+// } // breakpoint of > 768px
+
+// #####################################################
+// Large devices (desktops, 992px and up)
+// #####################################################
+// @include media-breakpoint-up(lg) {
+// }
+
+// * breakpint of > 992px
+// @media screen and (min-width: 992px) {
+// } // breakpoint of > 992px
+
+// #####################################################
+// X-Large devices (large desktops, 1200px and up)
+// #####################################################
+// @include media-breakpoint-up(xl) {
+// }
+
+// * breakpint of > 1200px
+// @media screen and (min-width: 1200px) {
+// } // breakpoint of > 1200px
+
+// #####################################################
+// XX-Large devices (larger desktops, 1400px and up)
+// #####################################################
+// @include media-breakpoint-up(xxl) {
+// }
+
+// * breakpint of > 1400px
+// @media screen and (min-width: 1400px) {
+// } // breakpoint of > 1400px
