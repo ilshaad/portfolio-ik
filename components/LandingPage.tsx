@@ -11,9 +11,5 @@ export default function LandingPage({}: Props) {
     console.log(window.outerWidth);
   });
 
-  return (
-    <div className={`${LandingPage_component} border border-3 text-dark`}>
-      LandingPage
-    </div>
-  );
+  return <div className={`${LandingPage_component}`}>LandingPage</div>;
 }

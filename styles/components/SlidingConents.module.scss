@@ -2,23 +2,115 @@
 // @import "../global.scss";
 // @import "../customBootstrap.scss";
 
+// iK? begin from 320px & up for starting breakpoint
 .SlidingContents_component {
-  // iK? begin from 320px & up for starting breakpoint
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
+  min-width: 100%;
+  max-width: 100%;
   min-height: 100%;
-
-  background-color: cornsilk;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  // flex: 1;
+  // justify-content: center;
+  // align-items: center;
+  // min-height: 100%;
+  background-color: rgb(221, 220, 255);
 
   .SlidingContent_container {
-    width: 97%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    padding: 0;
+    // margin: 0;
+    // align-self: center;
+    // width: 400px !important;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    // display: flex;
+    // flex-wrap: nowrap;
+    background-color: brown;
+    // color: black;
+    // transition: transform 1s;
+    //
+    // &:hover {
+    // transform: translateX(-100%);
+    // }
+  }
 
-    background-color: burlywood;
-    color: black;
+  .sliderItems {
+    width: 100% !important;
+    position: absolute;
+    // transition: transform 0.5s;
+    // overflow: hidden;
+    // display: inline;
+    // flex-wrap: nowrap;
+
+    // &:not(:nth-child(1)) {
+    //   transform: translateX(100%);
+    // }
+
+    // &:hover:not(:nth-child(1)) {
+    //   transform: translateX(-0%);
+    // }
+    // &:hover {
+    //   transform: translateX(-100%);
+    // }
+
+    background-color: darkgrey;
+    border: black solid 5px;
+  }
+
+  .landingSlide {
+    transform: translateX(0%);
+    transition: transform 1s ease;
+
+    background-color: wheat;
+  }
+  &:hover .landingSlide {
+    transform: translateX(-100%);
+  }
+
+  .aboutSlide {
+    transform: translateX(100%);
+    transition: transform 1s ease;
+
+    background-color: wheat;
+  }
+  &:hover .aboutSlide {
+    transform: translateX(0%);
+  }
+
+  .projectSlide {
+    transform: translateX(100%);
+    transition: transform 1s ease;
+
+    background-color: wheat;
+  }
+
+  &:hover .projectSlide {
+    transform: translateX(0%);
+  }
+
+  .techstackSlide {
+    transform: translateX(100%);
+    transition: transform 1s ease;
+
+    background-color: wheat;
+  }
+
+  &:hover .techstackSlide {
+    transform: translateX(0%);
+  }
+
+  .contactSlide {
+    transform: translateX(100%);
+    transition: transform 1s ease;
+
+    background-color: wheat;
+  }
+
+  &:hover .contactSlide {
+    transform: translateX(0%);
   }
 
   // * breakpint of > 360px

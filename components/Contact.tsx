@@ -7,5 +7,5 @@ type Props = {};
 export default function Contact({}: Props) {
   const { Contact_component } = styles;
 
-  return <div className={`${Contact_component} border border-3`}>Contact</div>;
+  return <div className={`${Contact_component}`}>Contact</div>;
 }

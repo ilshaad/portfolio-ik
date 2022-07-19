@@ -7,7 +7,5 @@ type Props = {};
 export default function Projects({}: Props) {
   const { Projects_component } = styles;
 
-  return (
-    <div className={`${Projects_component} border border-3`}>Projects</div>
-  );
+  return <div className={`${Projects_component}`}>Projects</div>;
 }

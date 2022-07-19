@@ -1,4 +1,15 @@
 .LandingPage_component {
-  width: 100%;
-  position: absolute;
+  width: inherit;
+
+  // display: inline-block;
+
+  // position: absolute;
+
+  // transform: translateX(0);
+
+  // transition: transform 1s;
+
+  // &:hover {
+  //   transform: translateX(-50%);
+  // }
 }

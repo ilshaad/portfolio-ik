@@ -1,8 +1,10 @@
 .Projects_component {
-  width: 100%;
-  position: absolute;
+  width: inherit;
+  // display: inline-block;
 
-  transform: translate(100%);
+  // position: absolute;
+
+  // transform: translateX(200%);
 
   // border
 }

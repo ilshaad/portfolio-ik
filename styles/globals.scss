@@ -16,7 +16,7 @@ STARTING BREAKPOINT
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 html,
@@ -68,8 +68,8 @@ body,
   grid-area: main;
   overflow-x: auto; // prevents main from shifting any aside grid to make x unscrollable
 
-  width: 93%;
-  margin: 7px auto; // center the box
+  width: 60%;
+  margin: 50px auto; // center the box
 
   background-color: darkgreen;
 }
@@ -78,6 +78,28 @@ body,
   grid-area: footer;
 
   background-color: yellow;
+}
+
+// all the sliding contents,
+.LandingSlideCss {
+  transform: translateX(0%) !important;
+}
+.AboutSlideCss {
+  transform: translateX(0%) !important;
+}
+.TechstackSlideCss {
+  transform: translateX(0%) !important;
+}
+.ProjectsSlideCss {
+  transform: translateX(0%) !important;
+}
+.ContactSlideCss {
+  transform: translateX(0%) !important;
+}
+
+// move landing content appropriately with other slides, as this is the main default content to come back to
+.NotLandingContent {
+  transform: translateX(-100%);
 }
 
 // ! iK Beware I notice media query does not work accordingly unless your elements have higher specificity than < 576px. Not sure if this is a one off or not?
