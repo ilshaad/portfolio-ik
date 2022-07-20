@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import BackgroundParticles from "../components/BackgroundParticles";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -26,9 +27,18 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <BackgroundParticles />
+
       <Header setSlidingCssClassName={setSlidingCssClassName} />
 
-      <main id="Main">
+      <main
+        id="Main"
+        className={
+          slidingCssClassName === "PlaygroundSlideCss"
+            ? "PlaygroundSlideCss"
+            : ""
+        }
+      >
         <SlidingContents slidingCssClassName={slidingCssClassName} />
       </main>
 

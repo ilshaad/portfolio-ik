@@ -21,35 +21,25 @@ export default function SlidingContents({ slidingCssClassName }: Props) {
     contactSlide,
   } = styles;
 
-  // for when landing page is not select by link than motion the css transition slide apprriately since this is the starting content of the slide
-  // const [notLandingSlidePage, setNotLandingSlidePage] = useState("");
-  // useEffect(() => {
-
-  //   // const notLandingSlidePageCon = () => {
-  //     if (slidingCssClassName === "LandingSlideCss") {
-  //       setNotLandingSlidePage("");
-  //       return;
-  //     }
-
-  //     setNotLandingSlidePage("notLandContent");
-  //   // };
-  // )}
-
-  // ! zzzzzzzzzzzzz continue from here I think ||||||||||||
-  const [slidingCssContent, setSlidingCssContent] = useState("");
-
   // place css to specific content in the slide so it can animate slide css transition
   const goToCorrectSlideWithCss = (slideType: string) => {
+    // set css type to content if it is correct
     if (slidingCssClassName === slideType) {
-      if (slidingCssClassName !== "LandingSlideCss") {
-        // setnotLandingSlidePageCon();
-        return "NotLandingContent";
-      }
-
       // notLandingSlidePageCon();
       return slidingCssClassName;
     }
 
+    // if it is the Landing slide but not acive, than keep it to the left, opposite side to the other slide to give it a nice effect
+    if (slideType === "LandingSlideCss") {
+      return "NotLandingContent";
+    }
+
+    // remove all slides for use to play with background
+    if (slidingCssClassName === "PlaygroundSlideCss") {
+      return "";
+    }
+
+    // if slideType is not matching than keep it out of view
     return "";
   };
 

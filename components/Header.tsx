@@ -1,16 +1,19 @@
 import React from "react";
+import NavOffcanva from "./NavOffcanva";
 
-type Props = { setSlidingCssClassName: Function };
+type Props = {
+  setSlidingCssClassName: Function;
+};
 
 export default function Header({ setSlidingCssClassName }: Props) {
-  // setSlidingCssClassName("tesxtin");
-
   const goToSlide = (cssClassName: string) => {
     setSlidingCssClassName(cssClassName);
   };
 
   return (
     <header id="Header">
+      {/* <NavOffcanva /> */}
+
       <nav>
         <ul>
           <li onClick={() => goToSlide("LandingSlideCss")}>Home</li>
@@ -22,6 +25,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
           <li>LinkedIn</li>
           <li>Github</li>
           <li>blog</li>
+          <li onClick={() => goToSlide("PlaygroundSlideCss")}>Playground</li>
         </ul>
       </nav>
     </header>

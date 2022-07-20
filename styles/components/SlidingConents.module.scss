@@ -40,6 +40,9 @@
   .sliderItems {
     width: 100% !important;
     position: absolute;
+
+    height: 100%;
+
     // transition: transform 0.5s;
     // overflow: hidden;
     // display: inline;
@@ -61,14 +64,14 @@
   }
 
   .landingSlide {
-    transform: translateX(0%);
+    // transform: translateX(0%); // no need to set this as it is already default
     transition: transform 1s ease;
 
     background-color: wheat;
   }
-  &:hover .landingSlide {
-    transform: translateX(-100%);
-  }
+  // &:hover .landingSlide {
+  // transform: translateX(-100%);
+  // }
 
   .aboutSlide {
     transform: translateX(100%);
@@ -76,9 +79,9 @@
 
     background-color: wheat;
   }
-  &:hover .aboutSlide {
-    transform: translateX(0%);
-  }
+  // &:hover .aboutSlide {
+  // transform: translateX(0%);
+  // }
 
   .projectSlide {
     transform: translateX(100%);
@@ -87,9 +90,9 @@
     background-color: wheat;
   }
 
-  &:hover .projectSlide {
-    transform: translateX(0%);
-  }
+  // &:hover .projectSlide {
+  // transform: translateX(0%);
+  // }
 
   .techstackSlide {
     transform: translateX(100%);
@@ -98,9 +101,9 @@
     background-color: wheat;
   }
 
-  &:hover .techstackSlide {
-    transform: translateX(0%);
-  }
+  // &:hover .techstackSlide {
+  // transform: translateX(0%);
+  // }
 
   .contactSlide {
     transform: translateX(100%);
@@ -109,9 +112,9 @@
     background-color: wheat;
   }
 
-  &:hover .contactSlide {
-    transform: translateX(0%);
-  }
+  // &:hover .contactSlide {
+  // transform: translateX(0%);
+  // }
 
   // * breakpint of > 360px
   // @media screen and (min-width: 360px) {
