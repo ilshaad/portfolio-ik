@@ -36,8 +36,8 @@ a {
 root,
 html,
 body,
-#root,
-#root > div#OuterGrid {
+#root {
+  min-height: 100vh;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -53,6 +53,7 @@ body,
     "main"
     "footer";
   width: 100%;
+  min-height: 100vh;
   height: 100vh;
 
   // background-color: aquamarine;
@@ -68,6 +69,7 @@ body,
   grid-area: main;
   overflow-x: auto; // prevents main from shifting any aside grid to make x unscrollable
 
+  // height: 100%;
   width: 60%;
   margin: 50px auto; // center the box
 

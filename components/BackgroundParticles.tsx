@@ -52,7 +52,7 @@ export default function BackgroundParticles({}: Props) {
         },
         detectRetina: true,
         duration: 0,
-        fpsLimit: 60,
+        fpsLimit: 50,
         interactivity: {
           detectsOn: "window",
           events: {
@@ -71,8 +71,8 @@ export default function BackgroundParticles({}: Props) {
               mode: "grab",
               parallax: {
                 enable: true,
-                force: 100,
-                smooth: 40,
+                force: 80,
+                smooth: 30,
               },
             },
             resize: true,
@@ -176,7 +176,7 @@ export default function BackgroundParticles({}: Props) {
         motion: {
           disable: false,
           reduce: {
-            factor: 4,
+            factor: 5,
             value: true,
           },
         },
@@ -282,7 +282,7 @@ export default function BackgroundParticles({}: Props) {
               value: "#004aad",
             },
             consent: false,
-            distance: 115,
+            distance: 140,
             enable: true,
             frequency: 1,
             opacity: 0.4,
@@ -372,8 +372,8 @@ export default function BackgroundParticles({}: Props) {
               area: 800,
               factor: 1000,
             },
-            limit: 400,
-            value: 100,
+            limit: 180,
+            value: 60,
           },
           opacity: {
             random: {
