@@ -71,8 +71,8 @@ export default function BackgroundParticles({}: Props) {
               mode: "grab",
               parallax: {
                 enable: true,
-                force: 80,
-                smooth: 30,
+                force: 60,
+                smooth: 20,
               },
             },
             resize: true,
@@ -282,7 +282,7 @@ export default function BackgroundParticles({}: Props) {
               value: "#004aad",
             },
             consent: false,
-            distance: 140,
+            distance: 185,
             enable: true,
             frequency: 1,
             opacity: 0.4,
@@ -372,8 +372,8 @@ export default function BackgroundParticles({}: Props) {
               area: 800,
               factor: 1000,
             },
-            limit: 180,
-            value: 60,
+            limit: 45,
+            value: 30,
           },
           opacity: {
             random: {
