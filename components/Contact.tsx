@@ -32,7 +32,7 @@ export default function Contact({}: Props) {
       validationSchema={schema}
       onSubmit={(values, { setSubmitting }) => {
         console.log(values);
-        fetch("https://harmonious-paprenjak-811e95.netlify.app", {
+        fetch("/success", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
@@ -72,7 +72,6 @@ export default function Contact({}: Props) {
           method="POST"
           action="/"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
         >
           <input type="hidden" name="form-name" value="contact" />
 
