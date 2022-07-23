@@ -32,22 +32,22 @@ export default function Contact({}: Props) {
       validationSchema={schema}
       onSubmit={(values, { setSubmitting }) => {
         console.log(values);
-        fetch("/success", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({
-            "form-name": "contact",
-            ...values,
-          }),
-        })
-          .then(() => {
-            alert("Success!");
-            setSubmitting(false);
-          })
-          .catch((error) => {
-            alert("Error: Please Try Again!");
-            setSubmitting(false);
-          });
+        // fetch("/success", {
+        //   method: "POST",
+        //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        //   body: encode({
+        //     "form-name": "contact",
+        //     ...values,
+        //   }),
+        // })
+        //   .then(() => {
+        //     alert("Success!");
+        //     setSubmitting(false);
+        //   })
+        //   .catch((error) => {
+        //     alert("Error: Please Try Again!");
+        //     setSubmitting(false);
+        //   });
       }}
       initialValues={{
         name: "",
@@ -68,13 +68,13 @@ export default function Contact({}: Props) {
         <Form
           noValidate
           onSubmit={handleSubmit}
-          name="contact"
+          name="iKcontactForm"
           method="POST"
           action="/"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
+          // data-netlify="true"
+          // netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="iKcontactForm" />
 
           {/* name text box */}
           <Form.Group>
