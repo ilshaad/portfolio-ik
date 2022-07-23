@@ -12,14 +12,6 @@ export default function Contact({}: Props) {
 
   useEffect(() => console.log(schema));
 
-  const encode = (data: any) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
-
   // handle validation from Yum
   const schema = yup.object().shape({
     name: yup.string().required("Required"),
@@ -31,20 +23,7 @@ export default function Contact({}: Props) {
     <Formik
       validationSchema={schema}
       onSubmit={(values) => {
-        // event.preventDefault();
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({
-            "form-name": "ikportfoliomessage",
-            ...values,
-          }),
-        })
-          .then(() => {
-            console.log("iK message was success full");
-            console.log(values);
-          })
-          .catch((error) => alert(error));
+        console.log(values);
       }}
       initialValues={{
         name: "",
@@ -65,10 +44,12 @@ export default function Contact({}: Props) {
         <Form
           noValidate
           onSubmit={handleSubmit}
-          name="iK_portfolio_message"
+          name="contact"
           method="POST"
+          action="/"
+          data-netlify="true"
         >
-          <input type="hidden" name="form-name" value="ikportfoliomessage" />
+          <input type="hidden" name="form-name" value="contact" />
 
           {/* name text box */}
           <Form.Group>

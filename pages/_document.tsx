@@ -5,16 +5,6 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <form
-          name="ikportfoliomessage"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          hidden
-        >
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <textarea name="message"></textarea>
-        </form>
         <Main />
         <NextScript />
       </body>
