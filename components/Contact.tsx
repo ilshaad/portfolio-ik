@@ -27,6 +27,7 @@ export default function Contact({}: Props) {
       // onSubmit={handleSubmit}
       name="iKcontactForm"
       method="POST"
+      action="/"
     >
       <input type="hidden" name="form-name" value="iKcontactForm" />
 
