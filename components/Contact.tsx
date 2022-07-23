@@ -27,7 +27,7 @@ export default function Contact({}: Props) {
       // onSubmit={handleSubmit}
       name="iKportfolioContactForm"
       method="POST"
-      action="https://harmonious-paprenjak-811e95.netlify.app/"
+      action="/"
     >
       <input type="hidden" name="form-name" value="iKportfolioContactForm" />
 
