@@ -31,18 +31,18 @@ export default function Contact({}: Props) {
     <Formik
       validationSchema={schema}
       onSubmit={(values) => {
-        // console.log(values);
+        console.log(values);
         // event.preventDefault();
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({
-            "form-name": "ikportfoliomessage",
-            ...values,
-          }),
-        })
-          .then(() => console.log("iK message was success full"))
-          .catch((error) => alert(error));
+        // fetch("/", {
+        //   method: "POST",
+        //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        //   body: encode({
+        //     "form-name": "ikportfoliomessage",
+        //     ...values,
+        //   }),
+        // })
+        //   .then(() => console.log("iK message was success full"))
+        //   .catch((error) => alert(error));
       }}
       initialValues={{
         name: "",
@@ -65,6 +65,7 @@ export default function Contact({}: Props) {
           onSubmit={handleSubmit}
           name="iK_portfolio_message"
           method="POST"
+          action="/"
         >
           <input type="hidden" name="form-name" value="ikportfoliomessage" />
 
