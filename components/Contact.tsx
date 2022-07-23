@@ -33,7 +33,7 @@ export default function Contact({}: Props) {
       onSubmit={(values) => {
         // console.log(values);
         // event.preventDefault();
-        fetch("https://harmonious-paprenjak-811e95.netlify.app/", {
+        fetch("https://harmonious-paprenjak-811e95.netlify.app", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
