@@ -75,7 +75,8 @@ export default function Contact({}: Props) {
             </Form.Label>
             {/* is a controlled form */}
             <Form.Control
-              as="text"
+              // as="textarea"
+              type="text"
               name="name"
               value={values.name}
               onChange={handleChange}
