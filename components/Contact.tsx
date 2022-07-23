@@ -72,6 +72,7 @@ export default function Contact({}: Props) {
           method="POST"
           action="/"
           data-netlify="true"
+          netlify-honeypot="bot-field"
         >
           <input type="hidden" name="form-name" value="contact" />
 
