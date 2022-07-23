@@ -37,7 +37,7 @@ export default function Contact({}: Props) {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
-            "form-name": "iK_portfolio_message",
+            "form-name": "ikportfoliomessage",
             ...values,
           }),
         })
@@ -66,7 +66,7 @@ export default function Contact({}: Props) {
           name="iK_portfolio_message"
           method="POST"
         >
-          <input type="hidden" name="form-name" value="iK_portfolio_message" />
+          <input type="hidden" name="form-name" value="ikportfoliomessage" />
 
           {/* name text box */}
           <Form.Group>

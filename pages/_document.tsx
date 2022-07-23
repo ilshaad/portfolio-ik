@@ -6,7 +6,7 @@ export default function Document() {
       <Head />
       <body>
         <form
-          name="iK_portfolio_message"
+          name="ikportfoliomessage"
           data-netlify="true"
           netlify-honeypot="bot-field"
           hidden
