@@ -25,11 +25,11 @@ export default function Contact({}: Props) {
       noValidate
       // validated={validated}
       // onSubmit={handleSubmit}
-      name="iKcontactForm"
+      name="iKportfolioContactForm"
       method="POST"
       action="/"
     >
-      <input type="hidden" name="form-name" value="iKcontactForm" />
+      <input type="hidden" name="form-name" value="iKportfolioContactForm" />
 
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom01">
