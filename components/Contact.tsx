@@ -33,7 +33,7 @@ export default function Contact({}: Props) {
       onSubmit={(values) => {
         // console.log(values);
         // event.preventDefault();
-        fetch("/", {
+        fetch("https://harmonious-paprenjak-811e95.netlify.app/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
@@ -75,7 +75,7 @@ export default function Contact({}: Props) {
             </Form.Label>
             {/* is a controlled form */}
             <Form.Control
-              // as="textarea"
+              as="text"
               name="name"
               value={values.name}
               onChange={handleChange}
