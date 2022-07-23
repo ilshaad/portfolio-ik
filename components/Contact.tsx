@@ -62,7 +62,7 @@ export default function Contact({}: Props) {
         // return form jsx component
         <Form
           noValidate
-          // onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
           name="iK_portfolio_message"
           method="POST"
         >
