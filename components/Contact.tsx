@@ -95,6 +95,7 @@ export default function Contact({}: Props) {
             {/* is a controlled form */}
             <Form.Control
               // as="textarea"
+              type="email"
               name="email"
               value={values.email}
               onChange={handleChange}
