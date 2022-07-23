@@ -22,9 +22,9 @@ export default function Contact({}: Props) {
   return (
     <Formik
       validationSchema={schema}
-      onSubmit={(values) => {
-        console.log(values);
-      }}
+      // onSubmit={(values) => {
+      //   console.log(values);
+      // }}
       initialValues={{
         name: "",
         email: "",
@@ -43,7 +43,7 @@ export default function Contact({}: Props) {
         // return form jsx component
         <Form
           noValidate
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
           name="iK_portfolio_message"
           method="POST"
         >
