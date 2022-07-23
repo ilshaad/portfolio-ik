@@ -12,6 +12,14 @@ export default function Contact({}: Props) {
 
   useEffect(() => console.log(schema));
 
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   // handle validation from Yum
   const schema = yup.object().shape({
     name: yup.string().required("Required"),
@@ -22,9 +30,20 @@ export default function Contact({}: Props) {
   return (
     <Formik
       validationSchema={schema}
-      // onSubmit={(values) => {
-      //   console.log(values);
-      // }}
+      onSubmit={(values) => {
+        // console.log(values);
+        // event.preventDefault();
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({
+            "form-name": "iK_portfolio_message",
+            ...values,
+          }),
+        })
+          .then(() => console.log("iK message was success full"))
+          .catch((error) => alert(error));
+      }}
       initialValues={{
         name: "",
         email: "",
