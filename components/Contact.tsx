@@ -10,6 +10,14 @@ type Props = {};
 export default function Contact({}: Props) {
   const { Contact_component } = styles;
 
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   useEffect(() => console.log(schema));
 
   // handle validation from Yum
@@ -22,8 +30,24 @@ export default function Contact({}: Props) {
   return (
     <Formik
       validationSchema={schema}
-      onSubmit={(values) => {
+      onSubmit={(values, { setSubmitting }) => {
         console.log(values);
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({
+            "form-name": "contact",
+            ...values,
+          }),
+        })
+          .then(() => {
+            alert("Success!");
+            setSubmitting(false);
+          })
+          .catch((error) => {
+            alert("Error: Please Try Again!");
+            setSubmitting(false);
+          });
       }}
       initialValues={{
         name: "",
