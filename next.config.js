@@ -7,14 +7,14 @@ const nextConfig = {
   //     afterFiles: [{ source: "/:path*", destination: "/_404/:path*" }],
   //   };
   // },
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: "/:path*",
-  //       destination: "/",
-  //     },
-  //   ];
-  // },
+  async rewrites() {
+    return [
+      {
+        source: "/:path*",
+        destination: "/",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
