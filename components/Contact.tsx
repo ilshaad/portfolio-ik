@@ -34,7 +34,9 @@ export default function Contact({}: Props) {
         within 24-48 hours.
       </p>
 
-      <button onClick={() => router.replace("/", undefined, { shallow: true })}>
+      <button
+        onClick={() => router.replace("/one", undefined, { shallow: true })}
+      >
         {" "}
         Submit Another Response{" "}
       </button>
@@ -48,7 +50,7 @@ export default function Contact({}: Props) {
       // onSubmit={handleSubmit}
       name="iKportfolioContactForm"
       method="POST"
-      action="/?success=true"
+      action="/one?success=true"
     >
       <input type="hidden" name="form-name" value="iKportfolioContactForm" />
 
