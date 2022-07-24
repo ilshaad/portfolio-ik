@@ -4,6 +4,7 @@ import * as yup from "yup";
 import { Form, Row, Col, InputGroup, Button } from "react-bootstrap";
 
 import styles from "../styles/components/Contact.module.scss";
+import { useRouter } from "next/router";
 
 type Props = {};
 
@@ -22,18 +23,58 @@ export default function Contact({}: Props) {
 
   const [success, setSuccess] = useState(false);
 
-  useEffect(() => {
-    if (window.location.search.includes("success=true")) {
-      setSuccess(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window.location.search.includes("success=true")) {
+  //     setSuccess(true);
+  //   }
+  // }, []);
+
+  const router = useRouter();
+
+  function encode(data: any) {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
+
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+
+    const name = event.currentTarget.name.value;
+    console.log("🚀 ~ file: Contact.tsx ~ line 43 ~ handleSubmit ~ name", name);
+    const email = event.currentTarget.email.value;
+    console.log(
+      "🚀 ~ file: Contact.tsx ~ line 45 ~ handleSubmit ~ email",
+      email
+    );
+    const message = event.currentTarget.message.value;
+    console.log(
+      "🚀 ~ file: Contact.tsx ~ line 47 ~ handleSubmit ~ message",
+      message
+    );
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "iKportfolioContactForm",
+        name,
+        email,
+        message,
+      }),
+    })
+      .then(() => router.push("/"))
+      .catch((error) => alert(error));
+  };
 
   return (
     <>
       <Form
         noValidate
         // validated={validated}
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
         name="iKportfolioContactForm"
         method="POST"
         action="/?success=true"
