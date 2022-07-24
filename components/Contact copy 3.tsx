@@ -4,30 +4,53 @@ import * as yup from "yup";
 import { Form, Row, Col, InputGroup, Button } from "react-bootstrap";
 
 import styles from "../styles/components/Contact.module.scss";
+import { useRouter } from "next/router";
 
 type Props = {};
 
 export default function Contact({}: Props) {
-  const [validated, setValidated] = useState(false);
+  // const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event: any) => {
-    const form = event.currentTarget as HTMLFormElement;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+  // const handleSubmit = (event: any) => {
+  //   const form = event.currentTarget as HTMLFormElement;
+  //   if (form.checkValidity() === false) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //   }
 
-    setValidated(true);
-  };
+  //   setValidated(true);
+  // };
 
-  return (
+  const [submitterName, setSubmitterName] = useState("");
+  const router = useRouter();
+  const confirmationScreenVisible =
+    router.query?.success && router.query.success === "true";
+  const formVisible = !confirmationScreenVisible;
+
+  const ConfirmationMessage = (
+    <React.Fragment>
+      <p>
+        Thank you for submitting this form. Someone should get back to you
+        within 24-48 hours.
+      </p>
+
+      <button
+        onClick={() => router.replace("/one", undefined, { shallow: true })}
+      >
+        {" "}
+        Submit Another Response{" "}
+      </button>
+    </React.Fragment>
+  );
+
+  const ContactForm = (
     <Form
       noValidate
-      validated={validated}
-      onSubmit={handleSubmit}
+      // validated={validated}
+      // onSubmit={handleSubmit}
       name="iKportfolioContactForm"
       method="POST"
-      action="/"
+      action="/one?success=true"
     >
       <input type="hidden" name="form-name" value="iKportfolioContactForm" />
 
@@ -72,5 +95,12 @@ export default function Contact({}: Props) {
         <Button type="submit">Submit form</Button>
       </Row>
     </Form>
+  );
+
+  return (
+    <div>
+      <h1>Contact Us</h1>
+      {formVisible ? ContactForm : ConfirmationMessage}
+    </div>
   );
 }
