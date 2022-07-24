@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 
 import styles from "../styles/components/LandingPage.module.scss";
 
+// import rss from
 // Welcome!
 // I’m ilshaad Kheerdali
 // Frontend / Full stack developer
