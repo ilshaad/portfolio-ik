@@ -4,7 +4,7 @@ import styles from "../styles/components/About.module.scss";
 
 type Props = {};
 
-export default function About({}: Props) {
+export default function About_content({}: Props) {
   const { About_component } = styles;
 
   const yearStartedCoding = 2018;

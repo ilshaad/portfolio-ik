@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 import styles from "../styles/components/SlidingConents.module.scss";
-import About from "./About";
-import Contact from "./Contact";
-import LandingPage from "./LandingPage";
-import Projects from "./Projects";
-import Techstack from "./Techstack";
+import About_content from "./About_content";
+import Contact_content from "./Contact_content";
+import Landing_content from "./Landing_content";
+import Projects_content from "./Projects_content";
+import Techstack_content from "./Techstack_content";
 
 type Props = { slidingCssClassName: string };
 
@@ -50,35 +50,35 @@ export default function SlidingContents({ slidingCssClassName }: Props) {
           className={`${sliderItems} ${landingSlide} ${(() =>
             goToCorrectSlideWithCss("LandingSlideCss"))()}`}
         >
-          <LandingPage />
+          <Landing_content />
         </div>
 
         <div
           className={`${sliderItems} ${aboutSlide} ${(() =>
             goToCorrectSlideWithCss("AboutSlideCss"))()}`}
         >
-          <About />
+          <About_content />
         </div>
 
         <div
           className={`${sliderItems} ${aboutSlide} ${(() =>
             goToCorrectSlideWithCss("TechstackSlideCss"))()}`}
         >
-          <Techstack />
+          <Techstack_content />
         </div>
 
         <div
           className={`${sliderItems} ${projectSlide} ${(() =>
             goToCorrectSlideWithCss("ProjectsSlideCss"))()}`}
         >
-          <Projects />
+          <Projects_content />
         </div>
 
         <div
           className={`${sliderItems} ${contactSlide} ${(() =>
             goToCorrectSlideWithCss("ContactSlideCss"))()}`}
         >
-          <Contact />
+          <Contact_content />
         </div>
       </Container>
       {/* </Row> */}

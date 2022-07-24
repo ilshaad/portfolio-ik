@@ -14,7 +14,7 @@ import styles from "../styles/components/LandingPage.module.scss";
 
 type Props = {};
 
-export default function LandingPage({}: Props) {
+export default function Landing_content({}: Props) {
   const { LandingPage_component } = styles;
 
   return (

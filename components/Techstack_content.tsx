@@ -5,7 +5,7 @@ import { ListGroup } from "react-bootstrap";
 
 type Props = {};
 
-export default function Techstack({}: Props) {
+export default function Techstack_content({}: Props) {
   return (
     <div>
       <h2>My Tech stack</h2>

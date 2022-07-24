@@ -9,31 +9,8 @@ export default function BugTrackerModal({ show, handleClose }: Props) {
     <Modal size="xl" show={show} onHide={() => handleClose()} centered>
       <Modal.Header closeButton>
         <Modal.Title>Bug tracking web application system</Modal.Title>
-        <Button variant="primary">
-          <Link
-            href="https://bug-tracker-frontend-ik-202203.herokuapp.com/"
-            passHref
-          >
-            <a target="_blank">Visit site</a>
-          </Link>
-        </Button>
-        <Button variant="primary">
-          <Link href="https://github.com/RechadSalma/bug-tracker-ik" passHref>
-            <a target="_blank">Github repo</a>
-          </Link>
-        </Button>
       </Modal.Header>
       <Modal.Body>
-        <iframe
-          // width="560"
-          // height="315"
-          src="https://www.youtube.com/embed/WJYVmT5baO4"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-
         {/* feature */}
         <h3>Features:</h3>
         <ListGroup>

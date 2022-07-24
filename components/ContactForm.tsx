@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Formik } from "formik";
-import * as yup from "yup";
-import { Form, Row, Col, InputGroup, Button } from "react-bootstrap";
-
-import styles from "../styles/components/Contact.module.scss";
+// contact form to netlify form submission
+import React, { useState } from "react";
 import { useRouter } from "next/router";
+
+import * as yup from "yup";
+import { Formik } from "formik";
+import { Button, Form } from "react-bootstrap";
 
 type Props = {};
 
-export default function Contact({}: Props) {
-  const { Contact_component } = styles;
+export default function ContactForm({}: Props) {
   const router = useRouter();
 
   // handle validation from Yum
@@ -90,9 +89,9 @@ export default function Contact({}: Props) {
             });
         }}
         initialValues={{
-          name: "ii",
-          email: "i@am.coj",
-          message: "whatsup",
+          name: "",
+          email: "",
+          message: "",
         }}
       >
         {({
@@ -189,8 +188,8 @@ export default function Contact({}: Props) {
 
       {/* success or fail message whether the user successfully submitted form */}
       {/* {success && (
-        <p style={{ color: "green" }}>Successfully submitted form!</p>
-      )} */}
+      <p style={{ color: "green" }}>Successfully submitted form!</p>
+    )} */}
 
       {/* display message when form submitted */}
       {displaySubmittedFormStatusMessage()}
