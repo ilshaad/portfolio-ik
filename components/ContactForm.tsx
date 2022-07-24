@@ -180,8 +180,6 @@ export default function ContactForm({}: Props) {
               </Form.Control.Feedback>
             </Form.Group>
 
-            <div data-netlify-recaptcha="true"></div>
-
             <Button type="submit">submit message</Button>
             {/* <Button onClick={() => setShowCreateCommentBox(false)}>Cancel</Button> */}
           </Form>
