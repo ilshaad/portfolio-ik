@@ -4,12 +4,11 @@ import * as yup from "yup";
 import { Form, Row, Col, InputGroup, Button } from "react-bootstrap";
 
 import styles from "../styles/components/Contact.module.scss";
-import { useRouter } from "next/router";
 
 type Props = {};
 
 export default function Contact({}: Props) {
-  // const [validated, setValidated] = useState(false);
+  const [validated, setValidated] = useState(false);
 
   // const handleSubmit = (event: any) => {
   //   const form = event.currentTarget as HTMLFormElement;
@@ -21,27 +20,7 @@ export default function Contact({}: Props) {
   //   setValidated(true);
   // };
 
-  const [submitterName, setSubmitterName] = useState("");
-  const router = useRouter();
-  const confirmationScreenVisible =
-    router.query?.success && router.query.success === "true";
-  const formVisible = !confirmationScreenVisible;
-
-  const ConfirmationMessage = (
-    <React.Fragment>
-      <p>
-        Thank you for submitting this form. Someone should get back to you
-        within 24-48 hours.
-      </p>
-
-      <button onClick={() => router.replace("/", undefined, { shallow: true })}>
-        {" "}
-        Submit Another Response{" "}
-      </button>
-    </React.Fragment>
-  );
-
-  const ContactForm = (
+  return (
     <Form
       noValidate
       // validated={validated}
@@ -93,12 +72,5 @@ export default function Contact({}: Props) {
         <Button type="submit">Submit form</Button>
       </Row>
     </Form>
-  );
-
-  return (
-    <div>
-      <h1>Contact Us</h1>
-      {formVisible ? ContactForm : ConfirmationMessage}
-    </div>
   );
 }
