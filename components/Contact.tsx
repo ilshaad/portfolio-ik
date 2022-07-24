@@ -9,6 +9,9 @@ import { useRouter } from "next/router";
 type Props = {};
 
 export default function Contact({}: Props) {
+  const { Contact_component } = styles;
+  const router = useRouter();
+
   const [validated, setValidated] = useState(false);
 
   // const handleSubmit = (event: any) => {
@@ -21,6 +24,7 @@ export default function Contact({}: Props) {
   //   setValidated(true);
   // };
 
+  // will let us know if user has submitted ticket, & if so, we can thank them & remove form
   const [success, setSuccess] = useState(false);
 
   // useEffect(() => {
@@ -29,8 +33,7 @@ export default function Contact({}: Props) {
   //   }
   // }, []);
 
-  const router = useRouter();
-
+  // from netlify, which handles the submitted form values & url encode them
   function encode(data: any) {
     return Object.keys(data)
       .map(
@@ -39,13 +42,16 @@ export default function Contact({}: Props) {
       .join("&");
   }
 
+  // when ticket is submitted, we must use prevent default otherwise netlify will show its confirmation submit page
   const handleSubmit = (event: any) => {
     event.preventDefault();
 
+    // values from the submitted inputs
     const name = event.currentTarget.name.value;
     const email = event.currentTarget.email.value;
     const message = event.currentTarget.message.value;
 
+    // post form data to netlify
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -57,10 +63,13 @@ export default function Contact({}: Props) {
       }),
     })
       .then(() => {
+        // keep the route at home page because netlify will show its confirm submit form page instead
         router.push("/");
+
+        // set success true because now we know user has submitted form & we can confirm for them
         setSuccess(true);
       })
-      .catch((error) => alert(error));
+      .catch((error) => console.error(error));
   };
 
   return (
@@ -91,7 +100,7 @@ export default function Contact({}: Props) {
           <Form.Group as={Col} md="4" controlId="validationCustom02">
             <Form.Label>email</Form.Label>
             <Form.Control
-              required
+              // required
               name="email"
               type="email"
               placeholder="Last name"
