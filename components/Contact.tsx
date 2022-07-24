@@ -43,17 +43,8 @@ export default function Contact({}: Props) {
     event.preventDefault();
 
     const name = event.currentTarget.name.value;
-    console.log("🚀 ~ file: Contact.tsx ~ line 43 ~ handleSubmit ~ name", name);
     const email = event.currentTarget.email.value;
-    console.log(
-      "🚀 ~ file: Contact.tsx ~ line 45 ~ handleSubmit ~ email",
-      email
-    );
     const message = event.currentTarget.message.value;
-    console.log(
-      "🚀 ~ file: Contact.tsx ~ line 47 ~ handleSubmit ~ message",
-      message
-    );
 
     fetch("/", {
       method: "POST",
@@ -65,7 +56,10 @@ export default function Contact({}: Props) {
         message,
       }),
     })
-      .then(() => router.push("/"))
+      .then(() => {
+        router.push("/");
+        setSuccess(true);
+      })
       .catch((error) => alert(error));
   };
 
