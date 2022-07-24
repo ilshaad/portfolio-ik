@@ -14,7 +14,7 @@ export default function Document() {
         >
           <input type="text" name="name" />
           <input type="email" name="email" />
-          <div data-netlify-recaptcha="true"></div>
+          {/* <div data-netlify-recaptcha="true"></div> */}
 
           <textarea name="message"></textarea>
         </form>
