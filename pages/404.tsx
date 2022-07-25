@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
-import BackgroundParticles from "../components/BackgroundParticles";
+import LoadingFullScreen from "../components/LoadingFullScreen";
 
 type Props = {};
 
@@ -13,7 +13,7 @@ export default function Error404({}: Props) {
 
   return (
     <>
-      <BackgroundParticles />
+      <LoadingFullScreen />
     </>
   );
 }

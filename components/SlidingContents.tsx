@@ -1,12 +1,29 @@
-import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import React, { Suspense, useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 import styles from "../styles/components/SlidingConents.module.scss";
-import About_content from "./About_content";
-import Contact_content from "./Contact_content";
+// import About_content from "./About_content";
+// import Contact_content from "./Contact_content";
 import Landing_content from "./Landing_content";
-import Projects_content from "./Projects_content";
-import Techstack_content from "./Techstack_content";
+// import Projects_content from "./Projects_content";
+// import Techstack_content from "./Techstack_content";
+
+const About_content = dynamic(() => import("./About_content"), {
+  suspense: true,
+});
+
+const Techstack_content = dynamic(() => import("./Techstack_content"), {
+  suspense: true,
+});
+
+const Projects_content = dynamic(() => import("./Projects_content"), {
+  suspense: true,
+});
+
+const Contact_content = dynamic(() => import("./Contact_content"), {
+  suspense: true,
+});
 
 type Props = { slidingCssClassName: string };
 
@@ -46,6 +63,7 @@ export default function SlidingContents({ slidingCssClassName }: Props) {
   return (
     <Container className={`${SlidingContents_component}`}>
       <Container className={`${SlidingContent_container}`}>
+        {/* landing slide content */}
         <div
           className={`${sliderItems} ${landingSlide} ${(() =>
             goToCorrectSlideWithCss("LandingSlideCss"))()}`}
@@ -53,32 +71,52 @@ export default function SlidingContents({ slidingCssClassName }: Props) {
           <Landing_content />
         </div>
 
+        {/* About slide content */}
         <div
           className={`${sliderItems} ${aboutSlide} ${(() =>
             goToCorrectSlideWithCss("AboutSlideCss"))()}`}
         >
-          <About_content />
+          <Suspense fallback={`Loading...`}>
+            <About_content />
+          </Suspense>
+
+          {/* <About_content /> */}
         </div>
 
+        {/* techstack slide content */}
         <div
           className={`${sliderItems} ${aboutSlide} ${(() =>
             goToCorrectSlideWithCss("TechstackSlideCss"))()}`}
         >
-          <Techstack_content />
+          <Suspense fallback={`Loading...`}>
+            <Techstack_content />
+          </Suspense>
+
+          {/* <Techstack_content /> */}
         </div>
 
+        {/* projects slide content */}
         <div
           className={`${sliderItems} ${projectSlide} ${(() =>
             goToCorrectSlideWithCss("ProjectsSlideCss"))()}`}
         >
-          <Projects_content />
+          <Suspense fallback={`Loading...`}>
+            <Projects_content />
+          </Suspense>
+
+          {/* <Projects_content /> */}
         </div>
 
+        {/* contact slide content */}
         <div
           className={`${sliderItems} ${contactSlide} ${(() =>
             goToCorrectSlideWithCss("ContactSlideCss"))()}`}
         >
-          <Contact_content />
+          <Suspense fallback={`Loading...`}>
+            <Contact_content />
+          </Suspense>
+
+          {/* <Contact_content /> */}
         </div>
       </Container>
       {/* </Row> */}

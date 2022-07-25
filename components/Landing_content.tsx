@@ -23,12 +23,12 @@ export default function Landing_content({}: Props) {
       <h4>Welcome!</h4>
       <h1>I&#39;m Ilshaad</h1>
       <h2>Frontend / Full stack developer</h2>
-      <h3>Javascript / React / Typescript / Node.js</h3>
+      <h3>Specialised in Javascript / React / Typescript / Node.js</h3>
       <div>
         <i>Always follow your heart but remember to bring your brain along!</i>
       </div>
       <div>
-        <Button>Contact me!</Button>
+        <Button>Get in touch</Button>
       </div>
     </div>
   );

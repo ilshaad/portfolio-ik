@@ -1,19 +1,20 @@
-import React, { useState } from "react";
-import {
-  Button,
-  Card,
-  Col,
-  Container,
-  ListGroup,
-  Modal,
-  Row,
-} from "react-bootstrap";
+import dynamic from "next/dynamic";
+import { Suspense, useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 
 import styles from "../styles/components/Projects.module.scss";
-import ProjectCard from "./ProjectCards/ProjectCard";
 import BugTrackerModal from "./ProjectCards/BugTrackerModal";
+import ProjectCard from "./ProjectCards/ProjectCard";
 
-import bugtrackerImg from "../public/projectsPreview/bugTrackerSite.jpg";
+// lazy loading on bug tracker youtube video
+const BugTrackerYoutubeEmbedCode = dynamic(
+  () => import("./ProjectCards/BugTrackerYoutubeEmbedCode"),
+  {
+    suspense: true,
+  }
+);
+
+// import bugtrackerImg from "../public/projectsPreview/bugTrackerSite.jpg";
 
 // import jssvg from '../public/'
 
@@ -43,15 +44,9 @@ export default function Projects_content({}: Props) {
               // image={bugtrackerImg}
               // imageAlt="Bug Tracker app preview"
               youtubeIframe={
-                <iframe
-                  // width="560"
-                  // height="315"
-                  src="https://www.youtube.com/embed/WJYVmT5baO4"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <Suspense fallback={`Loading...`}>
+                  <BugTrackerYoutubeEmbedCode />
+                </Suspense>
               }
               projectUrl="https://bug-tracker-frontend-ik-202203.herokuapp.com/"
               projectGitRepoUrl="https://github.com/RechadSalma/bug-tracker-ik"

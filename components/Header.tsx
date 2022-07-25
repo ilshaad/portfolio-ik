@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
@@ -8,12 +9,22 @@ import Github_svg from "./svgs/Github_svg";
 import LinkedIn_svg from "./svgs/LinkedIn_svg";
 import Resume_svg from "./svgs/Resume_svg";
 
+import rsLogo from "../public/rs-logo/RS-optimize.jpg";
+
 type Props = {
   setSlidingCssClassName: Function;
 };
 
 export default function Header({ setSlidingCssClassName }: Props) {
-  const { Header_component, MobileBarList, MainListLinks } = styles;
+  const {
+    Header_component,
+    MobileBarList,
+    MainListLinks,
+    blueBackground,
+    rsLogoContainer,
+    logoName,
+    svgContainer,
+  } = styles;
 
   const [show, setShow] = useState(false);
 
@@ -25,28 +36,40 @@ export default function Header({ setSlidingCssClassName }: Props) {
   };
 
   return (
-    <header id="Header" className={`${Header_component} mx-auto w-100`}>
-      <Container className={`mx-auto`}>
-        <Row>
+    <header id="Header" className={`${Header_component} mx-auto w-100 pt-2`}>
+      <Container className={`mx-auto  text-center`}>
+        <Row className={`mx-auto text-center pt-1`}>
           {/* !!!! insert rechadsalma logo with link to home content */}
           <Col
             onClick={() => {
               goToSlide("LandingSlideCss");
             }}
+            xs={2}
+            className={`p-0`}
           >
-            Image comes here
+            <div className={`${rsLogoContainer}`}>
+              <Image src={rsLogo} alt="rechad salma logo" />
+            </div>
           </Col>
 
+          <Col className={`p-0`}>
+            <h1 className={`${logoName}`}>Ilshaad</h1>
+          </Col>
           {/* <Col>Ilshaad</Col> */}
 
           {/* svg links */}
-          <Col>
-            <LinkedIn_svg /> <Github_svg />
-            <Resume_svg classProps={`w-25`} />
+          <Col
+            xs={4}
+            className={`${svgContainer} d-flex justify-content-around`}
+          >
+            {/* <LinkedIn_svg classProps="w-100" />
+            <Github_svg classProps="w-100" />
+            <Resume_svg classProps={`h-50`} /> */}
+            sif
           </Col>
 
           {/* offcanva button links for mobile view only */}
-          <Col className={`${MobileBarList}`}>
+          <Col className={`${MobileBarList} p-0 text-end`}>
             <Button variant="primary" onClick={handleShow}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -121,27 +144,19 @@ export default function Header({ setSlidingCssClassName }: Props) {
         </Row>
       </Container>
 
+      {/* space for blue background */}
+      <div className={`${blueBackground} d-flex justify-content-around`}>
+        <LinkedIn_svg classProps="w-100 text-light" />
+        <Github_svg classProps="w-100 text-light" />
+        <Resume_svg classProps={`text-light bg-primary`} />
+      </div>
+
       <NavOffcanva
         show={show}
         handleClose={handleClose}
         setSlidingCssClassName={setSlidingCssClassName}
         goToSlide={goToSlide}
       />
-
-      {/* <nav>
-        <ul>
-          <li onClick={() => goToSlide("LandingSlideCss")}>Home</li>
-          <li onClick={() => goToSlide("AboutSlideCss")}>About</li>
-          <li onClick={() => goToSlide("TechstackSlideCss")}>Tech stack</li>
-          <li onClick={() => goToSlide("ProjectsSlideCss")}>Projects</li>
-          <li onClick={() => goToSlide("ContactSlideCss")}>Contact</li>
-          <li>Download Resume</li>
-          <li>LinkedIn</li>
-          <li>Github</li>
-          <li>blog</li>
-          <li onClick={() => goToSlide("PlaygroundSlideCss")}>Playground</li>
-        </ul>
-      </nav> */}
     </header>
   );
 }

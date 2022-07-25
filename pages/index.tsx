@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import BackgroundParticles from "../components/BackgroundParticles";
 import Body from "../components/Body";
-import LoadingScreen from "../components/LoadingScreen";
+import LoadingFullScreen from "../components/LoadingFullScreen";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       </Head>
 
       {isLoading ? (
-        <LoadingScreen />
+        <LoadingFullScreen />
       ) : (
         <>
           <Body />

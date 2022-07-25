@@ -2,38 +2,27 @@
 // @import "../global.scss";
 // @import "../customBootstrap.scss";
 
-// iK? begin from 320px & up for starting breakpoint
-.Header_component {
-  position: relative;
+.rsLogoSvg {
+  // iK? begin from 320px & up for starting breakpoint
 
-  // hidden links for only > 576px
-  .MainListLinks {
-    display: none;
-  }
+  // border: red 3px solid;
+  width: 20%;
+  padding-left: 0.5rem;
 
-  .rsLogoContainer {
-    width: 80%;
-  }
+  animation-name: rs-logo;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-direction: alternate;
 
-  .logoName {
-    font-family: "Edu SA Beginner", cursive;
-  }
-
-  .blueBackground {
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(0, 74, 173, 1) 54%,
-      rgba(3, 176, 212, 1) 100%
-    );
-    height: 30%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-
-  .svgContainer {
-    padding-right: 0;
+  @keyframes rs-logo {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
   // * breakpint of > 360px
@@ -50,23 +39,18 @@
 
   // * breakpint of > 576px
   @media screen and (min-width: 576px) {
-    .MobileBarList {
-      display: none;
-    }
-
-    // links to navigate
-    div.MainListLinks {
-      display: block;
-    }
+    width: 16%;
   } // breakpoint of > 576px
 
   // * breakpint of > 768px
-  // @media screen and (min-width: 768px) {
-  // } // breakpoint of > 768px
+  @media screen and (min-width: 768px) {
+    width: 12%;
+  } // breakpoint of > 768px
 
   // * breakpint of > 992px
-  // @media screen and (min-width: 992px) {
-  // } // breakpoint of > 992px
+  @media screen and (min-width: 992px) {
+    width: 10%;
+  } // breakpoint of > 992px
 
   // * breakpint of > 1200px
   // @media screen and (min-width: 1200px) {

@@ -12,10 +12,10 @@ type Props = {};
 
 export default function BackgroundParticles({}: Props) {
   // default value set for 320px width or above (really its for 360px)
-  let [linkDistance, setLinkDistance] = useState(120);
+  let [linkDistance, setLinkDistance] = useState(130);
   let [particlesNumberLimit, setParticlesNumberLimit] = useState(25);
   let [particlesNumberValue, setParticlesNumberValue] = useState(25);
-  let [motionReduceFactor, setMotionReduceFactor] = useState(9);
+  let [motionReduceFactor, setMotionReduceFactor] = useState(10);
 
   // setting the canvas to have more power depending on screen size
   useEffect(() => {
@@ -27,14 +27,14 @@ export default function BackgroundParticles({}: Props) {
       setLinkDistance(150);
       setParticlesNumberLimit(40);
       setParticlesNumberValue(30);
-      setMotionReduceFactor(8);
+      setMotionReduceFactor(9);
       console.log("iK 500");
     }
 
     if (mediaQuery576.matches) {
       setLinkDistance(180);
       setParticlesNumberLimit(45);
-      setMotionReduceFactor(6);
+      setMotionReduceFactor(7);
       console.log("iK 576");
     }
   }, []);

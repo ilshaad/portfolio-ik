@@ -2,39 +2,12 @@
 // @import "../global.scss";
 // @import "../customBootstrap.scss";
 
-// iK? begin from 320px & up for starting breakpoint
-.Header_component {
-  position: relative;
+.LoadingFullScreen_component {
+  // iK? begin from 320px & up for starting breakpoint
 
-  // hidden links for only > 576px
-  .MainListLinks {
-    display: none;
-  }
+  padding-top: 15rem;
 
-  .rsLogoContainer {
-    width: 80%;
-  }
-
-  .logoName {
-    font-family: "Edu SA Beginner", cursive;
-  }
-
-  .blueBackground {
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(0, 74, 173, 1) 54%,
-      rgba(3, 176, 212, 1) 100%
-    );
-    height: 30%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-
-  .svgContainer {
-    padding-right: 0;
-  }
+  // border: red 2px solid;
 
   // * breakpint of > 360px
   // @media screen and (min-width: 360px) {
@@ -49,16 +22,8 @@
   // } // breakpoint of > 500px
 
   // * breakpint of > 576px
-  @media screen and (min-width: 576px) {
-    .MobileBarList {
-      display: none;
-    }
-
-    // links to navigate
-    div.MainListLinks {
-      display: block;
-    }
-  } // breakpoint of > 576px
+  // @media screen and (min-width: 576px) {
+  // } // breakpoint of > 576px
 
   // * breakpint of > 768px
   // @media screen and (min-width: 768px) {

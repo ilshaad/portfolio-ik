@@ -1,15 +1,19 @@
 import React from "react";
 
+import styles from "../../styles/components/svgs/Rs_logo_svg.module.scss";
+
 type Props = { classProp?: string };
 
 export default function Rs_logo_svg({ classProp }: Props) {
+  const { rsLogoSvg } = styles;
+
   return (
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
       // width="500.000000pt"
       // height="500.000000pt"
-      className={`${classProp}`}
+      className={`${rsLogoSvg} ${classProp}`}
       viewBox="0 0 500.000000 500.000000"
       preserveAspectRatio="xMidYMid meet"
     >

@@ -23,9 +23,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Mukta" -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+// font-family: 'Mukta', sans-serif;
 
 a {
   color: inherit;
@@ -41,13 +43,14 @@ body,
   height: 100%;
   width: 100%;
   margin: 0;
+  font-family: "Mukta", sans-serif;
 }
 
 // * Setup up Outer-grid of the screen (OuterGrid.tsx component)
 #divBody {
   display: grid;
   grid-template-columns: 100%; // 1fr is a bit dodgy when it comes to navbar sandwich & does not take the 100% width like it is suppose to
-  grid-template-rows: 60px minmax(max-content, 1fr) 60px;
+  grid-template-rows: 80px minmax(max-content, 1fr) 60px;
   grid-template-areas:
     "header"
     "main"
@@ -56,13 +59,15 @@ body,
   min-height: 100vh;
   height: 100vh;
 
+  // position: relative;
   // background-color: aquamarine;
 }
 
 #Header {
   grid-area: header;
 
-  background-color: red;
+  // background-color: red;
+  border-bottom: red 2px solid;
 }
 
 #Main {
