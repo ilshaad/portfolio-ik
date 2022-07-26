@@ -1,62 +1,248 @@
 // scss module setup
 // @import "../global.scss";
 // @import "../customBootstrap.scss";
+$primary: #004aad;
+$gradientBackground: linear-gradient(
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(0, 74, 173, 1) 54%,
+  rgba(3, 176, 212, 1) 100%
+);
 
 // iK? begin from 320px & up for starting breakpoint
 .Header_component {
   position: relative;
 
-  // hidden links for only > 576px
-  .MainListLinks {
-    display: none;
+  .firstHeaderContainer {
+    position: absolute;
+    height: 60%;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    padding: 0.25rem 3rem;
+
+    // hidden links for only > 576px
+    .MainListLinks {
+      display: none;
+    }
+
+    .rsLogoContainer {
+      width: 37px;
+      cursor: pointer;
+    }
+
+    .logoName {
+      font-family: "Edu SA Beginner", cursive;
+      font-size: 2.2rem;
+      letter-spacing: 4px;
+
+      background: $gradientBackground;
+
+      background-clip: text;
+      color: rgb(0, 0, 0, 0);
+      margin-top: -3px;
+      padding-left: 27px;
+    }
+
+    .mobileNavButton {
+      background: $gradientBackground;
+    }
+
+    .desktopSvgContactLinks {
+      display: none;
+    }
   }
 
-  .rsLogoContainer {
-    width: 80%;
-  }
-
-  .logoName {
-    font-family: "Edu SA Beginner", cursive;
-  }
-
-  .blueBackground {
+  .secondHeaderContainer {
     background: linear-gradient(
       90deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(0, 74, 173, 1) 54%,
       rgba(3, 176, 212, 1) 100%
     );
-    height: 30%;
+    height: 40%;
     width: 100%;
     position: absolute;
     bottom: 0;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    overflow: hidden;
+
+    .resumeSvgElement_mobile {
+      color: white;
+      height: auto;
+      width: 22px;
+      // margin-left: 1.5rem;
+    }
+
+    .shineAnimation {
+      position: absolute;
+      opacity: 0;
+      left: 0;
+      bottom: 0;
+      width: 10%;
+      height: 100%;
+      transform: skew(-25deg, 0deg);
+
+      background: inherit;
+      filter: blur(3px);
+
+      animation: move 3s;
+      animation-iteration-count: infinite;
+      animation-delay: 2s;
+      // animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
+      // animation-timing-function: cubic-bezier(0.57, -0.14, 1, 1);
+      animation-timing-function: ease-in;
+    }
+
+    @keyframes move {
+      0% {
+        left: -10;
+        opacity: 1;
+      }
+      5% {
+        opacity: 0.3;
+      }
+      10% {
+        opacity: 0.4;
+      }
+      48% {
+        opacity: 0.3;
+      }
+      95% {
+        opacity: 0;
+      }
+      100% {
+        left: 110%;
+      }
+    }
+
+    .navLinkButtonsContainer {
+      display: none;
+    }
   }
 
-  .svgContainer {
-    padding-right: 0;
-  }
+  // .svgContainer {
+  //   padding-right: 0;
+  // }
 
   // * breakpint of > 360px
-  // @media screen and (min-width: 360px) {
-  // } // breakpoint of > 360px
+  @media screen and (min-width: 360px) {
+    .firstHeaderContainer {
+      padding: 0.25rem 4rem;
+
+      .logoName {
+        font-size: 2.3rem !important;
+      }
+    }
+  } // breakpoint of > 360px
 
   // * breakpint of > 400px
-  // @media screen and (min-width: 400px) {
-  // } // breakpoint of > 400px
+  @media screen and (min-width: 400px) {
+    .firstHeaderContainer {
+      padding: 0.25rem 5rem;
+    }
+  } // breakpoint of > 400px
 
   // * breakpint of > 500px
-  // @media screen and (min-width: 500px) {
-  // } // breakpoint of > 500px
+  @media screen and (min-width: 500px) {
+    .firstHeaderContainer {
+      padding: 0.25rem 7rem;
+
+      .logoName {
+        padding-left: 56px;
+      }
+    }
+  } // breakpoint of > 500px
 
   // * breakpint of > 576px
   @media screen and (min-width: 576px) {
-    .MobileBarList {
-      display: none;
+    .firstHeaderContainer {
+      padding: 0 8rem;
+
+      .MobileBarList {
+        display: none;
+      }
+
+      .rsLogoContainer {
+        width: 42px;
+      }
+
+      .logoName {
+        font-size: 3rem !important;
+        margin-top: -6px;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+      }
+
+      .desktopSvgContactLinks {
+        display: block;
+        padding: 0;
+
+        .linkedinSvg_desktop {
+          color: $primary;
+
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
+
+        .githubSvg_desktop {
+          color: $primary;
+
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
+
+        .resumeSvgElement_desktop {
+          color: $primary;
+
+          &:hover {
+            transform: scale(1.5);
+          }
+
+          // color: white;
+          height: auto;
+          width: 22px;
+        }
+      }
     }
 
-    // links to navigate
-    div.MainListLinks {
-      display: block;
+    .secondHeaderContainer {
+      padding: 0;
+      flex-direction: row;
+
+      // links to navigate
+      .navLinkButtonsContainer {
+        display: flex;
+        flex-direction: row;
+        color: white;
+        justify-content: space-between;
+        overflow: hidden;
+        margin: auto;
+
+        .MainListLinks {
+          text-align: start;
+          font-size: 1.2rem;
+          padding: 0 6px;
+          // width: 20px !important;
+          cursor: pointer;
+          // background-color: pink;
+
+          &:hover,
+          & a:hover {
+            // filter: brightness(2);
+            color: red !important;
+          }
+        }
+      }
+
+      .mobileSvgContactLinks {
+        display: none;
+      }
     }
   } // breakpoint of > 576px
 
@@ -75,25 +261,4 @@
   // * breakpint of > 1400px
   // @media screen and (min-width: 1400px) {
   // } // breakpoint of > 1400px
-
-  // BOOTSTRAP VERSION FROM 576px
-  // * breakpoint of > 576px (sm)
-  //  @include media-breakpoint-up(sm) {
-  //  } //END breakpoint of > 576px (sm)
-
-  // * breakpoint of > 768px (md)
-  //  @include media-breakpoint-up(md) {
-  //  } //END breakpoint of > 768px (md)
-
-  // * breakpoint of > 992 (lg)
-  //  @include media-breakpoint-up(lg) {
-  //  } //END breakpoint of > 992 (lg)
-
-  // * breakpoint of > 1200px (xl)
-  //  @include media-breakpoint-up(xl) {
-  //  } //END breakpoint of 1200px
-
-  // * breakpoint of > 1400px (xxl)
-  //  @include media-breakpoint-up(xxl) {
-  //  } //END breakpoint of 1400px
 }

@@ -7,9 +7,10 @@ import styles from "../styles/components/Header.module.scss";
 import NavOffcanva from "./NavOffcanva";
 import Github_svg from "./svgs/Github_svg";
 import LinkedIn_svg from "./svgs/LinkedIn_svg";
-import Resume_svg from "./svgs/Resume_svg";
+import Resume_svg_anchor from "./svgs/Resume_svg_anchor";
 
 import rsLogo from "../public/rs-logo/RS-optimize.jpg";
+import Resume_svg_rawElement from "./svgs/Resume_svg_rawElement";
 
 type Props = {
   setSlidingCssClassName: Function;
@@ -18,12 +19,22 @@ type Props = {
 export default function Header({ setSlidingCssClassName }: Props) {
   const {
     Header_component,
+    firstHeaderContainer,
     MobileBarList,
     MainListLinks,
-    blueBackground,
+    secondHeaderContainer,
     rsLogoContainer,
     logoName,
-    svgContainer,
+    resumeSvgElement_mobile,
+    resumeSvgElement_desktop,
+    shineAnimation,
+    mobileNavButton,
+    navLinkButtonsContainer,
+    mobileSvgContactLinks,
+    desktopSvgContactLinks,
+    linkedinSvg_desktop,
+    githubSvg_desktop,
+    // svgContainer,
   } = styles;
 
   const [show, setShow] = useState(false);
@@ -37,14 +48,20 @@ export default function Header({ setSlidingCssClassName }: Props) {
 
   return (
     <header id="Header" className={`${Header_component} mx-auto w-100 pt-2`}>
-      <Container className={`mx-auto  text-center`}>
+      {/* first container for header */}
+      <Container
+        fluid
+        className={`${firstHeaderContainer} mx-auto text-center`}
+      >
         <Row className={`mx-auto text-center pt-1`}>
-          {/* !!!! insert rechadsalma logo with link to home content */}
+          {/* rs logo image */}
           <Col
+            xs={1}
+            sm={2}
             onClick={() => {
               goToSlide("LandingSlideCss");
             }}
-            xs={2}
+            // xs={2}
             className={`p-0`}
           >
             <div className={`${rsLogoContainer}`}>
@@ -52,25 +69,14 @@ export default function Header({ setSlidingCssClassName }: Props) {
             </div>
           </Col>
 
-          <Col className={`p-0`}>
+          {/* ilshaad heading */}
+          <Col xs={8} sm={7} className={`p-0`}>
             <h1 className={`${logoName}`}>Ilshaad</h1>
-          </Col>
-          {/* <Col>Ilshaad</Col> */}
-
-          {/* svg links */}
-          <Col
-            xs={4}
-            className={`${svgContainer} d-flex justify-content-around`}
-          >
-            {/* <LinkedIn_svg classProps="w-100" />
-            <Github_svg classProps="w-100" />
-            <Resume_svg classProps={`h-50`} /> */}
-            sif
           </Col>
 
           {/* offcanva button links for mobile view only */}
-          <Col className={`${MobileBarList} p-0 text-end`}>
-            <Button variant="primary" onClick={handleShow}>
+          <Col xs={3} className={`${MobileBarList} p-0 text-end`}>
+            <Button className={`${mobileNavButton}`} onClick={handleShow}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -87,11 +93,55 @@ export default function Header({ setSlidingCssClassName }: Props) {
             </Button>
           </Col>
 
-          {/* Links outside the mobile view */}
+          {/* svg contact links only in desktop viewpoint */}
+          <Col xs={0} sm={1} className={`${desktopSvgContactLinks} mx-auto`}>
+            <LinkedIn_svg classProps={`${linkedinSvg_desktop}`} />
+          </Col>
+          <Col xs={0} sm={1} className={`${desktopSvgContactLinks} mx-auto`}>
+            <Github_svg classProps={`${githubSvg_desktop} text-primary`} />
+          </Col>
+          <Col xs={0} sm={1} className={`${desktopSvgContactLinks} mx-auto`}>
+            <Resume_svg_anchor
+              svgElement={
+                <Resume_svg_rawElement classProps={resumeSvgElement_desktop} />
+              }
+            />
+          </Col>
+        </Row>
+      </Container>
+
+      {/* second container of header */}
+      {/* blue background for svg contact links */}
+      <Container
+        fluid
+        className={`${secondHeaderContainer} d-flex justify-content-around`}
+      >
+        {/* svg links only in mobile viewpoint */}
+        <Row
+          className={`${mobileSvgContactLinks} justify-content-center align-items-center`}
+        >
+          <Col xs={4} className={`mx-auto`}>
+            <LinkedIn_svg classProps="w-100 text-light" />
+          </Col>
+          <Col xs={4} className={`mx-auto`}>
+            <Github_svg classProps="w-100 text-light" />
+          </Col>
+          <Col xs={4} className={`mx-auto`}>
+            <Resume_svg_anchor
+              svgElement={
+                <Resume_svg_rawElement classProps={resumeSvgElement_mobile} />
+              }
+            />
+          </Col>
+        </Row>
+
+        <Row className={`${navLinkButtonsContainer}`}>
+          {/* Links display outside the mobile view */}
           <Col
             onClick={() => {
               goToSlide("LandingSlideCss");
             }}
+            xs={1}
             className={`${MainListLinks}`}
           >
             Home
@@ -100,6 +150,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
             onClick={() => {
               goToSlide("AboutSlideCss");
             }}
+            xs={1}
             className={`${MainListLinks}`}
           >
             About me
@@ -108,6 +159,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
             onClick={() => {
               goToSlide("TechstackSlideCss");
             }}
+            xs={1}
             className={`${MainListLinks}`}
           >
             Tech stack
@@ -116,6 +168,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
             onClick={() => {
               goToSlide("ProjectsSlideCss");
             }}
+            xs={1}
             className={`${MainListLinks}`}
           >
             Projects
@@ -124,6 +177,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
             onClick={() => {
               goToSlide("ContactSlideCss");
             }}
+            xs={1}
             className={`${MainListLinks}`}
           >
             Contact
@@ -132,25 +186,21 @@ export default function Header({ setSlidingCssClassName }: Props) {
             onClick={() => {
               goToSlide("PlaygroundSlideCss");
             }}
+            xs={1}
             className={`${MainListLinks}`}
           >
             Playground
           </Col>
-          <Col className={`${MainListLinks}`}>
+          <Col xs={1} className={`${MainListLinks}`}>
             <Link href="https://www.ilshaadblog.tk/" passHref>
               <a target="_blank">Blog</a>
             </Link>
           </Col>
         </Row>
+        <i className={`${shineAnimation}`}></i>
       </Container>
 
-      {/* space for blue background */}
-      <div className={`${blueBackground} d-flex justify-content-around`}>
-        <LinkedIn_svg classProps="w-100 text-light" />
-        <Github_svg classProps="w-100 text-light" />
-        <Resume_svg classProps={`text-light bg-primary`} />
-      </div>
-
+      {/* nav menu when user clicks button on mobile view */}
       <NavOffcanva
         show={show}
         handleClose={handleClose}

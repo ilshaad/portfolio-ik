@@ -50,7 +50,7 @@ body,
 #divBody {
   display: grid;
   grid-template-columns: 100%; // 1fr is a bit dodgy when it comes to navbar sandwich & does not take the 100% width like it is suppose to
-  grid-template-rows: 80px minmax(max-content, 1fr) 60px;
+  grid-template-rows: 85px minmax(max-content, 1fr) 60px;
   grid-template-areas:
     "header"
     "main"
@@ -67,7 +67,7 @@ body,
   grid-area: header;
 
   // background-color: red;
-  border-bottom: red 2px solid;
+  border-bottom: black 2px solid;
 }
 
 #Main {
