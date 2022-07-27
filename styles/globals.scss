@@ -13,6 +13,11 @@
 // x-Small devices (small phones, 320px and up)
 STARTING BREAKPOINT
 // #####################################################
+// iK font options I am using from google font
+// font-family: 'Edu SA Beginner', cursive;
+// font-family: 'Edu TAS Beginner', cursive;
+// font-family: 'Mukta', sans-serif;
+
 *,
 *::before,
 *::after {
@@ -50,7 +55,7 @@ body,
 #divBody {
   display: grid;
   grid-template-columns: 100%; // 1fr is a bit dodgy when it comes to navbar sandwich & does not take the 100% width like it is suppose to
-  grid-template-rows: 85px minmax(max-content, 1fr) 60px;
+  grid-template-rows: 85px minmax(max-content, 1fr) 32px;
   grid-template-areas:
     "header"
     "main"
@@ -75,8 +80,9 @@ body,
   overflow-x: auto; // prevents main from shifting any aside grid to make x unscrollable
 
   // height: 100%;
-  width: 60%;
-  margin: 50px auto; // center the box
+  min-height: 50vh;
+  width: 70%;
+  margin: 19px auto; // center the box
 
   transition: opacity 1s ease;
   background-color: darkgreen;
@@ -85,7 +91,7 @@ body,
 #Footer {
   grid-area: footer;
 
-  background-color: yellow;
+  // background-color: yellow;
 }
 
 // all the sliding contents,
@@ -134,16 +140,8 @@ body,
 // #####################################################
 // Small devices (landscape phones, 576px and up)
 // #####################################################
-@include media-breakpoint-up(sm) {
-  #OuterGrid {
-    grid-template-rows: 75px minmax(max-content, 1fr) 75px;
-
-    #OuterGrid-main {
-      width: 90%;
-      margin: 10px auto; // center the box
-    }
-  }
-}
+// @include media-breakpoint-up(sm) {
+// }
 
 // * breakpint of > 576px
 // @media screen and (min-width: 576px) {

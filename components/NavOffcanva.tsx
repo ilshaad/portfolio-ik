@@ -17,7 +17,7 @@ export default function NavOffcanva({
   setSlidingCssClassName,
   goToSlide,
 }: Props) {
-  const { NavOffcanva_component } = styles;
+  const { NavOffcanva_component, bs_offcanvas_header, navUlContainer } = styles;
 
   // const goToSlide = (cssClassName: string) => {
   //   setSlidingCssClassName(cssClassName);
@@ -28,18 +28,23 @@ export default function NavOffcanva({
       show={show}
       onHide={handleClose}
       placement={"end"}
-      className={`w-50`}
+      className={`${NavOffcanva_component}`}
     >
-      <Offcanvas.Header closeButton>
-        <Offcanvas.Title>Where would you like to go?</Offcanvas.Title>
+      <Offcanvas.Header closeButton className={`${bs_offcanvas_header}`}>
+        <Offcanvas.Title>
+          <h4>Where to?</h4>
+        </Offcanvas.Title>
       </Offcanvas.Header>
-      <Offcanvas.Body>
+
+      <Offcanvas.Body className={`pt-0`}>
         <Nav
           // activeKey="/home"
           // onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-          className={`flex-column`}
+          className={`${navUlContainer} flex-column`}
+          as="ul"
         >
           <Nav.Item
+            as="li"
             onClick={() => {
               goToSlide("LandingSlideCss");
               handleClose();
@@ -48,6 +53,7 @@ export default function NavOffcanva({
             Home
           </Nav.Item>
           <Nav.Item
+            as="li"
             onClick={() => {
               goToSlide("AboutSlideCss");
               handleClose();
@@ -56,6 +62,7 @@ export default function NavOffcanva({
             About
           </Nav.Item>
           <Nav.Item
+            as="li"
             onClick={() => {
               goToSlide("TechstackSlideCss");
               handleClose();
@@ -64,6 +71,7 @@ export default function NavOffcanva({
             Tech stack
           </Nav.Item>
           <Nav.Item
+            as="li"
             onClick={() => {
               goToSlide("ProjectsSlideCss");
               handleClose();
@@ -72,6 +80,7 @@ export default function NavOffcanva({
             Projects
           </Nav.Item>
           <Nav.Item
+            as="li"
             onClick={() => {
               goToSlide("ContactSlideCss");
               handleClose();
@@ -80,6 +89,7 @@ export default function NavOffcanva({
             Contact
           </Nav.Item>
           <Nav.Item
+            as="li"
             onClick={() => {
               goToSlide("PlaygroundSlideCss");
               handleClose();
@@ -88,6 +98,7 @@ export default function NavOffcanva({
             Playground
           </Nav.Item>
           <Nav.Item
+            as="li"
             onClick={() => {
               handleClose();
             }}

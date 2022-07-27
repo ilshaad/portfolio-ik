@@ -8,6 +8,7 @@ $gradientBackground: linear-gradient(
   rgba(0, 74, 173, 1) 54%,
   rgba(3, 176, 212, 1) 100%
 );
+$hover-colours: #00ffd4;
 
 // iK? begin from 320px & up for starting breakpoint
 .Header_component {
@@ -20,7 +21,7 @@ $gradientBackground: linear-gradient(
     left: 0;
     right: 0;
     overflow: hidden;
-    padding: 0.25rem 3rem;
+    padding: 0.25rem 1rem;
 
     // hidden links for only > 576px
     .MainListLinks {
@@ -42,7 +43,7 @@ $gradientBackground: linear-gradient(
       background-clip: text;
       color: rgb(0, 0, 0, 0);
       margin-top: -3px;
-      padding-left: 27px;
+      padding-left: 53px;
     }
 
     .mobileNavButton {
@@ -69,10 +70,16 @@ $gradientBackground: linear-gradient(
     padding-right: 6rem;
     overflow: hidden;
 
+    .linkedSvgElement_mobile,
+    .githubSvgElement_mobile {
+      transform: scale(1.2);
+    }
+
     .resumeSvgElement_mobile {
       color: white;
       height: auto;
       width: 22px;
+      transform: scale(1.2);
       // margin-left: 1.5rem;
     }
 
@@ -88,7 +95,7 @@ $gradientBackground: linear-gradient(
       background: inherit;
       filter: blur(3px);
 
-      animation: move 3s;
+      animation: move 6s;
       animation-iteration-count: infinite;
       animation-delay: 2s;
       // animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
@@ -98,25 +105,54 @@ $gradientBackground: linear-gradient(
 
     @keyframes move {
       0% {
-        left: -10;
+        left: 0;
+      }
+
+      15% {
+        left: 0;
         opacity: 1;
       }
-      5% {
-        opacity: 0.3;
-      }
-      10% {
+      20% {
         opacity: 0.4;
+      }
+      25% {
+        opacity: 0.5;
       }
       48% {
         opacity: 0.3;
       }
-      95% {
+      60% {
         opacity: 0;
+        left: 80%;
+      }
+      60% {
+        left: 100%;
       }
       100% {
-        left: 110%;
+        left: 100%;
       }
     }
+    // @keyframes move {
+    //   0% {
+    //     left: -10;
+    //     opacity: 1;
+    //   }
+    //   5% {
+    //     opacity: 0.3;
+    //   }
+    //   10% {
+    //     opacity: 0.4;
+    //   }
+    //   48% {
+    //     opacity: 0.3;
+    //   }
+    //   95% {
+    //     opacity: 0;
+    //   }
+    //   100% {
+    //     left: 110%;
+    //   }
+    // }
 
     .navLinkButtonsContainer {
       display: none;
@@ -130,10 +166,11 @@ $gradientBackground: linear-gradient(
   // * breakpint of > 360px
   @media screen and (min-width: 360px) {
     .firstHeaderContainer {
-      padding: 0.25rem 4rem;
+      padding: 0.25rem 2rem;
 
       .logoName {
         font-size: 2.3rem !important;
+        padding-left: 58px;
       }
     }
   } // breakpoint of > 360px
@@ -141,7 +178,7 @@ $gradientBackground: linear-gradient(
   // * breakpint of > 400px
   @media screen and (min-width: 400px) {
     .firstHeaderContainer {
-      padding: 0.25rem 5rem;
+      padding: 0.25rem 3rem;
     }
   } // breakpoint of > 400px
 
@@ -159,7 +196,7 @@ $gradientBackground: linear-gradient(
   // * breakpint of > 576px
   @media screen and (min-width: 576px) {
     .firstHeaderContainer {
-      padding: 0 8rem;
+      padding: 0 7rem;
 
       .MobileBarList {
         display: none;
@@ -175,33 +212,37 @@ $gradientBackground: linear-gradient(
         display: flex;
         justify-content: flex-start;
         padding: 0;
+        margin-left: -12px;
       }
 
       .desktopSvgContactLinks {
         display: block;
-        padding: 0;
+        padding: 0.5rem;
 
         .linkedinSvg_desktop {
           color: $primary;
+          transform: scale(1.6);
 
           &:hover {
-            transform: scale(1.5);
+            transform: scale(2);
           }
         }
 
         .githubSvg_desktop {
           color: $primary;
+          transform: scale(1.5);
 
           &:hover {
-            transform: scale(1.5);
+            transform: scale(2);
           }
         }
 
         .resumeSvgElement_desktop {
           color: $primary;
+          transform: scale(1.5);
 
           &:hover {
-            transform: scale(1.5);
+            transform: scale(2);
           }
 
           // color: white;
@@ -219,24 +260,41 @@ $gradientBackground: linear-gradient(
       .navLinkButtonsContainer {
         display: flex;
         flex-direction: row;
-        color: white;
         justify-content: space-between;
         overflow: hidden;
-        margin: auto;
+        height: 100%;
+        width: 89%;
+        // margin: auto;
+        color: white;
+        padding-top: 4px;
 
         .MainListLinks {
           text-align: start;
-          font-size: 1.2rem;
-          padding: 0 6px;
+          font-size: 1rem;
+          padding: 0 13px;
           // width: 20px !important;
           cursor: pointer;
           // background-color: pink;
 
           &:hover,
           & a:hover {
-            // filter: brightness(2);
-            color: red !important;
+            color: $hover-colours !important;
           }
+        }
+
+        // project link
+        .MainListLinks:nth-of-type(4) {
+          padding-left: 3px;
+        }
+
+        // contact link
+        .MainListLinks:nth-of-type(5) {
+          padding-left: 3px;
+        }
+
+        // Playground link
+        .MainListLinks:nth-of-type(6) {
+          padding-left: 0px;
         }
       }
 
@@ -247,18 +305,72 @@ $gradientBackground: linear-gradient(
   } // breakpoint of > 576px
 
   // * breakpint of > 768px
-  // @media screen and (min-width: 768px) {
-  // } // breakpoint of > 768px
+  @media screen and (min-width: 768px) {
+    .firstHeaderContainer {
+      padding: 0 9rem;
+
+      .logoName {
+        margin-left: -30px;
+      }
+    }
+
+    .secondHeaderContainer {
+      .navLinkButtonsContainer {
+        width: 71%;
+
+        .MainListLinks {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  } // breakpoint of > 768px
 
   // * breakpint of > 992px
-  // @media screen and (min-width: 992px) {
-  // } // breakpoint of > 992px
+  @media screen and (min-width: 992px) {
+    .firstHeaderContainer {
+      padding: 0 13rem;
+
+      .logoName {
+        margin-left: 0;
+      }
+    }
+
+    // LinkedIn svg
+    .linkedinSvgContainer_desktop {
+      text-align: end;
+    }
+
+    // cv svg
+    .resumeSvgContainer_desktop {
+      text-align: start;
+    }
+
+    .secondHeaderContainer {
+      .navLinkButtonsContainer {
+        width: 60%;
+      }
+    }
+  } // breakpoint of > 992px
 
   // * breakpint of > 1200px
-  // @media screen and (min-width: 1200px) {
-  // } // breakpoint of > 1200px
+  @media screen and (min-width: 1200px) {
+    .firstHeaderContainer {
+      padding: 0 16rem;
+
+      .rsLogoContainer {
+        margin-left: 15px;
+      }
+
+      .logoName {
+        margin-left: 10px;
+      }
+    }
+  } // breakpoint of > 1200px
 
   // * breakpint of > 1400px
-  // @media screen and (min-width: 1400px) {
-  // } // breakpoint of > 1400px
+  @media screen and (min-width: 1400px) {
+    .firstHeaderContainer {
+      padding: 0 20rem;
+    }
+  } // breakpoint of > 1400px
 }

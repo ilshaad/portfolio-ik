@@ -34,6 +34,10 @@ export default function Header({ setSlidingCssClassName }: Props) {
     desktopSvgContactLinks,
     linkedinSvg_desktop,
     githubSvg_desktop,
+    linkedSvgElement_mobile,
+    githubSvgElement_mobile,
+    linkedinSvgContainer_desktop,
+    resumeSvgContainer_desktop,
     // svgContainer,
   } = styles;
 
@@ -58,6 +62,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
           <Col
             xs={1}
             sm={2}
+            lg={1}
             onClick={() => {
               goToSlide("LandingSlideCss");
             }}
@@ -70,7 +75,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
           </Col>
 
           {/* ilshaad heading */}
-          <Col xs={8} sm={7} className={`p-0`}>
+          <Col xs={8} sm={7} lg={8} className={`p-0`}>
             <h1 className={`${logoName}`}>Ilshaad</h1>
           </Col>
 
@@ -94,13 +99,28 @@ export default function Header({ setSlidingCssClassName }: Props) {
           </Col>
 
           {/* svg contact links only in desktop viewpoint */}
-          <Col xs={0} sm={1} className={`${desktopSvgContactLinks} mx-auto`}>
+          <Col
+            xs={0}
+            sm={1}
+            lg={1}
+            className={`${desktopSvgContactLinks} ${linkedinSvgContainer_desktop} mx-auto`}
+          >
             <LinkedIn_svg classProps={`${linkedinSvg_desktop}`} />
           </Col>
-          <Col xs={0} sm={1} className={`${desktopSvgContactLinks} mx-auto`}>
+          <Col
+            xs={0}
+            sm={1}
+            lg={1}
+            className={`${desktopSvgContactLinks} mx-auto`}
+          >
             <Github_svg classProps={`${githubSvg_desktop} text-primary`} />
           </Col>
-          <Col xs={0} sm={1} className={`${desktopSvgContactLinks} mx-auto`}>
+          <Col
+            xs={0}
+            sm={1}
+            lg={1}
+            className={`${desktopSvgContactLinks} ${resumeSvgContainer_desktop} mx-auto`}
+          >
             <Resume_svg_anchor
               svgElement={
                 <Resume_svg_rawElement classProps={resumeSvgElement_desktop} />
@@ -121,10 +141,14 @@ export default function Header({ setSlidingCssClassName }: Props) {
           className={`${mobileSvgContactLinks} justify-content-center align-items-center`}
         >
           <Col xs={4} className={`mx-auto`}>
-            <LinkedIn_svg classProps="w-100 text-light" />
+            <LinkedIn_svg
+              classProps={`${linkedSvgElement_mobile} w-100 text-light`}
+            />
           </Col>
           <Col xs={4} className={`mx-auto`}>
-            <Github_svg classProps="w-100 text-light" />
+            <Github_svg
+              classProps={`${githubSvgElement_mobile} w-100 text-light`}
+            />
           </Col>
           <Col xs={4} className={`mx-auto`}>
             <Resume_svg_anchor

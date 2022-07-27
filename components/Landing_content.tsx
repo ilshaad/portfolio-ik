@@ -3,7 +3,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
-import styles from "../styles/components/LandingPage.module.scss";
+import styles from "../styles/components/Landing_content.module.scss";
 
 // import rss from
 // Welcome!
@@ -16,18 +16,34 @@ import styles from "../styles/components/LandingPage.module.scss";
 type Props = {};
 
 export default function Landing_content({}: Props) {
-  const { LandingPage_component } = styles;
+  const {
+    blockquote_p,
+    role_h,
+    LandingPage_component,
+    welcome_h,
+    getInTouchButtonContainer,
+    name_h,
+    specialised_h,
+  } = styles;
 
   return (
     <div className={`${LandingPage_component}`}>
-      <h4>Welcome!</h4>
-      <h1>I&#39;m Ilshaad</h1>
-      <h2>Frontend / Full stack developer</h2>
-      <h3>Specialised in Javascript / React / Typescript / Node.js</h3>
-      <div>
-        <i>Always follow your heart but remember to bring your brain along!</i>
-      </div>
-      <div>
+      <h4 className={`${welcome_h} fst-italic`}>Welcome!</h4>
+
+      <h1 className={`${name_h} fw-bolder`}>I&#39;m Ilshaad</h1>
+
+      <h2 className={`${role_h}`}>Frontend / Full stack developer</h2>
+
+      <h3 className={`${specialised_h} fw-light`}>
+        Specialised in&#160;<span>Javascript</span> /&#160;<span>React</span>
+        &#160;/&#160;<span>Typescript</span> /&#160;<span>Node.js</span>
+      </h3>
+
+      <blockquote className={`${blockquote_p} blockquote text-dark text-muted`}>
+        <p>Always follow your heart but remember to bring your brain along!</p>
+      </blockquote>
+
+      <div className={`${getInTouchButtonContainer} text-center`}>
         <Button>Get in touch</Button>
       </div>
     </div>

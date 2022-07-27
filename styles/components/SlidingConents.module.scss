@@ -1,6 +1,17 @@
-// scss module setup
-// @import "../global.scss";
-// @import "../customBootstrap.scss";
+$primary: #004aad;
+// $primary: #004aad;
+$secondary: #ffffff;
+
+$light-background: #f1f8ff;
+
+$hover-colours: #00ffd4;
+
+$gradientBackground: linear-gradient(
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(0, 74, 173, 1) 54%,
+  rgba(3, 176, 212, 1) 100%
+);
 
 // iK? begin from 320px & up for starting breakpoint
 .SlidingContents_component {
@@ -60,14 +71,15 @@
     // }
 
     background-color: darkgrey;
-    border: black solid 5px;
+    border: $primary solid 1px;
+    padding: 9px;
   }
 
   .landingSlide {
     // transform: translateX(0%); // no need to set this as it is already default
     transition: transform 1s ease;
 
-    background-color: wheat;
+    background-color: white;
   }
   // &:hover .landingSlide {
   // transform: translateX(-100%);

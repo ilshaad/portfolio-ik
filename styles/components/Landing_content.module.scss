@@ -1,0 +1,92 @@
+$primary: #004aad;
+// $primary: #004aad;
+$secondary: #ffffff;
+
+$light-background: #f1f8ff;
+
+$hover-colours: #00ffd4;
+
+$gradientBackground: linear-gradient(
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(0, 74, 173, 1) 54%,
+  rgba(3, 176, 212, 1) 100%
+);
+
+// font-family: 'Edu TAS Beginner', cursive;
+
+.LandingPage_component {
+  // iK? begin from 320px & up for starting breakpoint
+  width: inherit;
+  // height: 100%;
+  color: $primary;
+
+  // border: red 1px solid;
+
+  .welcome_h {
+    font-size: 1.3rem;
+    font-family: "Edu TAS Beginner", cursive;
+  }
+
+  .name_h {
+    background: $gradientBackground;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.2rem;
+    font-family: "Edu TAS Beginner", cursive;
+  }
+
+  .role_h {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .specialised_h {
+    font-size: 0.9rem;
+
+    span {
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+
+  .blockquote_p {
+    font-size: 1rem;
+  }
+
+  .getInTouchButtonContainer > button {
+    background: $gradientBackground;
+  }
+
+  // * breakpint of > 360px
+  // @media screen and (min-width: 360px) {
+  // } // breakpoint of > 360px
+
+  // * breakpint of > 400px
+  // @media screen and (min-width: 400px) {
+  // } // breakpoint of > 400px
+
+  // * breakpint of > 500px
+  // @media screen and (min-width: 500px) {
+  // } // breakpoint of > 500px
+
+  // * breakpint of > 576px
+  // @media screen and (min-width: 576px) {
+  // } // breakpoint of > 576px
+
+  // * breakpint of > 768px
+  // @media screen and (min-width: 768px) {
+  // } // breakpoint of > 768px
+
+  // * breakpint of > 992px
+  // @media screen and (min-width: 992px) {
+  // } // breakpoint of > 992px
+
+  // * breakpint of > 1200px
+  // @media screen and (min-width: 1200px) {
+  // } // breakpoint of > 1200px
+
+  // * breakpint of > 1400px
+  // @media screen and (min-width: 1400px) {
+  // } // breakpoint of > 1400px
+}
