@@ -60,9 +60,9 @@ export default function Header({ setSlidingCssClassName }: Props) {
         <Row className={`mx-auto text-center pt-1`}>
           {/* rs logo image */}
           <Col
-            xs={1}
-            sm={2}
-            lg={1}
+            xs={6}
+            sm={9}
+            // lg={1}
             onClick={() => {
               goToSlide("LandingSlideCss");
             }}
@@ -75,12 +75,12 @@ export default function Header({ setSlidingCssClassName }: Props) {
           </Col>
 
           {/* ilshaad heading */}
-          <Col xs={8} sm={7} lg={8} className={`p-0`}>
+          {/* <Col xs={8} sm={7} lg={8} className={`p-0`}>
             <h1 className={`${logoName}`}>Ilshaad</h1>
-          </Col>
+          </Col> */}
 
           {/* offcanva button links for mobile view only */}
-          <Col xs={3} className={`${MobileBarList} p-0 text-end`}>
+          <Col xs={6} className={`${MobileBarList} p-0 text-end`}>
             <Button className={`${mobileNavButton}`} onClick={handleShow}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
           <Col
             xs={0}
             sm={1}
-            lg={1}
+            // lg={1}
             className={`${desktopSvgContactLinks} ${linkedinSvgContainer_desktop} mx-auto`}
           >
             <LinkedIn_svg classProps={`${linkedinSvg_desktop}`} />
@@ -110,7 +110,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
           <Col
             xs={0}
             sm={1}
-            lg={1}
+            // lg={1}
             className={`${desktopSvgContactLinks} mx-auto`}
           >
             <Github_svg classProps={`${githubSvg_desktop} text-primary`} />
@@ -118,7 +118,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
           <Col
             xs={0}
             sm={1}
-            lg={1}
+            // lg={1}
             className={`${desktopSvgContactLinks} ${resumeSvgContainer_desktop} mx-auto`}
           >
             <Resume_svg_anchor

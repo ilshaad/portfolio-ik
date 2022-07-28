@@ -21,7 +21,8 @@ $hover-colours: #00ffd4;
     left: 0;
     right: 0;
     overflow: hidden;
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 3rem;
+    // padding: 0.25rem 1rem;
 
     // hidden links for only > 576px
     .MainListLinks {
@@ -29,16 +30,16 @@ $hover-colours: #00ffd4;
     }
 
     .rsLogoContainer {
-      width: 37px;
+      width: 40px;
       cursor: pointer;
     }
 
     .logoName {
-      font-family: "Edu SA Beginner", cursive;
+      // font-family: "Edu SA Beginner", cursive;
       font-size: 2.2rem;
       letter-spacing: 4px;
 
-      background: $gradientBackground;
+      background: $gradientBackground, $primary;
 
       background-clip: text;
       color: rgb(0, 0, 0, 0);
@@ -47,7 +48,7 @@ $hover-colours: #00ffd4;
     }
 
     .mobileNavButton {
-      background: $gradientBackground;
+      background: $gradientBackground, $primary;
     }
 
     .desktopSvgContactLinks {
@@ -57,11 +58,12 @@ $hover-colours: #00ffd4;
 
   .secondHeaderContainer {
     background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(0, 74, 173, 1) 54%,
-      rgba(3, 176, 212, 1) 100%
-    );
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(0, 74, 173, 1) 54%,
+        rgba(3, 176, 212, 1) 100%
+      ),
+      $primary;
     height: 40%;
     width: 100%;
     position: absolute;
@@ -166,7 +168,8 @@ $hover-colours: #00ffd4;
   // * breakpint of > 360px
   @media screen and (min-width: 360px) {
     .firstHeaderContainer {
-      padding: 0.25rem 2rem;
+      padding: 0.25rem 3rem;
+      // padding: 0.25rem 2rem;
 
       .logoName {
         font-size: 2.3rem !important;
@@ -178,14 +181,15 @@ $hover-colours: #00ffd4;
   // * breakpint of > 400px
   @media screen and (min-width: 400px) {
     .firstHeaderContainer {
-      padding: 0.25rem 3rem;
+      // padding: 0.25rem 3rem;
+      padding: 0.25rem 4rem;
     }
   } // breakpoint of > 400px
 
   // * breakpint of > 500px
   @media screen and (min-width: 500px) {
     .firstHeaderContainer {
-      padding: 0.25rem 7rem;
+      padding: 0.25rem 5rem;
 
       .logoName {
         padding-left: 56px;
@@ -196,7 +200,8 @@ $hover-colours: #00ffd4;
   // * breakpint of > 576px
   @media screen and (min-width: 576px) {
     .firstHeaderContainer {
-      padding: 0 7rem;
+      // padding: 0 5rem;
+      padding: 0 6rem;
 
       .MobileBarList {
         display: none;
@@ -307,7 +312,7 @@ $hover-colours: #00ffd4;
   // * breakpint of > 768px
   @media screen and (min-width: 768px) {
     .firstHeaderContainer {
-      padding: 0 9rem;
+      padding: 0 7rem;
 
       .logoName {
         margin-left: -30px;
@@ -328,7 +333,11 @@ $hover-colours: #00ffd4;
   // * breakpint of > 992px
   @media screen and (min-width: 992px) {
     .firstHeaderContainer {
-      padding: 0 13rem;
+      padding: 0 9rem;
+
+      .rsLogoContainer {
+        margin-left: 1.7rem;
+      }
 
       .logoName {
         margin-left: 0;
@@ -355,10 +364,11 @@ $hover-colours: #00ffd4;
   // * breakpint of > 1200px
   @media screen and (min-width: 1200px) {
     .firstHeaderContainer {
-      padding: 0 16rem;
+      // padding: 0 16rem;
 
       .rsLogoContainer {
-        margin-left: 15px;
+        // margin-left: 15px;
+        margin-left: 3.5rem;
       }
 
       .logoName {
@@ -370,7 +380,11 @@ $hover-colours: #00ffd4;
   // * breakpint of > 1400px
   @media screen and (min-width: 1400px) {
     .firstHeaderContainer {
-      padding: 0 20rem;
+      padding: 0 13rem;
+
+      .rsLogoContainer {
+        margin-left: 2.3rem;
+      }
     }
   } // breakpoint of > 1400px
 }

@@ -7,59 +7,101 @@ $light-background: #f1f8ff;
 $hover-colours: #00ffd4;
 
 $gradientBackground: linear-gradient(
-  90deg,
-  rgba(2, 0, 36, 1) 0%,
-  rgba(0, 74, 173, 1) 54%,
-  rgba(3, 176, 212, 1) 100%
-);
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 74, 173, 1) 54%,
+    rgba(3, 176, 212, 1) 100%
+  ),
+  $primary;
 
 // font-family: 'Edu TAS Beginner', cursive;
 
 .LandingPage_component {
   // iK? begin from 320px & up for starting breakpoint
   width: inherit;
-  // height: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 8rem 1fr 1fr 1fr 1fr;
+  // grid-auto-rows: auto;
+  grid-template-areas:
+    "welcomeName picOfMe_img"
+    "role_h role_h"
+    "specialised_h specialised_h"
+    "blockquote blockquote"
+    "getInTouchButton getInTouchButton";
+  padding: 1rem;
   color: $primary;
 
   // border: red 1px solid;
 
-  .welcome_h {
-    font-size: 1.3rem;
-    font-family: "Edu TAS Beginner", cursive;
-  }
+  .welcomeName_container {
+    grid-area: welcomeName;
 
-  .name_h {
-    background: $gradientBackground;
-    background-clip: text;
-    color: transparent;
-    font-size: 2.2rem;
-    font-family: "Edu TAS Beginner", cursive;
-  }
+    .welcome_h {
+      font-size: 1.3rem;
+      font-family: "Edu TAS Beginner", cursive;
+      // margin-bottom: 0.2rem;
+    }
 
-  .role_h {
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-
-  .specialised_h {
-    font-size: 0.9rem;
-
-    span {
-      font-style: italic;
-      font-weight: 600;
+    .name_h {
+      display: inline-block;
+      background: $gradientBackground;
+      background-clip: text;
+      color: transparent;
+      font-size: 2rem;
+      font-family: "Edu TAS Beginner", cursive;
     }
   }
 
-  .blockquote_p {
-    font-size: 1rem;
+  .picOfMe_img {
+    grid-area: picOfMe_img;
+    display: inline-block;
+    width: 100%;
   }
 
-  .getInTouchButtonContainer > button {
-    background: $gradientBackground;
+  .role_h_container {
+    grid-area: role_h;
+
+    .role_h {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+
+  .specialised_h_container {
+    grid-area: specialised_h;
+
+    .specialised_h {
+      font-size: 0.9rem;
+
+      span {
+        font-style: italic;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .blockquote_p_container {
+    grid-area: blockquote;
+    font-size: 1rem;
+    // font-family: "Edu SA Beginner", cursive;
+    font-family: "Edu TAS Beginner", cursive;
+
+    color: black;
+  }
+
+  .getInTouchButtonContainer {
+    grid-area: getInTouchButton;
+
+    button {
+      background: $gradientBackground;
+    }
   }
 
   // * breakpint of > 360px
   // @media screen and (min-width: 360px) {
+  // padding-top: 5px !important;
   // } // breakpoint of > 360px
 
   // * breakpint of > 400px
@@ -68,10 +110,18 @@ $gradientBackground: linear-gradient(
 
   // * breakpint of > 500px
   // @media screen and (min-width: 500px) {
+  // .welcomeName_container {
+  // padding-top: 2rem;
+  // padding-left: 1rem;
+  // }
   // } // breakpoint of > 500px
 
   // * breakpint of > 576px
   // @media screen and (min-width: 576px) {
+  //   .welcomeName_container {
+  // padding-top: 0;
+  // padding-left: 1rem;
+  //   }
   // } // breakpoint of > 576px
 
   // * breakpint of > 768px

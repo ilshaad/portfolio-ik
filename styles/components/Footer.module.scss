@@ -16,7 +16,7 @@ $gradientBackground: linear-gradient(
 .Footer_component {
   // iK? begin from 320px & up for starting breakpoint
   .footerBadge {
-    background: $gradientBackground;
+    background: $gradientBackground, $primary;
     color: white;
   }
 

@@ -36,7 +36,7 @@ $gradientBackground: linear-gradient(
     // align-self: center;
     // width: 400px !important;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     // display: flex;
     // flex-wrap: nowrap;
     background-color: brown;
@@ -53,6 +53,7 @@ $gradientBackground: linear-gradient(
     position: absolute;
 
     height: 100%;
+    overflow-y: scroll;
 
     // transition: transform 0.5s;
     // overflow: hidden;
@@ -72,7 +73,7 @@ $gradientBackground: linear-gradient(
 
     background-color: darkgrey;
     border: $primary solid 1px;
-    padding: 9px;
+    padding: 9px 0;
   }
 
   .landingSlide {

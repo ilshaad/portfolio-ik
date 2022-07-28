@@ -34,6 +34,7 @@ export default function SlidingContents({ slidingCssClassName }: Props) {
     sliderItems,
     landingSlide,
     aboutSlide,
+    techstackSlide,
     projectSlide,
     contactSlide,
   } = styles;
@@ -85,7 +86,7 @@ export default function SlidingContents({ slidingCssClassName }: Props) {
 
         {/* techstack slide content */}
         <div
-          className={`${sliderItems} ${aboutSlide} ${(() =>
+          className={`${sliderItems} ${techstackSlide} ${(() =>
             goToCorrectSlideWithCss("TechstackSlideCss"))()}`}
         >
           <Suspense fallback={`Loading...`}>

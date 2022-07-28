@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
@@ -12,6 +12,17 @@ export default function Document() {
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@600&family=Edu+TAS+Beginner:wght@500&family=Mukta&display=swap"
+          rel="stylesheet"
+        /> */}
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Mukta&display=swap"
           rel="stylesheet"
         />
       </Head>
