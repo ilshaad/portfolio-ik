@@ -61,7 +61,7 @@ body,
     "header"
     "main"
     "footer";
-  row-gap: 5px;
+  row-gap: 15px;
   width: 100%;
   min-height: 100vh;
   height: 100vh;
@@ -92,7 +92,7 @@ body,
 
 #Footer {
   grid-area: footer;
-
+  margin-top: -7px;
   // background-color: yellow;
 }
 
@@ -142,8 +142,11 @@ body,
 // #####################################################
 // Small devices (landscape phones, 576px and up)
 // #####################################################
-// @include media-breakpoint-up(sm) {
-// }
+@include media-breakpoint-up(sm) {
+  #Main {
+    width: 65%;
+  }
+}
 
 // * breakpint of > 576px
 // @media screen and (min-width: 576px) {
@@ -166,8 +169,11 @@ body,
 // }
 
 // * breakpint of > 992px
-// @media screen and (min-width: 992px) {
-// } // breakpoint of > 992px
+@media screen and (min-width: 992px) {
+  #Main {
+    width: 60%;
+  }
+} // breakpoint of > 992px
 
 // #####################################################
 // X-Large devices (large desktops, 1200px and up)

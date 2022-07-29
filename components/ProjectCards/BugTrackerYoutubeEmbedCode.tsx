@@ -9,7 +9,7 @@ export default function BugTrackerYoutubeEmbedCode({}: Props) {
     <iframe
       width="560"
       height="315"
-      src="https://www.youtube.com/embed/WJYVmT5baO4"
+      src="https://www.youtube.com/embed/UyNLsB-Q8GI"
       title="Bug Tracker app tour - ilshaad"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -22,7 +22,7 @@ $gradientBackground: linear-gradient(
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 8rem 1fr 1fr 1fr 1fr;
+  grid-template-rows: 9rem 3rem 4rem 5rem 1fr;
   // grid-auto-rows: auto;
   grid-template-areas:
     "welcomeName picOfMe_img"
@@ -30,7 +30,7 @@ $gradientBackground: linear-gradient(
     "specialised_h specialised_h"
     "blockquote blockquote"
     "getInTouchButton getInTouchButton";
-  padding: 1rem;
+  padding: 0.5rem;
   color: $primary;
 
   // border: red 1px solid;
@@ -62,15 +62,17 @@ $gradientBackground: linear-gradient(
 
   .role_h_container {
     grid-area: role_h;
+    align-self: center;
 
     .role_h {
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 700;
     }
   }
 
   .specialised_h_container {
     grid-area: specialised_h;
+    align-self: center;
 
     .specialised_h {
       font-size: 0.9rem;
@@ -100,41 +102,243 @@ $gradientBackground: linear-gradient(
   }
 
   // * breakpint of > 360px
-  // @media screen and (min-width: 360px) {
-  // padding-top: 5px !important;
-  // } // breakpoint of > 360px
+  @media screen and (min-width: 360px) {
+    grid-template-rows: 9rem 3rem 4rem 4rem 1fr;
+
+    .welcomeName_container {
+      align-self: center;
+      padding-left: 0.5rem;
+    }
+
+    .role_h_container {
+      align-self: flex-end;
+
+      .role_h {
+        font-size: 1.1rem;
+      }
+    }
+  } // breakpoint of > 360px
 
   // * breakpint of > 400px
-  // @media screen and (min-width: 400px) {
-  // } // breakpoint of > 400px
+  @media screen and (min-width: 400px) {
+    grid-template-rows: 11rem 3rem 4rem 4rem 1fr;
+
+    .welcomeName_container {
+      padding-left: 0;
+      padding-top: 1rem;
+
+      .name_h {
+        font-size: 2.7rem;
+      }
+    }
+  } // breakpoint of > 400px
 
   // * breakpint of > 500px
-  // @media screen and (min-width: 500px) {
-  // .welcomeName_container {
-  // padding-top: 2rem;
-  // padding-left: 1rem;
-  // }
-  // } // breakpoint of > 500px
+  @media screen and (min-width: 500px) {
+    grid-template-rows: 13.5rem 3rem 4rem 4rem 1fr;
+    padding: 1rem;
+
+    .welcomeName_container {
+      padding-left: 1.5rem;
+      padding-top: 0;
+    }
+
+    .role_h_container {
+      align-self: center;
+
+      .role_h {
+        font-size: 1.2rem;
+      }
+    }
+
+    .specialised_h_container {
+      .specialised_h {
+        font-size: 1rem;
+      }
+    }
+
+    .blockquote_p_container {
+      font-size: 1.1rem;
+    }
+  } // breakpoint of > 500px
 
   // * breakpint of > 576px
-  // @media screen and (min-width: 576px) {
-  //   .welcomeName_container {
-  // padding-top: 0;
-  // padding-left: 1rem;
-  //   }
-  // } // breakpoint of > 576px
+  @media screen and (min-width: 576px) {
+    grid-template-columns: repeat(5, 1fr);
+    // grid-template-rows: 8rem 6rem 3rem 3rem 1fr;
+    grid-template-rows: 7rem 6rem 3rem 4rem 1fr;
+    grid-template-areas:
+      "welcomeName welcomeName welcomeName picOfMe_img picOfMe_img"
+      "role_h role_h role_h picOfMe_img picOfMe_img"
+      "specialised_h specialised_h specialised_h specialised_h specialised_h"
+      "blockquote blockquote blockquote blockquote blockquote"
+      "getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton";
+    padding: 1.5rem;
+
+    .welcomeName_container {
+      align-self: flex-start;
+      justify-self: flex-start;
+      padding-left: 0;
+
+      .welcome_h {
+        font-size: 1.4rem;
+      }
+
+      .name_h {
+        font-size: 2.5rem;
+      }
+    }
+
+    .role_h_container {
+      align-self: auto;
+      justify-self: center;
+
+      // .role_h {
+      //   font-size: 1.3rem;
+      // }
+    }
+  } // breakpoint of > 576px
 
   // * breakpint of > 768px
-  // @media screen and (min-width: 768px) {
-  // } // breakpoint of > 768px
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(5, 1fr);
+    // grid-template-rows: 6rem 5rem 3.5rem 5rem 1fr;
+    grid-template-rows: 6rem 6rem 3.5rem 6.5rem 1fr;
+    grid-template-areas:
+      "welcomeName welcomeName welcomeName picOfMe_img picOfMe_img"
+      "role_h role_h role_h picOfMe_img picOfMe_img"
+      "specialised_h specialised_h specialised_h picOfMe_img picOfMe_img"
+      "blockquote blockquote blockquote blockquote blockquote"
+      "getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton";
+
+    .welcomeName_container {
+      .welcome_h {
+        font-size: 1.8rem;
+      }
+
+      .name_h {
+        font-size: 2.8rem;
+      }
+
+      .name_h {
+        font-size: 3.3rem;
+      }
+    }
+
+    .role_h_container {
+      align-self: center;
+    }
+
+    .specialised_h_container {
+      justify-self: center;
+
+      .specialised_h {
+        font-size: 0.9rem;
+      }
+    }
+
+    .blockquote_p_container {
+      align-self: flex-end;
+      justify-self: center;
+
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .getInTouchButtonContainer {
+      margin-top: -1rem;
+    }
+  } // breakpoint of > 768px
 
   // * breakpint of > 992px
-  // @media screen and (min-width: 992px) {
-  // } // breakpoint of > 992px
+  @media screen and (min-width: 992px) {
+    grid-template-rows: 7rem 6rem 5.5rem 3.5rem 1fr;
+    padding: 2.5rem;
+
+    .welcomeName_container {
+      justify-self: flex-start;
+
+      .welcome_h {
+        font-size: 2.3rem;
+      }
+
+      .name_h {
+        font-size: 3.3rem;
+      }
+    }
+
+    .role_h_container {
+      .role_h {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .specialised_h_container {
+      .specialised_h {
+        font-size: 1rem;
+      }
+    }
+
+    .blockquote_p_container {
+      align-self: center;
+      font-size: 1.2rem;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .getInTouchButtonContainer {
+      margin-top: 0rem;
+    }
+  } // breakpoint of > 992px
 
   // * breakpint of > 1200px
-  // @media screen and (min-width: 1200px) {
-  // } // breakpoint of > 1200px
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(7, 1fr);
+    // grid-template-rows: 7rem 5rem 3.5rem 6.5rem 1fr;
+    grid-template-rows: 7rem 6rem 3.5rem 6.5rem 1fr;
+    grid-template-areas:
+      "welcomeName welcomeName welcomeName welcomeName welcomeName picOfMe_img picOfMe_img"
+      "role_h role_h role_h role_h role_h picOfMe_img picOfMe_img"
+      "specialised_h specialised_h specialised_h specialised_h specialised_h picOfMe_img picOfMe_img"
+      "blockquote blockquote blockquote blockquote blockquote blockquote blockquote"
+      "getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton";
+
+    .welcomeName_container {
+      .welcome_h {
+        font-size: 2.3rem;
+      }
+
+      .name_h {
+        font-size: 4.3rem;
+      }
+    }
+
+    .role_h_container {
+      align-self: flex-end;
+
+      .role_h {
+        font-size: 2rem;
+      }
+    }
+
+    .specialised_h_container {
+      align-self: flex-end;
+
+      .specialised_h {
+        font-size: 1.1rem;
+      }
+    }
+
+    .blockquote_p_container {
+      align-self: center;
+
+      // margin-bottom: 3rem;
+    }
+  } // breakpoint of > 1200px
 
   // * breakpint of > 1400px
   // @media screen and (min-width: 1400px) {
