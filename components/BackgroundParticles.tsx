@@ -22,25 +22,33 @@ export default function BackgroundParticles({}: Props) {
     // const mediaQuery30 = window.matchMedia("(min-width: 360px)");
     const mediaQuery500 = window.matchMedia("(min-width: 500px)");
     const mediaQuery576 = window.matchMedia("(min-width: 576px)");
+    const mediaQuery992 = window.matchMedia("(min-width: 992px)");
 
     if (mediaQuery500.matches) {
       setLinkDistance(150);
       setParticlesNumberLimit(40);
-      setParticlesNumberValue(30);
+      setParticlesNumberValue(29);
       setMotionReduceFactor(9);
-      console.log("iK 500");
+      // console.log("iK 500");
     }
 
     if (mediaQuery576.matches) {
-      setLinkDistance(185);
+      setLinkDistance(180);
+      setParticlesNumberLimit(43);
+      setMotionReduceFactor(7);
+      // console.log("iK 576");
+    }
+
+    if (mediaQuery992.matches) {
+      setLinkDistance(200);
       setParticlesNumberLimit(45);
       setMotionReduceFactor(7);
-      console.log("iK 576");
+      // console.log("iK 992");
     }
   }, []);
 
   const particlesInit = async (main: Main) => {
-    console.log(main);
+    // console.log(main);
 
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready

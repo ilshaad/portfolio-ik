@@ -25,9 +25,12 @@ const Contact_content = dynamic(() => import("./Contact_content"), {
   suspense: true,
 });
 
-type Props = { slidingCssClassName: string };
+type Props = { slidingCssClassName: string; setSlidingCssClassName: Function };
 
-export default function SlidingContents({ slidingCssClassName }: Props) {
+export default function SlidingContents({
+  slidingCssClassName,
+  setSlidingCssClassName,
+}: Props) {
   const {
     SlidingContents_component,
     SlidingContent_container,
@@ -69,7 +72,7 @@ export default function SlidingContents({ slidingCssClassName }: Props) {
           className={`${sliderItems} ${landingSlide} ${(() =>
             goToCorrectSlideWithCss("LandingSlideCss"))()}`}
         >
-          <Landing_content />
+          <Landing_content setSlidingCssClassName={setSlidingCssClassName} />
         </div>
 
         {/* About slide content */}

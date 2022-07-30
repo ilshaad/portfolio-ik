@@ -12,7 +12,7 @@ export default function Footer({}: Props) {
 
   return (
     <footer id="Footer" className={`${Footer_component} text-center`}>
-      <Badge pill className={`${footerBadge}`}>
+      <Badge className={`${footerBadge}`}>
         &#169;{currentYear} Ilshaad Kheerdali
       </Badge>
     </footer>

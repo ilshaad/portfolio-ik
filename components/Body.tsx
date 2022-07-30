@@ -13,8 +13,6 @@ export default function Body({}: Props) {
 
   return (
     <div id="divBody">
-      
-
       {/* <BackgroundParticles /> */}
 
       <Header setSlidingCssClassName={setSlidingCssClassName} />
@@ -27,7 +25,10 @@ export default function Body({}: Props) {
             : ""
         }
       >
-        <SlidingContents slidingCssClassName={slidingCssClassName} />
+        <SlidingContents
+          slidingCssClassName={slidingCssClassName}
+          setSlidingCssClassName={setSlidingCssClassName}
+        />
       </main>
 
       <Footer />

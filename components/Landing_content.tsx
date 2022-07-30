@@ -16,9 +16,11 @@ import Image from "next/image";
 // Always follow your heart but remember to bring your brain along.
 // <Get in Touch>
 
-type Props = {};
+type Props = {
+  setSlidingCssClassName: Function;
+};
 
-export default function Landing_content({}: Props) {
+export default function Landing_content({ setSlidingCssClassName }: Props) {
   const {
     blockquote_p_container,
     role_h_container,
@@ -32,6 +34,10 @@ export default function Landing_content({}: Props) {
     welcomeName_container,
     picOfMe_img,
   } = styles;
+
+  const goToSlide = (cssClassName: string) => {
+    setSlidingCssClassName(cssClassName);
+  };
 
   return (
     <Container fluid className={`${LandingPage_component}`}>
@@ -66,8 +72,16 @@ export default function Landing_content({}: Props) {
       </blockquote>
 
       <div className={`${getInTouchButtonContainer} text-center`}>
-        <Button>Get in touch</Button>
+        <Button
+          onClick={() => {
+            goToSlide("ContactSlideCss");
+          }}
+        >
+          Get in touch
+        </Button>
       </div>
+
+      <br />
     </Container>
   );
 }

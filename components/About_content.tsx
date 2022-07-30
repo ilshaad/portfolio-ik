@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../styles/components/About.module.scss";
+import styles from "../styles/components/About_content.module.scss";
 
 type Props = {};
 
@@ -16,11 +16,11 @@ export default function About_content({}: Props) {
   return (
     <div className={`${About_component}`}>
       <h2>About me</h2>
-
       <p>My name is Ilshaad Kheerdali, a humble, but ravenous coder.</p>
       <p>
-        I am skilled at building beautiful, sleek, fully functional web
-        applications using JavaScript, React, TypeScript and Node.js.
+        I am skilled at building beautiful, sleek, functional web applications
+        using <span>JavaScript</span>, <span>React</span>,{" "}
+        <span>TypeScript</span> and <span>Node.js</span>.
       </p>
       <p>
         I have been coding for {numberOfYearsCoding} years now and have become
@@ -34,6 +34,7 @@ export default function About_content({}: Props) {
         I am devoted to becoming the best coder I can be because coding indulges
         me.
       </p>
+      <br />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 $primary: #004aad;
-// $primary: #004aad;
 $secondary: #ffffff;
 
 $light-background: #f1f8ff;
@@ -19,12 +18,8 @@ $gradientBackground: linear-gradient(
   max-width: 100%;
   min-height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0.2rem;
   display: flex;
-  // flex: 1;
-  // justify-content: center;
-  // align-items: center;
-  // min-height: 100%;
   background-color: rgb(221, 220, 255);
 
   .SlidingContent_container {
@@ -32,20 +27,9 @@ $gradientBackground: linear-gradient(
     max-width: 100%;
     min-height: 100%;
     padding: 0;
-    // margin: 0;
-    // align-self: center;
-    // width: 400px !important;
     position: relative;
     overflow: hidden;
-    // display: flex;
-    // flex-wrap: nowrap;
     background-color: brown;
-    // color: black;
-    // transition: transform 1s;
-    //
-    // &:hover {
-    // transform: translateX(-100%);
-    // }
   }
 
   .sliderItems {
@@ -55,25 +39,18 @@ $gradientBackground: linear-gradient(
     height: 100%;
     overflow-y: auto;
 
-    // transition: transform 0.5s;
-    // overflow: hidden;
-    // display: inline;
-    // flex-wrap: nowrap;
-
-    // &:not(:nth-child(1)) {
-    //   transform: translateX(100%);
-    // }
-
-    // &:hover:not(:nth-child(1)) {
-    //   transform: translateX(-0%);
-    // }
-    // &:hover {
-    //   transform: translateX(-100%);
-    // }
-
-    background-color: darkgrey;
+    background-color: darkgrey; // ! D
     border: $primary solid 1px;
     padding: 9px 0;
+
+    // * to all slide content component directly so they all have roughly the same look
+    & > * {
+      width: inherit;
+      height: 100%;
+      padding: 0.5rem;
+      color: $primary;
+      background-color: white;
+    }
   }
 
   .landingSlide {
@@ -82,19 +59,20 @@ $gradientBackground: linear-gradient(
 
     background-color: white;
   }
-  // &:hover .landingSlide {
-  // transform: translateX(-100%);
-  // }
 
   .aboutSlide {
     transform: translateX(100%);
     transition: transform 1s ease;
 
-    background-color: wheat;
+    background-color: white;
   }
-  // &:hover .aboutSlide {
-  // transform: translateX(0%);
-  // }
+
+  .techstackSlide {
+    transform: translateX(100%);
+    transition: transform 1s ease;
+
+    background-color: white;
+  }
 
   .projectSlide {
     transform: translateX(100%);
@@ -103,31 +81,12 @@ $gradientBackground: linear-gradient(
     background-color: wheat;
   }
 
-  // &:hover .projectSlide {
-  // transform: translateX(0%);
-  // }
-
-  .techstackSlide {
-    transform: translateX(100%);
-    transition: transform 1s ease;
-
-    background-color: wheat;
-  }
-
-  // &:hover .techstackSlide {
-  // transform: translateX(0%);
-  // }
-
   .contactSlide {
     transform: translateX(100%);
     transition: transform 1s ease;
 
     background-color: wheat;
   }
-
-  // &:hover .contactSlide {
-  // transform: translateX(0%);
-  // }
 
   // * breakpint of > 360px
   // @media screen and (min-width: 360px) {
@@ -138,20 +97,35 @@ $gradientBackground: linear-gradient(
   // } // breakpoint of > 400px
 
   // * breakpint of > 500px
-  // @media screen and (min-width: 500px) {
-  // } // breakpoint of > 500px
+  @media screen and (min-width: 500px) {
+    .sliderItems {
+      & > * {
+        padding: 1rem;
+      }
+    }
+  } // breakpoint of > 500px
 
   // * breakpint of > 576px
-  // @media screen and (min-width: 576px) {
-  // } // breakpoint of > 576px
+  @media screen and (min-width: 576px) {
+    .sliderItems {
+      & > * {
+        padding: 1.5rem;
+      }
+    }
+  } // breakpoint of > 576px
 
   // * breakpint of > 768px
   // @media screen and (min-width: 768px) {
   // } // breakpoint of > 768px
 
   // * breakpint of > 992px
-  // @media screen and (min-width: 992px) {
-  // } // breakpoint of > 992px
+  @media screen and (min-width: 992px) {
+    .sliderItems {
+      & > * {
+        padding: 2.5rem;
+      }
+    }
+  } // breakpoint of > 992px
 
   // * breakpint of > 1200px
   // @media screen and (min-width: 1200px) {
@@ -160,25 +134,4 @@ $gradientBackground: linear-gradient(
   // * breakpint of > 1400px
   // @media screen and (min-width: 1400px) {
   // } // breakpoint of > 1400px
-
-  // BOOTSTRAP VERSION FROM 576px
-  // * breakpoint of > 576px (sm)
-  //  @include media-breakpoint-up(sm) {
-  //  } //END breakpoint of > 576px (sm)
-
-  // * breakpoint of > 768px (md)
-  //  @include media-breakpoint-up(md) {
-  //  } //END breakpoint of > 768px (md)
-
-  // * breakpoint of > 992 (lg)
-  //  @include media-breakpoint-up(lg) {
-  //  } //END breakpoint of > 992 (lg)
-
-  // * breakpoint of > 1200px (xl)
-  //  @include media-breakpoint-up(xl) {
-  //  } //END breakpoint of 1200px
-
-  // * breakpoint of > 1400px (xxl)
-  //  @include media-breakpoint-up(xxl) {
-  //  } //END breakpoint of 1400px
 }

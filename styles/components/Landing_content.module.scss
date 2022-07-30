@@ -1,5 +1,4 @@
 $primary: #004aad;
-// $primary: #004aad;
 $secondary: #ffffff;
 
 $light-background: #f1f8ff;
@@ -7,19 +6,17 @@ $light-background: #f1f8ff;
 $hover-colours: #00ffd4;
 
 $gradientBackground: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 74, 173, 1) 54%,
-    rgba(3, 176, 212, 1) 100%
-  ),
-  $primary;
-
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(0, 74, 173, 1) 54%,
+  rgba(3, 176, 212, 1) 100%
+);
 // font-family: 'Edu TAS Beginner', cursive;
 
 .LandingPage_component {
   // iK? begin from 320px & up for starting breakpoint
-  width: inherit;
-  height: 100%;
+  // width: inherit;
+  // height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 9rem 3rem 4rem 5rem 1fr;
@@ -30,8 +27,8 @@ $gradientBackground: linear-gradient(
     "specialised_h specialised_h"
     "blockquote blockquote"
     "getInTouchButton getInTouchButton";
-  padding: 0.5rem;
-  color: $primary;
+  // padding: 0.5rem;
+  // color: $primary;
 
   // border: red 1px solid;
 
@@ -46,7 +43,7 @@ $gradientBackground: linear-gradient(
 
     .name_h {
       display: inline-block;
-      background: $gradientBackground;
+      background: $gradientBackground, $primary;
       background-clip: text;
       color: transparent;
       font-size: 2rem;
@@ -97,7 +94,13 @@ $gradientBackground: linear-gradient(
     grid-area: getInTouchButton;
 
     button {
-      background: $gradientBackground;
+      background: $gradientBackground, $primary;
+      border-radius: 15%;
+
+      &:hover {
+        // background: $primary;
+        color: $hover-colours;
+      }
     }
   }
 
@@ -136,7 +139,7 @@ $gradientBackground: linear-gradient(
   // * breakpint of > 500px
   @media screen and (min-width: 500px) {
     grid-template-rows: 13.5rem 3rem 4rem 4rem 1fr;
-    padding: 1rem;
+    // padding: 1rem;
 
     .welcomeName_container {
       padding-left: 1.5rem;
@@ -173,7 +176,7 @@ $gradientBackground: linear-gradient(
       "specialised_h specialised_h specialised_h specialised_h specialised_h"
       "blockquote blockquote blockquote blockquote blockquote"
       "getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton";
-    padding: 1.5rem;
+    // padding: 1.5rem;
 
     .welcomeName_container {
       align-self: flex-start;
@@ -254,7 +257,7 @@ $gradientBackground: linear-gradient(
   // * breakpint of > 992px
   @media screen and (min-width: 992px) {
     grid-template-rows: 7rem 6rem 5.5rem 3.5rem 1fr;
-    padding: 2.5rem;
+    // padding: 2.5rem;
 
     .welcomeName_container {
       justify-self: flex-start;
@@ -314,6 +317,7 @@ $gradientBackground: linear-gradient(
 
       .name_h {
         font-size: 4.3rem;
+        margin-left: 1rem;
       }
     }
 
@@ -341,6 +345,11 @@ $gradientBackground: linear-gradient(
   } // breakpoint of > 1200px
 
   // * breakpint of > 1400px
-  // @media screen and (min-width: 1400px) {
-  // } // breakpoint of > 1400px
+  @media screen and (min-width: 1400px) {
+    .blockquote_p_container {
+      p {
+        margin-left: -111px;
+      }
+    }
+  } // breakpoint of > 1400px
 }
