@@ -1,11 +1,7 @@
 $primary: #004aad;
-// $primary: #004aad;
 $secondary: #ffffff;
-
 $light-background: #f1f8ff;
-
 $hover-colours: #00ffd4;
-
 $gradientBackground: linear-gradient(
   90deg,
   rgba(2, 0, 36, 1) 0%,
@@ -13,12 +9,19 @@ $gradientBackground: linear-gradient(
   rgba(3, 176, 212, 1) 100%
 );
 
-.Footer_component {
-  // iK? begin from 320px & up for starting breakpoint
-  .footerBadge {
+// font-family: 'Edu TAS Beginner', cursive;
+// font-family: 'Mukta', sans-serif;
+
+// iK? begin from 320px & up for starting breakpoint
+.Projects_component {
+  width: inherit;
+
+  h2 {
     background: $gradientBackground, $primary;
-    color: white;
-    border-radius: 3% / 50%;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 600;
   }
 
   // * breakpint of > 360px
@@ -52,25 +55,4 @@ $gradientBackground: linear-gradient(
   // * breakpint of > 1400px
   // @media screen and (min-width: 1400px) {
   // } // breakpoint of > 1400px
-
-  // BOOTSTRAP VERSION FROM 576px
-  // * breakpoint of > 576px (sm)
-  //  @include media-breakpoint-up(sm) {
-  //  } //END breakpoint of > 576px (sm)
-
-  // * breakpoint of > 768px (md)
-  //  @include media-breakpoint-up(md) {
-  //  } //END breakpoint of > 768px (md)
-
-  // * breakpoint of > 992 (lg)
-  //  @include media-breakpoint-up(lg) {
-  //  } //END breakpoint of > 992 (lg)
-
-  // * breakpoint of > 1200px (xl)
-  //  @include media-breakpoint-up(xl) {
-  //  } //END breakpoint of 1200px
-
-  // * breakpoint of > 1400px (xxl)
-  //  @include media-breakpoint-up(xxl) {
-  //  } //END breakpoint of 1400px
 }

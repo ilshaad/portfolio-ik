@@ -1,0 +1,213 @@
+$primary: #004aad;
+$secondary: #ffffff;
+$light-background: #f1f8ff;
+$hover-colours: #00ffd4;
+$gradientBackground: linear-gradient(
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(0, 74, 173, 1) 54%,
+  rgba(3, 176, 212, 1) 100%
+);
+
+// font-family: 'Edu TAS Beginner', cursive;
+// font-family: 'Mukta', sans-serif;
+
+// iK? begin from 320px & up for starting breakpoint
+.ProjectCard_component {
+  border: $primary solid 1px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+
+  .titleHeader {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .cardBody {
+    margin: auto;
+    text-align: center;
+
+    .mediaContainer {
+      // border: 1px $primary solid;
+
+      // width: 960px;
+      // height: 540px;
+      width: 158px;
+      height: 88.875px;
+      display: inline-block;
+      // margin: auto;
+
+      iframe {
+        // width: 100%;
+        // height: auto;
+        // width: 960px;
+        // height: 540px;
+        width: 158px;
+        height: 88.875px;
+      }
+    }
+
+    .summaryText {
+      color: black;
+      text-align: start;
+      font-size: 0.9rem;
+      // padding: 0.2rem;
+      padding-left: 0.3rem;
+      padding-right: 0.3rem;
+    }
+
+    .projectButtonsContainer {
+      .projectButtons {
+        background: $gradientBackground, $primary;
+        // border-radius: 8% / 50%;
+        color: white;
+        margin: -0.5rem 0.1rem 0.1rem 0.1rem;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        height: 3rem;
+
+        &:hover {
+          color: $hover-colours;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        &:visited {
+          color: white;
+        }
+
+        a:hover {
+          color: $hover-colours;
+        }
+      }
+    }
+  }
+
+  // * breakpint of > 360px
+  @media screen and (min-width: 360px) {
+    .cardBody {
+      .mediaContainer {
+        width: 184px;
+        height: 110.7px;
+
+        iframe {
+          width: 184px;
+          height: 110.7px;
+        }
+      }
+    }
+  } // breakpoint of > 360px
+
+  // * breakpint of > 400px
+  @media screen and (min-width: 400px) {
+    .cardBody {
+      .mediaContainer {
+        width: 209px;
+        height: 124.762px;
+
+        iframe {
+          width: 209px;
+          height: 124.762px;
+        }
+      }
+
+      .summaryText {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+      }
+
+      .projectButtonsContainer {
+        .projectButtons {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  } // breakpoint of > 400px
+
+  // * breakpint of > 500px
+  @media screen and (min-width: 500px) {
+    .cardBody {
+      .mediaContainer {
+        width: 268px;
+        height: 157.95px;
+
+        iframe {
+          width: 268px;
+          height: 157.95px;
+        }
+      }
+
+      .summaryText {
+        padding: 0 1.4rem;
+      }
+
+      .projectButtonsContainer {
+        padding: 0 1.5rem;
+      }
+    }
+  } // breakpoint of > 500px
+
+  // * breakpint of > 576px
+  @media screen and (min-width: 576px) {
+    .titleHeader {
+      font-size: 1.1rem;
+    }
+
+    .cardBody {
+      .mediaContainer {
+        width: 252px;
+        height: 148.95px;
+
+        iframe {
+          width: 252px;
+          height: 148.95px;
+        }
+      }
+
+      .projectButtonsContainer {
+        padding: 0 1.6rem;
+      }
+    }
+  } // breakpoint of > 576px
+
+  // * breakpint of > 768px
+  @media screen and (min-width: 768px) {
+    .cardBody {
+      .mediaContainer {
+        width: 349px;
+        height: 203.512px;
+
+        iframe {
+          width: 349px;
+          height: 203.512px;
+        }
+      }
+    }
+  } // breakpoint of > 768px
+
+  // * breakpint of > 992px
+  @media screen and (min-width: 992px) {
+    .cardBody {
+      .mediaContainer {
+        width: 400px;
+        height: 232.2px;
+
+        iframe {
+          width: 400px;
+          height: 232.2px;
+        }
+      }
+    }
+  } // breakpoint of > 992px
+
+  // * breakpint of > 1200px
+  // @media screen and (min-width: 1200px) {
+  // } // breakpoint of > 1200px
+
+  // * breakpint of > 1400px
+  // @media screen and (min-width: 1400px) {
+  // } // breakpoint of > 1400px
+}

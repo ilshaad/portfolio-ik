@@ -95,7 +95,7 @@ $gradientBackground: linear-gradient(
 
     button {
       background: $gradientBackground, $primary;
-      border-radius: 15%;
+      border-radius: 8% / 50%;
 
       &:hover {
         // background: $primary;

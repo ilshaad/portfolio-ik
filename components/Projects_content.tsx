@@ -1,12 +1,18 @@
+// * create show & close useState >> for each project you will need to use the <ProjectCard/> component >>  create a modal for it to include tech infor
+
 import dynamic from "next/dynamic";
 import { Suspense, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-import styles from "../styles/components/Projects.module.scss";
-import BugTrackerModal from "./ProjectCards/BugTrackerModal";
+import styles from "../styles/components/Projects_content.module.scss";
 import ProjectCard from "./ProjectCards/ProjectCard";
 
-// lazy loading on bug tracker youtube video
+// bug tracker project
+const BugTrackerModal = dynamic(
+  () => import("./ProjectCards/BugTrackerModal"),
+  { suspense: true }
+);
+
 const BugTrackerYoutubeEmbedCode = dynamic(
   () => import("./ProjectCards/BugTrackerYoutubeEmbedCode"),
   {
@@ -14,9 +20,19 @@ const BugTrackerYoutubeEmbedCode = dynamic(
   }
 );
 
-// import bugtrackerImg from "../public/projectsPreview/bugTrackerSite.jpg";
+// blog site
+const BlogSiteModal = dynamic(() => import("./ProjectCards/BlogSiteModal"), {
+  suspense: true,
+});
 
-// import jssvg from '../public/'
+import blogPreviewImg from "../public/projectsPreview/ilshaadBlogSite.jpg";
+
+// portfolio site
+const PortfolioModal = dynamic(() => import("./ProjectCards/PortfolioModal"), {
+  suspense: true,
+});
+
+import PortfolioPreviewImg from "../public/projectsPreview/ilshaadBlogSite.jpg";
 
 type Props = {};
 
@@ -28,14 +44,24 @@ export default function Projects_content({}: Props) {
   const closeBugTrackerModal = () => setShowBugTrackerModal(false);
   const openBugTrackerModal = () => setShowBugTrackerModal(true);
 
+  // blog project modal
+  const [showBlogModal, setShowBlogModal] = useState(false);
+  const closeBlogModal = () => setShowBlogModal(false);
+  const openBlogModal = () => setShowBlogModal(true);
+
+  // Portfolio project modal
+  const [showPortfolioModal, setShowPortfolioModal] = useState(false);
+  const closePortfolioModal = () => setShowPortfolioModal(false);
+  const openPortfolioModal = () => setShowPortfolioModal(true);
+
   return (
     <div className={`${Projects_component}`}>
       <h2>My projects</h2>
       <Container>
         <Row>
-          <Col>
-            {/* ensure image sizew is 960 x 540im */}
-            {/* bug tracker app */}
+          {/* bug tracker app */}
+          {/* ensure image size is w960 x h540 */}
+          <Col xs={12}>
             <ProjectCard
               handleShow={openBugTrackerModal}
               title="Bug tracking web application system"
@@ -52,13 +78,64 @@ export default function Projects_content({}: Props) {
               projectGitRepoUrl="https://github.com/RechadSalma/bug-tracker-ik"
             />
           </Col>
+
+          {/* blog app */}
+          {/* ensure image size is w960 x h540 */}
+          <Col xs={12}>
+            <ProjectCard
+              handleShow={openBlogModal}
+              title="Blog site"
+              summary="My personal blog site, to share and help others on certain web sticky points.  I implemented testing and API’s within the Next.js template."
+              image={blogPreviewImg}
+              imageAlt="ilshaad blog site preview"
+              // youtubeIframe={
+              //   <Suspense fallback={`Loading...`}>
+              //     <BlogYoutubeEmbedCode />
+              //   </Suspense>
+              // }
+              projectUrl="https://www.ilshaadblog.tk/"
+              projectGitRepoUrl="https://github.com/RechadSalma/my-blog-site-ik"
+            />
+          </Col>
+
+          {/* Portfolio */}
+          {/* ensure image size is w960 x h540 */}
+          <Col xs={12}>
+            <ProjectCard
+              handleShow={openPortfolioModal}
+              title="Portfolio site"
+              summary="My web developer portfolio site. Shows a bit of who I am and what I am about."
+              image={PortfolioPreviewImg}
+              imageAlt="ilshaad Portfolio site preview"
+              // youtubeIframe={
+              //   <Suspense fallback={`Loading...`}>
+              //     <PortfolioYoutubeEmbedCode />
+              //   </Suspense>
+              // }
+              projectUrl="https://harmonious-paprenjak-811e95.netlify.app/"
+              projectGitRepoUrl="https://github.com/RechadSalma/portfolio-ik"
+            />
+          </Col>
         </Row>
       </Container>
 
-      <BugTrackerModal
-        show={showBugTrackerModal}
-        handleClose={closeBugTrackerModal}
-      />
+      <Suspense fallback={``}>
+        <BugTrackerModal
+          show={showBugTrackerModal}
+          handleClose={closeBugTrackerModal}
+        />
+      </Suspense>
+
+      <Suspense fallback={``}>
+        <BlogSiteModal show={showBlogModal} handleClose={closeBlogModal} />
+      </Suspense>
+
+      <Suspense fallback={``}>
+        <PortfolioModal
+          show={showPortfolioModal}
+          handleClose={closePortfolioModal}
+        />
+      </Suspense>
     </div>
   );
 }

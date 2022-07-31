@@ -1,11 +1,7 @@
 $primary: #004aad;
-// $primary: #004aad;
 $secondary: #ffffff;
-
 $light-background: #f1f8ff;
-
 $hover-colours: #00ffd4;
-
 $gradientBackground: linear-gradient(
   90deg,
   rgba(2, 0, 36, 1) 0%,
@@ -13,12 +9,34 @@ $gradientBackground: linear-gradient(
   rgba(3, 176, 212, 1) 100%
 );
 
-.Footer_component {
-  // iK? begin from 320px & up for starting breakpoint
-  .footerBadge {
+// font-family: 'Edu TAS Beginner', cursive;
+// font-family: 'Mukta', sans-serif;
+
+// iK? begin from 320px & up for starting breakpoint
+.AllProjectModals {
+  padding: 0 !important;
+
+  h2 {
     background: $gradientBackground, $primary;
-    color: white;
-    border-radius: 3% / 50%;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  h4 {
+    color: $primary;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+  }
+
+  .bottomCloseButton {
+    background: $gradientBackground, $primary;
+    border-radius: 8% / 50%;
   }
 
   // * breakpint of > 360px

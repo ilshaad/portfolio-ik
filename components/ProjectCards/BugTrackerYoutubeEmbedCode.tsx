@@ -7,8 +7,8 @@ type Props = {};
 export default function BugTrackerYoutubeEmbedCode({}: Props) {
   return (
     <iframe
-      width="560"
-      height="315"
+      width="960"
+      height="540"
       src="https://www.youtube.com/embed/UyNLsB-Q8GI"
       title="Bug Tracker app tour - ilshaad"
       frameBorder="0"

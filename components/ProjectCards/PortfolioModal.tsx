@@ -6,7 +6,7 @@ import styles from "../../styles/components/ProjectCards/AllProjectModals.module
 
 type Props = { show: boolean; handleClose: Function };
 
-export default function BugTrackerModal({ show, handleClose }: Props) {
+export default function PortfolioModal({ show, handleClose }: Props) {
   const { AllProjectModals, bottomCloseButton } = styles;
 
   return (
@@ -17,26 +17,20 @@ export default function BugTrackerModal({ show, handleClose }: Props) {
       className={`${AllProjectModals}`}
     >
       <Modal.Header closeButton>
-        <Modal.Title as="h2">Bug tracking web application system</Modal.Title>
+        <Modal.Title as="h2">Portfolio Site</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         {/* feature */}
         <h4>Features:</h4>
         <ListGroup as="ul" variant="flush">
-          <ListGroup.Item as="li">PERN stack build.</ListGroup.Item>
           <ListGroup.Item as="li">
-            Authentication with Auth0, includes in check securities.
+            Implementations of canvas and css animations.
           </ListGroup.Item>
           <ListGroup.Item as="li">
-            Heavy REST API and CRUD operation.
-          </ListGroup.Item>
-          <ListGroup.Item as="li">
-            Stored within PSQL database and Redux state management conjointly.
+            Carefully crafted styles and spacing.
           </ListGroup.Item>
           <ListGroup.Item as="li">Mobile first approach.</ListGroup.Item>
-          <ListGroup.Item as="li">
-            Full CI/CD pipeline, using Docker / Github Actions / Heroku.
-          </ListGroup.Item>
+          <ListGroup.Item as="li">PWA for downloadable app.</ListGroup.Item>
         </ListGroup>
 
         {/* Main technologies */}
@@ -44,12 +38,9 @@ export default function BugTrackerModal({ show, handleClose }: Props) {
         <ListGroup as="ul" variant="flush">
           <ListGroup.Item as="li">React</ListGroup.Item>
           <ListGroup.Item as="li">JavaScript / TypeScript</ListGroup.Item>
-          <ListGroup.Item as="li">Node.js / Express.js</ListGroup.Item>
-          <ListGroup.Item as="li">Redux</ListGroup.Item>
-          <ListGroup.Item as="li">Webpack</ListGroup.Item>
-          <ListGroup.Item as="li">PostgreSQL</ListGroup.Item>
+          <ListGroup.Item as="li">Next.js</ListGroup.Item>
           <ListGroup.Item as="li">SASS / Bootstrap</ListGroup.Item>
-          <ListGroup.Item as="li">Auth0</ListGroup.Item>
+          <ListGroup.Item as="li">PWA</ListGroup.Item>
         </ListGroup>
       </Modal.Body>
       <Modal.Footer className={`border border-0`}>

@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import Link from "next/link";
+
+import styles from "../../styles/components/ProjectCards/ProjectCard.module.scss";
 
 type Props = {
   handleShow: Function;
@@ -25,6 +27,16 @@ export default function ProjectCard({
   projectUrl,
   projectGitRepoUrl,
 }: Props) {
+  const {
+    ProjectCard_component,
+    mediaContainer,
+    titleHeader,
+    summaryText,
+    cardBody,
+    projectButtonsContainer,
+    projectButtons,
+  } = styles;
+
   // if no youtube tour video for the project than display the project image
   const displayYoutubeOrImage = () => {
     if (image && imageAlt) {
@@ -34,8 +46,8 @@ export default function ProjectCard({
           alt={imageAlt}
           width={960}
           height={540}
-          className={`border border-5 border-primary`}
-          onClick={() => handleShow()}
+          // className={`border border-5 border-primary`}
+          // onClick={() => handleShow()}
         />
       );
     }
@@ -46,28 +58,48 @@ export default function ProjectCard({
   };
 
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card className={`${ProjectCard_component}`}>
       {/* <Card.Img variant="top" src={bugTrackerImg} /> */}
 
-      {/* display the youtube tour video or the project image */}
-      {displayYoutubeOrImage()}
+      <Card.Header>
+        <h4 className={`${titleHeader}`}>{title}</h4>
+      </Card.Header>
 
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{summary}</Card.Text>
-        <Button variant="primary">
-          <Link href={projectUrl} passHref>
-            <a target="_blank">Visit site</a>
-          </Link>
-        </Button>
-        <Button variant="primary">
-          <Link href={projectGitRepoUrl} passHref>
-            <a target="_blank">Github repo</a>
-          </Link>
-        </Button>
-        <Button variant="primary" onClick={() => handleShow()}>
-          Tech info
-        </Button>
+      <Card.Body className={`${cardBody}`}>
+        {/* display the youtube tour video or the project image */}
+        <div className={`${mediaContainer}`}>{displayYoutubeOrImage()}</div>
+
+        <Card.Text className={`${summaryText}`}>{summary}</Card.Text>
+
+        <Container>
+          <Row className={`${projectButtonsContainer}`}>
+            <Col xs={4} className={`p-0`}>
+              <Button className={`${projectButtons}`} size="sm">
+                <Link href={projectUrl} passHref>
+                  <a target="_blank">Visit site</a>
+                </Link>
+              </Button>
+            </Col>
+
+            <Col xs={4} className={`p-0`}>
+              <Button className={`${projectButtons}`} size="sm">
+                <Link href={projectGitRepoUrl} passHref>
+                  <a target="_blank">Github repo</a>
+                </Link>
+              </Button>
+            </Col>
+
+            <Col xs={4} className={`p-0`}>
+              <Button
+                className={`${projectButtons}`}
+                size="sm"
+                onClick={() => handleShow()}
+              >
+                Tech info
+              </Button>
+            </Col>
+          </Row>
+        </Container>
       </Card.Body>
     </Card>
   );

@@ -1,6 +1,3 @@
-// scss module setup
-// @import "../global.scss";
-// @import "../customBootstrap.scss";
 $primary: #004aad;
 $gradientBackground: linear-gradient(
   90deg,
@@ -49,6 +46,7 @@ $hover-colours: #00ffd4;
 
     .mobileNavButton {
       background: $gradientBackground, $primary;
+      // border-radius: 8% / 50%;
     }
 
     .desktopSvgContactLinks {
