@@ -7,19 +7,27 @@ import styles from "../../styles/components/ProjectCards/AllProjectModals.module
 type Props = { show: boolean; handleClose: Function };
 
 export default function PortfolioModal({ show, handleClose }: Props) {
-  const { AllProjectModals, bottomCloseButton } = styles;
+  const {
+    AllProjectModals,
+    bottomCloseButton,
+    modalHeader,
+    modalBody,
+    modalFooter,
+  } = styles;
 
   return (
     <Modal
       show={show}
       onHide={() => handleClose()}
       centered
+      animation={false}
       className={`${AllProjectModals}`}
     >
-      <Modal.Header closeButton>
+      <Modal.Header closeButton className={`${modalHeader}`}>
         <Modal.Title as="h2">Portfolio Site</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+
+      <Modal.Body className={`${modalBody}`}>
         {/* feature */}
         <h4>Features:</h4>
         <ListGroup as="ul" variant="flush">
@@ -43,7 +51,8 @@ export default function PortfolioModal({ show, handleClose }: Props) {
           <ListGroup.Item as="li">PWA</ListGroup.Item>
         </ListGroup>
       </Modal.Body>
-      <Modal.Footer className={`border border-0`}>
+
+      <Modal.Footer className={`${modalFooter}`}>
         <Button
           onClick={() => handleClose()}
           className={`${bottomCloseButton}`}

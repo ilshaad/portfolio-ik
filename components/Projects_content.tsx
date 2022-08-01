@@ -12,6 +12,7 @@ const BugTrackerModal = dynamic(
   () => import("./ProjectCards/BugTrackerModal"),
   { suspense: true }
 );
+// import BugTrackerModal from "./ProjectCards/BugTrackerModal";
 
 const BugTrackerYoutubeEmbedCode = dynamic(
   () => import("./ProjectCards/BugTrackerYoutubeEmbedCode"),
@@ -24,6 +25,7 @@ const BugTrackerYoutubeEmbedCode = dynamic(
 const BlogSiteModal = dynamic(() => import("./ProjectCards/BlogSiteModal"), {
   suspense: true,
 });
+// import BlogSiteModal from "./ProjectCards/BlogSiteModal";
 
 import blogPreviewImg from "../public/projectsPreview/ilshaadBlogSite.jpg";
 
@@ -31,6 +33,7 @@ import blogPreviewImg from "../public/projectsPreview/ilshaadBlogSite.jpg";
 const PortfolioModal = dynamic(() => import("./ProjectCards/PortfolioModal"), {
   suspense: true,
 });
+// import PortfolioModal from "./ProjectCards/PortfolioModal";
 
 import PortfolioPreviewImg from "../public/projectsPreview/ilshaadBlogSite.jpg";
 
@@ -65,7 +68,7 @@ export default function Projects_content({}: Props) {
             <ProjectCard
               handleShow={openBugTrackerModal}
               title="Bug tracking web application system"
-              summary="I created this fully functional bug tracker. It allows developers to
+              summary="I created this fully functional bug tracker system. It allows developers to
               report defects within developing projects."
               // image={bugtrackerImg}
               // imageAlt="Bug Tracker app preview"
@@ -125,10 +128,15 @@ export default function Projects_content({}: Props) {
           handleClose={closeBugTrackerModal}
         />
       </Suspense>
+      {/* <BugTrackerModal
+        show={showBugTrackerModal}
+        handleClose={closeBugTrackerModal}
+      /> */}
 
       <Suspense fallback={``}>
         <BlogSiteModal show={showBlogModal} handleClose={closeBlogModal} />
       </Suspense>
+      {/* <BlogSiteModal show={showBlogModal} handleClose={closeBlogModal} /> */}
 
       <Suspense fallback={``}>
         <PortfolioModal
@@ -136,6 +144,10 @@ export default function Projects_content({}: Props) {
           handleClose={closePortfolioModal}
         />
       </Suspense>
+      {/* <PortfolioModal
+        show={showPortfolioModal}
+        handleClose={closePortfolioModal}
+      /> */}
     </div>
   );
 }

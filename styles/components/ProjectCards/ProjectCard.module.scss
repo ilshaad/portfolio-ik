@@ -50,7 +50,7 @@ $gradientBackground: linear-gradient(
 
     .summaryText {
       color: black;
-      text-align: start;
+      text-align: center;
       font-size: 0.9rem;
       // padding: 0.2rem;
       padding-left: 0.3rem;
@@ -103,6 +103,8 @@ $gradientBackground: linear-gradient(
 
   // * breakpint of > 400px
   @media screen and (min-width: 400px) {
+    margin-bottom: 1.25rem;
+
     .cardBody {
       .mediaContainer {
         width: 209px;
@@ -152,6 +154,8 @@ $gradientBackground: linear-gradient(
 
   // * breakpint of > 576px
   @media screen and (min-width: 576px) {
+    margin-bottom: 1.5rem;
+
     .titleHeader {
       font-size: 1.1rem;
     }
@@ -185,11 +189,24 @@ $gradientBackground: linear-gradient(
           height: 203.512px;
         }
       }
+
+      .projectButtonsContainer {
+        .projectButtons {
+          padding: revert;
+          height: 2rem;
+        }
+      }
     }
   } // breakpoint of > 768px
 
   // * breakpint of > 992px
   @media screen and (min-width: 992px) {
+    margin-bottom: 1.75rem;
+
+    .titleHeader {
+      font-size: 1.2rem;
+    }
+
     .cardBody {
       .mediaContainer {
         width: 400px;
@@ -200,14 +217,48 @@ $gradientBackground: linear-gradient(
           height: 232.2px;
         }
       }
+
+      .projectButtonsContainer {
+        .projectButtons {
+          width: 78px;
+        }
+      }
     }
   } // breakpoint of > 992px
 
   // * breakpint of > 1200px
-  // @media screen and (min-width: 1200px) {
-  // } // breakpoint of > 1200px
+  @media screen and (min-width: 1200px) {
+    .titleHeader {
+      font-size: 1.3rem;
+    }
+    .cardBody {
+      .summaryText {
+        font-size: 1rem;
+      }
+
+      .projectButtonsContainer {
+        padding: 0 6.6rem;
+      }
+    }
+  } // breakpoint of > 1200px
 
   // * breakpint of > 1400px
-  // @media screen and (min-width: 1400px) {
-  // } // breakpoint of > 1400px
+  @media screen and (min-width: 1400px) {
+    margin-bottom: 2rem;
+
+    .titleHeader {
+      font-size: 1.4rem;
+    }
+
+    .cardBody {
+      .projectButtonsContainer {
+        padding: 0 10.6rem;
+
+        .projectButtons {
+          font-size: 0.9rem;
+          width: 85px;
+        }
+      }
+    }
+  } // breakpoint of > 1400px
 }

@@ -55,7 +55,7 @@ export default function Techstack_content({}: Props) {
               <ListGroup.Item as="li">Responsive design</ListGroup.Item>
               <ListGroup.Item as="li">SASS / SCSS</ListGroup.Item>
               <ListGroup.Item as="li">
-                Bootstrap / React-bootstrap
+                Bootstrap / React-Bootstrap
               </ListGroup.Item>
             </ListGroup>
           </Col>

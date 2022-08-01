@@ -6,9 +6,13 @@ import * as yup from "yup";
 import { Formik } from "formik";
 import { Button, Form } from "react-bootstrap";
 
+import styles from "../styles/components/ContactForm.module.scss";
+
 type Props = {};
 
 export default function ContactForm({}: Props) {
+  const { ContactForm_component, formControl, errorMessage } = styles;
+
   const router = useRouter();
 
   // handle validation from Yum
@@ -112,6 +116,7 @@ export default function ContactForm({}: Props) {
             action="/?success=true"
             // data-netlify="true"
             // netlify-honeypot="bot-field"
+            className={`${ContactForm_component}`}
           >
             <input
               type="hidden"
@@ -133,10 +138,11 @@ export default function ContactForm({}: Props) {
                 onChange={handleChange}
                 isInvalid={!!errors.name}
                 placeholder="Enter your name"
+                className={`${formControl}`}
               />
               {/* will display to user their input in the textarea is invalid */}
               <Form.Control.Feedback type="invalid">
-                {errors.name}
+                <div className={`${errorMessage}`}>{errors.name}</div>
               </Form.Control.Feedback>
             </Form.Group>
 
@@ -153,10 +159,11 @@ export default function ContactForm({}: Props) {
                 onChange={handleChange}
                 isInvalid={!!errors.email}
                 placeholder="Enter your email"
+                className={`${formControl}`}
               />
               {/* will display to user their input in the textarea is invalid */}
               <Form.Control.Feedback type="invalid">
-                {errors.email}
+                <div className={`${errorMessage}`}>{errors.email}</div>
               </Form.Control.Feedback>
             </Form.Group>
 
@@ -173,14 +180,15 @@ export default function ContactForm({}: Props) {
                 onChange={handleChange}
                 isInvalid={!!errors.message}
                 placeholder="Enter your message"
+                className={`${formControl}`}
               />
               {/* will display to user their input in the textarea is invalid */}
               <Form.Control.Feedback type="invalid">
-                {errors.message}
+                <div className={`${errorMessage}`}>{errors.message}</div>
               </Form.Control.Feedback>
             </Form.Group>
 
-            <Button type="submit">submit message</Button>
+            <Button type="submit">Submit</Button>
             {/* <Button onClick={() => setShowCreateCommentBox(false)}>Cancel</Button> */}
           </Form>
         )}

@@ -12,56 +12,61 @@ $gradientBackground: linear-gradient(
 // font-family: 'Edu TAS Beginner', cursive;
 // font-family: 'Mukta', sans-serif;
 
-// iK? begin from 320px & up for starting breakpoint
-.AllProjectModals {
-  padding: 0 !important;
+.Contact_content_component {
+  // iK? begin from 320px & up for starting breakpoint
+  width: inherit;
 
-  .modalHeader {
-    border-bottom: none;
-
-    // top right close button
-    button {
-      align-self: flex-start;
-      z-index: 1;
-    }
-
-    h2 {
-      background: $gradientBackground, $primary;
-      background-clip: text;
-      color: transparent;
-      display: inline-block;
-      font-weight: 600;
-    }
+  h2 {
+    background: $gradientBackground, $primary;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 600;
   }
 
-  .modalBody {
-    margin-top: -1rem;
+  p {
+    color: black;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
 
-    h4 {
-      color: $primary;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 0rem;
-    }
+  .svgRowContainer {
+    text-align: center;
 
-    ul {
-      margin-bottom: 1rem;
+    .svgColContainer {
+      align-self: center;
 
-      li {
-        text-align: center;
-        font-size: 0.9rem;
+      .linkedin_container svg,
+      .github_container svg {
+        width: 35px;
+        height: auto;
+        color: $primary;
+
+        &:hover,
+        &:active {
+          transform: scale(1.2);
+        }
+      }
+
+      .resume_container {
+        display: inline-block;
+
+        svg {
+          width: 45px;
+          height: auto;
+          // background-color: red;
+          color: $primary;
+
+          &:hover,
+          &:active {
+            transform: scale(1.2);
+          }
+        }
       }
     }
-  }
 
-  .modalFooter {
-    margin-top: -2.5rem;
-    border: none;
-
-    .bottomCloseButton {
-      background: $gradientBackground, $primary;
-      border-radius: 8% / 50%;
-      z-index: 1;
+    .contactFormContainer {
+      margin: auto;
     }
   }
 
@@ -86,21 +91,8 @@ $gradientBackground: linear-gradient(
   // } // breakpoint of > 768px
 
   // * breakpint of > 992px
-  @media screen and (min-width: 992px) {
-    .modalBody {
-      margin-top: -2rem;
-
-      ul {
-        li {
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .modalFooter {
-      margin-top: -3rem;
-    }
-  } // breakpoint of > 992px
+  // @media screen and (min-width: 992px) {
+  // } // breakpoint of > 992px
 
   // * breakpint of > 1200px
   // @media screen and (min-width: 1200px) {

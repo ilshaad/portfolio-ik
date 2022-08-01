@@ -72,8 +72,8 @@ export default function ProjectCard({
         <Card.Text className={`${summaryText}`}>{summary}</Card.Text>
 
         <Container>
-          <Row className={`${projectButtonsContainer}`}>
-            <Col xs={4} className={`p-0`}>
+          <Row className={`${projectButtonsContainer} justify-content-center`}>
+            <Col xs={4} md={3} className={`p-0`}>
               <Button className={`${projectButtons}`} size="sm">
                 <Link href={projectUrl} passHref>
                   <a target="_blank">Visit site</a>
@@ -81,7 +81,7 @@ export default function ProjectCard({
               </Button>
             </Col>
 
-            <Col xs={4} className={`p-0`}>
+            <Col xs={4} md={3} className={`p-0`}>
               <Button className={`${projectButtons}`} size="sm">
                 <Link href={projectGitRepoUrl} passHref>
                   <a target="_blank">Github repo</a>
@@ -89,7 +89,7 @@ export default function ProjectCard({
               </Button>
             </Col>
 
-            <Col xs={4} className={`p-0`}>
+            <Col xs={4} md={3} className={`p-0`}>
               <Button
                 className={`${projectButtons}`}
                 size="sm"
