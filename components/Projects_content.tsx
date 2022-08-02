@@ -35,7 +35,7 @@ const PortfolioModal = dynamic(() => import("./ProjectCards/PortfolioModal"), {
 });
 // import PortfolioModal from "./ProjectCards/PortfolioModal";
 
-import PortfolioPreviewImg from "../public/projectsPreview/ilshaadBlogSite.jpg";
+import PortfolioPreviewImg from "../public/projectsPreview/portfolioSite.jpg";
 
 type Props = {};
 
@@ -115,7 +115,7 @@ export default function Projects_content({}: Props) {
               //     <PortfolioYoutubeEmbedCode />
               //   </Suspense>
               // }
-              projectUrl="https://harmonious-paprenjak-811e95.netlify.app/"
+              projectUrl="/"
               projectGitRepoUrl="https://github.com/RechadSalma/portfolio-ik"
             />
           </Col>

@@ -39,6 +39,18 @@ $gradientBackground: linear-gradient(
       font-size: 1.3rem;
       font-family: "Edu TAS Beginner", cursive;
       // margin-bottom: 0.2rem;
+
+      animation: welcomeAnimation 1000ms 1 100ms forwards;
+      opacity: 0;
+    }
+
+    @keyframes welcomeAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     .name_h {
@@ -48,6 +60,18 @@ $gradientBackground: linear-gradient(
       color: transparent;
       font-size: 2rem;
       font-family: "Edu TAS Beginner", cursive;
+
+      animation: nameAnimation 3000ms 1 700ms forwards;
+      opacity: 0;
+    }
+
+    @keyframes nameAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
   }
 
@@ -55,6 +79,18 @@ $gradientBackground: linear-gradient(
     grid-area: picOfMe_img;
     display: inline-block;
     width: 100%;
+
+    animation: picAnimation 3800ms 1 1000ms forwards;
+    opacity: 0;
+  }
+
+  @keyframes picAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .role_h_container {
@@ -64,6 +100,18 @@ $gradientBackground: linear-gradient(
     .role_h {
       font-size: 1rem;
       font-weight: 700;
+
+      animation: roleAnimation 2500ms 1 1200ms forwards;
+      opacity: 0;
+    }
+  }
+
+  @keyframes roleAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 
@@ -74,10 +122,22 @@ $gradientBackground: linear-gradient(
     .specialised_h {
       font-size: 0.9rem;
 
+      animation: specialisedAnimation 2500ms 1 1400ms forwards;
+      opacity: 0;
+
       span {
         font-style: italic;
         font-weight: 600;
       }
+    }
+  }
+
+  @keyframes specialisedAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 
@@ -88,10 +148,25 @@ $gradientBackground: linear-gradient(
     font-family: "Edu TAS Beginner", cursive;
 
     color: black;
+
+    animation: blockquoteAnimation 2500ms 1 1700ms forwards;
+    opacity: 0;
+  }
+
+  @keyframes blockquoteAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .getInTouchButtonContainer {
     grid-area: getInTouchButton;
+
+    animation: buttonAnimation 2500ms 1 1900ms forwards;
+    opacity: 0;
 
     button {
       background: $gradientBackground, $primary;
@@ -101,6 +176,15 @@ $gradientBackground: linear-gradient(
         // background: $primary;
         color: $hover-colours;
       }
+    }
+  }
+
+  @keyframes buttonAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 

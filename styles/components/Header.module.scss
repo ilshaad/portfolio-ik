@@ -299,6 +299,11 @@ $hover-colours: #00ffd4;
         .MainListLinks:nth-of-type(6) {
           padding-left: 0px;
         }
+
+        // when link is currently active, meaning we are on the current slide content
+        .activeLink {
+          color: $hover-colours;
+        }
       }
 
       .mobileSvgContactLinks {

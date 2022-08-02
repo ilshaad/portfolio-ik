@@ -15,7 +15,7 @@ export default function BackgroundParticles({}: Props) {
   let [linkDistance, setLinkDistance] = useState(130);
   let [particlesNumberLimit, setParticlesNumberLimit] = useState(23);
   let [particlesNumberValue, setParticlesNumberValue] = useState(23);
-  let [motionReduceFactor, setMotionReduceFactor] = useState(11);
+  let [motionReduceFactor, setMotionReduceFactor] = useState(12);
 
   // setting the canvas to have more power depending on screen size
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function BackgroundParticles({}: Props) {
     const mediaQuery992 = window.matchMedia("(min-width: 992px)");
 
     if (mediaQuery500.matches) {
-      setLinkDistance(150);
+      setLinkDistance(145);
       setParticlesNumberLimit(40);
       setParticlesNumberValue(29);
       setMotionReduceFactor(9);

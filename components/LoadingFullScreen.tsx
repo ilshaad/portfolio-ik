@@ -10,7 +10,7 @@ export default function LoadingFullScreen({}: Props) {
 
   return (
     <div
-      className={`${LoadingFullScreen_component} d-flex flex-column align-items-center vw-100 vh-100`}
+      className={`${LoadingFullScreen_component} d-flex flex-column align-items-center w-100 vh-100`}
     >
       <Rs_logo_svg />
       <p className={`mt-2`}>Loading</p>

@@ -13,10 +13,14 @@ import rsLogo from "../public/rs-logo/RS-optimize.jpg";
 import Resume_svg_rawElement from "./svgs/Resume_svg_rawElement";
 
 type Props = {
+  slidingCssClassName: string;
   setSlidingCssClassName: Function;
 };
 
-export default function Header({ setSlidingCssClassName }: Props) {
+export default function Header({
+  slidingCssClassName,
+  setSlidingCssClassName,
+}: Props) {
   const {
     Header_component,
     firstHeaderContainer,
@@ -39,6 +43,7 @@ export default function Header({ setSlidingCssClassName }: Props) {
     linkedinSvgContainer_desktop,
     resumeSvgContainer_desktop,
     // svgContainer,
+    activeLink,
   } = styles;
 
   const [show, setShow] = useState(false);
@@ -48,6 +53,20 @@ export default function Header({ setSlidingCssClassName }: Props) {
 
   const goToSlide = (cssClassName: string) => {
     setSlidingCssClassName(cssClassName);
+  };
+
+  // LandingSlideCss
+  // AboutSlideCss
+  // TechstackSlideCss
+  // ProjectsSlideCss
+  // ContactSlideCss
+  // PlaygroundSlideCss
+  const activeLinkFunc = (cssClassName: string) => {
+    if (cssClassName === slidingCssClassName) {
+      return activeLink;
+    } else {
+      return "";
+    }
   };
 
   return (
@@ -159,14 +178,15 @@ export default function Header({ setSlidingCssClassName }: Props) {
           </Col>
         </Row>
 
+        {/* Links display outside the mobile view */}
         <Row className={`${navLinkButtonsContainer}`}>
-          {/* Links display outside the mobile view */}
           <Col
             onClick={() => {
               goToSlide("LandingSlideCss");
             }}
             xs={1}
-            className={`${MainListLinks}`}
+            className={`${MainListLinks} ${(() =>
+              activeLinkFunc("LandingSlideCss"))()}`}
           >
             Home
           </Col>
@@ -175,7 +195,8 @@ export default function Header({ setSlidingCssClassName }: Props) {
               goToSlide("AboutSlideCss");
             }}
             xs={1}
-            className={`${MainListLinks}`}
+            className={`${MainListLinks} ${(() =>
+              activeLinkFunc("AboutSlideCss"))()}`}
           >
             About me
           </Col>
@@ -184,7 +205,8 @@ export default function Header({ setSlidingCssClassName }: Props) {
               goToSlide("TechstackSlideCss");
             }}
             xs={1}
-            className={`${MainListLinks}`}
+            className={`${MainListLinks} ${(() =>
+              activeLinkFunc("TechstackSlideCss"))()}`}
           >
             Tech stack
           </Col>
@@ -193,7 +215,8 @@ export default function Header({ setSlidingCssClassName }: Props) {
               goToSlide("ProjectsSlideCss");
             }}
             xs={1}
-            className={`${MainListLinks}`}
+            className={`${MainListLinks} ${(() =>
+              activeLinkFunc("ProjectsSlideCss"))()}`}
           >
             Projects
           </Col>
@@ -202,7 +225,8 @@ export default function Header({ setSlidingCssClassName }: Props) {
               goToSlide("ContactSlideCss");
             }}
             xs={1}
-            className={`${MainListLinks}`}
+            className={`${MainListLinks} ${(() =>
+              activeLinkFunc("ContactSlideCss"))()}`}
           >
             Contact
           </Col>
@@ -211,7 +235,8 @@ export default function Header({ setSlidingCssClassName }: Props) {
               goToSlide("PlaygroundSlideCss");
             }}
             xs={1}
-            className={`${MainListLinks}`}
+            className={`${MainListLinks} ${(() =>
+              activeLinkFunc("PlaygroundSlideCss"))()}`}
           >
             Playground
           </Col>

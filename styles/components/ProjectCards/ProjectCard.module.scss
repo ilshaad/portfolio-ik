@@ -66,6 +66,8 @@ $gradientBackground: linear-gradient(
         font-size: 0.7rem;
         padding: 0.5rem;
         height: 3rem;
+        min-height: auto;
+        min-width: fit-content;
 
         &:hover {
           color: $hover-colours;

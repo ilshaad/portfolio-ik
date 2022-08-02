@@ -20,7 +20,7 @@ $gradientBackground: linear-gradient(
   margin: 0;
   padding: 0.2rem;
   display: flex;
-  background-color: rgb(221, 220, 255);
+  background-color: transparent;
 
   .SlidingContent_container {
     min-width: 100%;
@@ -29,7 +29,7 @@ $gradientBackground: linear-gradient(
     padding: 0;
     position: relative;
     overflow: hidden;
-    background-color: brown;
+    background-color: transparent;
   }
 
   .sliderItems {

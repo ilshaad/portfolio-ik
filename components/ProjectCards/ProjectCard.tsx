@@ -74,7 +74,11 @@ export default function ProjectCard({
         <Container>
           <Row className={`${projectButtonsContainer} justify-content-center`}>
             <Col xs={4} md={3} className={`p-0`}>
-              <Button className={`${projectButtons}`} size="sm">
+              <Button
+                className={`${projectButtons}`}
+                size="sm"
+                disabled={title === "Portfolio site" ? true : false}
+              >
                 <Link href={projectUrl} passHref>
                   <a target="_blank">Visit site</a>
                 </Link>

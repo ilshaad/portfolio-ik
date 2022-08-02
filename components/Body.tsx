@@ -15,7 +15,10 @@ export default function Body({}: Props) {
     <div id="divBody">
       {/* <BackgroundParticles /> */}
 
-      <Header setSlidingCssClassName={setSlidingCssClassName} />
+      <Header
+        slidingCssClassName={slidingCssClassName}
+        setSlidingCssClassName={setSlidingCssClassName}
+      />
 
       <main
         id="Main"

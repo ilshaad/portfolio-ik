@@ -33,6 +33,7 @@ export default function Landing_content({ setSlidingCssClassName }: Props) {
     specialised_h,
     welcomeName_container,
     picOfMe_img,
+    blurringAnimation,
   } = styles;
 
   const goToSlide = (cssClassName: string) => {

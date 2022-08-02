@@ -17,6 +17,7 @@ export default function Contact_content({}: Props) {
     svgRowContainer,
     svgColContainer,
     contactFormContainer,
+    svgContainer,
   } = styles;
 
   return (
@@ -30,21 +31,21 @@ export default function Contact_content({}: Props) {
 
       <p>Or you can leave a friendly message.</p>
 
-      <Container className={`mb-2`}>
-        <Row className={`${svgRowContainer}`}>
-          <Col className={`${svgColContainer}`}>
+      <Container className={`${svgContainer}`}>
+        <Row className={`${svgRowContainer} justify-content-center`}>
+          <Col xs={4} sm={3} md={2} xl={1} className={`${svgColContainer}`}>
             <div className={`${linkedin_container}`}>
               <LinkedIn_svg />
             </div>
           </Col>
 
-          <Col className={`${svgColContainer}`}>
+          <Col xs={4} sm={3} md={2} xl={1} className={`${svgColContainer}`}>
             <div className={`${github_container}`}>
               <Github_svg />
             </div>
           </Col>
 
-          <Col className={`${svgColContainer}`}>
+          <Col xs={4} sm={3} md={2} xl={1} className={`${svgColContainer}`}>
             <div className={`${resume_container}`}>
               <Resume_svg_anchor svgElement={<Resume_svg_rawElement />} />
             </div>

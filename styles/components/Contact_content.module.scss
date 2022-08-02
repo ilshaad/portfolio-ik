@@ -30,36 +30,40 @@ $gradientBackground: linear-gradient(
     margin-bottom: 0.6rem;
   }
 
-  .svgRowContainer {
-    text-align: center;
+  .svgContainer {
+    margin-bottom: 0.5rem;
 
-    .svgColContainer {
-      align-self: center;
+    .svgRowContainer {
+      text-align: center;
 
-      .linkedin_container svg,
-      .github_container svg {
-        width: 35px;
-        height: auto;
-        color: $primary;
+      .svgColContainer {
+        align-self: center;
 
-        &:hover,
-        &:active {
-          transform: scale(1.2);
-        }
-      }
-
-      .resume_container {
-        display: inline-block;
-
-        svg {
-          width: 45px;
+        .linkedin_container svg,
+        .github_container svg {
+          width: 35px;
           height: auto;
-          // background-color: red;
           color: $primary;
 
           &:hover,
           &:active {
             transform: scale(1.2);
+          }
+        }
+
+        .resume_container {
+          display: inline-block;
+
+          svg {
+            width: 45px;
+            height: auto;
+            // background-color: red;
+            color: $primary;
+
+            &:hover,
+            &:active {
+              transform: scale(1.2);
+            }
           }
         }
       }
@@ -71,8 +75,11 @@ $gradientBackground: linear-gradient(
   }
 
   // * breakpint of > 360px
-  // @media screen and (min-width: 360px) {
-  // } // breakpoint of > 360px
+  @media screen and (min-width: 360px) {
+    .svgContainer {
+      margin-bottom: 1rem;
+    }
+  } // breakpoint of > 360px
 
   // * breakpint of > 400px
   // @media screen and (min-width: 400px) {
@@ -83,22 +90,41 @@ $gradientBackground: linear-gradient(
   // } // breakpoint of > 500px
 
   // * breakpint of > 576px
-  // @media screen and (min-width: 576px) {
-  // } // breakpoint of > 576px
+  @media screen and (min-width: 576px) {
+    .contactFormContainer {
+      padding: 0 1.5rem;
+    }
+  } // breakpoint of > 576px
 
   // * breakpint of > 768px
-  // @media screen and (min-width: 768px) {
-  // } // breakpoint of > 768px
+  @media screen and (min-width: 768px) {
+    .contactFormContainer {
+      padding: 0 3rem;
+    }
+  } // breakpoint of > 768px
 
   // * breakpint of > 992px
-  // @media screen and (min-width: 992px) {
-  // } // breakpoint of > 992px
+  @media screen and (min-width: 992px) {
+    .contactFormContainer {
+      padding: 0 4rem;
+    }
+  } // breakpoint of > 992px
 
   // * breakpint of > 1200px
-  // @media screen and (min-width: 1200px) {
-  // } // breakpoint of > 1200px
+  @media screen and (min-width: 1200px) {
+    p {
+      font-size: 1rem;
+    }
+
+    .contactFormContainer {
+      padding: 0 5rem;
+    }
+  } // breakpoint of > 1200px
 
   // * breakpint of > 1400px
-  // @media screen and (min-width: 1400px) {
-  // } // breakpoint of > 1400px
+  @media screen and (min-width: 1400px) {
+    .contactFormContainer {
+      padding: 0 6.5rem;
+    }
+  } // breakpoint of > 1400px
 }

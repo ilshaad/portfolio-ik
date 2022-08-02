@@ -11,14 +11,25 @@ import styles from "../styles/components/ContactForm.module.scss";
 type Props = {};
 
 export default function ContactForm({}: Props) {
-  const { ContactForm_component, formControl, errorMessage } = styles;
+  const {
+    ContactForm_component,
+    formGroup,
+    formControl,
+    name_errorMessage,
+    email_errorMessage,
+    message_errorMessage,
+    submitButtonContainer,
+    submittedMessage,
+    successSubmitMessage,
+    errorSubmitMessage,
+  } = styles;
 
   const router = useRouter();
 
   // handle validation from Yum
   const schema = yup.object().shape({
     name: yup.string().required("Required"),
-    email: yup.string().email(),
+    email: yup.string().email("Must be a valid email"),
     message: yup.string().required("Required"),
   });
 
@@ -31,10 +42,18 @@ export default function ContactForm({}: Props) {
   // display the form message when form has been submitted
   const displaySubmittedFormStatusMessage = () => {
     if (submittedStatus === "success") {
-      return <p>Message sent! Thank you.</p>;
-    } else if (submittedStatus === "failed") {
+      //   return true;
       return (
-        <p>Oops, something went wrong! Please submit your message again.</p>
+        <p className={`${successSubmitMessage} text-success mt-2 text-center`}>
+          Message sent!
+        </p>
+      );
+    } else if (submittedStatus === "failed") {
+      // return false;
+      return (
+        <p className={`${errorSubmitMessage} text-danger mt-2`}>
+          Oops, something went wrong! Please submit your message again.
+        </p>
       );
     }
 
@@ -125,7 +144,7 @@ export default function ContactForm({}: Props) {
             />
 
             {/* name text box */}
-            <Form.Group>
+            <Form.Group className={`${formGroup}`}>
               <Form.Label>
                 Name <span>*</span>
               </Form.Label>
@@ -137,17 +156,17 @@ export default function ContactForm({}: Props) {
                 value={values.name}
                 onChange={handleChange}
                 isInvalid={!!errors.name}
-                placeholder="Enter your name"
+                // placeholder="Enter your name"
                 className={`${formControl}`}
               />
               {/* will display to user their input in the textarea is invalid */}
               <Form.Control.Feedback type="invalid">
-                <div className={`${errorMessage}`}>{errors.name}</div>
+                <div className={`${name_errorMessage}`}>{errors.name}</div>
               </Form.Control.Feedback>
             </Form.Group>
 
             {/* email text box */}
-            <Form.Group>
+            <Form.Group className={`${formGroup}`}>
               <Form.Label>Email</Form.Label>
 
               {/* is a controlled form */}
@@ -158,17 +177,17 @@ export default function ContactForm({}: Props) {
                 value={values.email}
                 onChange={handleChange}
                 isInvalid={!!errors.email}
-                placeholder="Enter your email"
+                // placeholder="Enter your email"
                 className={`${formControl}`}
               />
               {/* will display to user their input in the textarea is invalid */}
               <Form.Control.Feedback type="invalid">
-                <div className={`${errorMessage}`}>{errors.email}</div>
+                <div className={`${email_errorMessage}`}>{errors.email}</div>
               </Form.Control.Feedback>
             </Form.Group>
 
             {/* message textarea box */}
-            <Form.Group>
+            <Form.Group className={`${formGroup}`}>
               <Form.Label>
                 Message <span>*</span>
               </Form.Label>
@@ -179,17 +198,21 @@ export default function ContactForm({}: Props) {
                 value={values.message}
                 onChange={handleChange}
                 isInvalid={!!errors.message}
-                placeholder="Enter your message"
+                // placeholder="Enter your message"
                 className={`${formControl}`}
               />
               {/* will display to user their input in the textarea is invalid */}
               <Form.Control.Feedback type="invalid">
-                <div className={`${errorMessage}`}>{errors.message}</div>
+                <div className={`${message_errorMessage}`}>
+                  {errors.message}
+                </div>
               </Form.Control.Feedback>
             </Form.Group>
 
-            <Button type="submit">Submit</Button>
-            {/* <Button onClick={() => setShowCreateCommentBox(false)}>Cancel</Button> */}
+            <div className={`${submitButtonContainer}`}>
+              <Button type="submit">Submit</Button>
+              {/* <Button onClick={() => setShowCreateCommentBox(false)}>Cancel</Button> */}
+            </div>
           </Form>
         )}
       </Formik>
@@ -200,7 +223,27 @@ export default function ContactForm({}: Props) {
     )} */}
 
       {/* display message when form submitted */}
-      {displaySubmittedFormStatusMessage()}
+      <div className={`${submittedMessage}`}>
+        {displaySubmittedFormStatusMessage()}
+
+        {/* {(() => {
+          if (displaySubmittedFormStatusMessage() === true) {
+            return (
+              <p className={`${successSubmitMessage} text-success`}>
+                Message sent! Thank you.
+              </p>
+            );
+          } else if (displaySubmittedFormStatusMessage() === false) {
+            return (
+              <p className={`${errorSubmitMessage}`}>
+                Oops, something went wrong! Please submit your message again.
+              </p>
+            );
+          }
+        })()} */}
+      </div>
+
+      <br />
     </>
   );
 }

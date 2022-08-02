@@ -17,6 +17,10 @@ $gradientBackground: linear-gradient(
   width: inherit;
   font-size: 0.9rem;
 
+  .formGroup {
+    margin-bottom: 0.5rem;
+  }
+
   label {
     font-weight: 600;
   }
@@ -27,18 +31,35 @@ $gradientBackground: linear-gradient(
 
   .formControl {
     width: 100%;
-    margin-bottom: 0.5rem;
+    // margin-bottom: 0.5rem;
 
     &:focus {
       outline-color: $primary;
     }
   }
 
-  .errorMessage {
+  .name_errorMessage,
+  .email_errorMessage,
+  .message_errorMessage {
     color: red;
+  }
 
-    // ! zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-    margin-bottom: 0.5rem;
+  .message_errorMessage {
+    margin-top: -0.5rem;
+  }
+
+  .submitButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  button {
+    background: $gradientBackground, $primary;
+    border-radius: 8% / 50%;
+
+    &:hover {
+      color: $hover-colours;
+    }
   }
 
   // * breakpint of > 360px
@@ -54,12 +75,22 @@ $gradientBackground: linear-gradient(
   // } // breakpoint of > 500px
 
   // * breakpint of > 576px
-  // @media screen and (min-width: 576px) {
-  // } // breakpoint of > 576px
+  @media screen and (min-width: 576px) {
+    padding: inherit;
+
+    .submitButtonContainer {
+      margin-top: 1rem;
+    }
+  } // breakpoint of > 576px
 
   // * breakpint of > 768px
-  // @media screen and (min-width: 768px) {
-  // } // breakpoint of > 768px
+  @media screen and (min-width: 768px) {
+    // padding: 3rem;
+
+    .svgContainer {
+      margin-bottom: -5rem;
+    }
+  } // breakpoint of > 768px
 
   // * breakpint of > 992px
   // @media screen and (min-width: 992px) {
