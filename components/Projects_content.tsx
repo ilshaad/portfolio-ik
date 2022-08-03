@@ -78,7 +78,7 @@ export default function Projects_content({}: Props) {
                 </Suspense>
               }
               projectUrl="https://bug-tracker-frontend-ik-202203.herokuapp.com/"
-              projectGitRepoUrl="https://github.com/RechadSalma/bug-tracker-ik"
+              projectGitRepoUrl="https://github.com/ilshaad/bug-tracker-ik"
             />
           </Col>
 
@@ -97,7 +97,7 @@ export default function Projects_content({}: Props) {
               //   </Suspense>
               // }
               projectUrl="https://www.ilshaadblog.tk/"
-              projectGitRepoUrl="https://github.com/RechadSalma/my-blog-site-ik"
+              projectGitRepoUrl="https://github.com/ilshaad/my-blog-site-ik"
             />
           </Col>
 
@@ -116,7 +116,7 @@ export default function Projects_content({}: Props) {
               //   </Suspense>
               // }
               projectUrl="/"
-              projectGitRepoUrl="https://github.com/RechadSalma/portfolio-ik"
+              projectGitRepoUrl="https://github.com/ilshaad/portfolio-ik"
             />
           </Col>
         </Row>
