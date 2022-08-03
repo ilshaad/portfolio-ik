@@ -4,7 +4,7 @@ type Props = { classProps?: string };
 
 export default function Github_svg({ classProps }: Props) {
   return (
-    <Link href="https://github.com/rechadsalma" passHref>
+    <Link href="https://github.com/ilshaad" passHref>
       <a target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -20,12 +20,12 @@ Portfolio site to inform and showcase some of my work.
 
 - I created the site myself, meaning no template was bought except for the use of next.js setup.
 - Mobile first approach, design ranging `320px-1600px`.
-- Set up of contact form
+- Contact form setup
 
 #### Feel free to contact me if you want to know more about me or the app. Thanks
 
 ##### Site: [Ilshaad portfolio site](https://www.ilshaad.com/)
 
-##### Github: [rechadsalma/my-blog-site-ik](https://github.com/RechadSalma/portfolio-ik)
+##### Github: [ilshaad/portfolio-ik](https://github.com/ilshaad/portfolio-ik)
 
 ##### _< ilshaad Kheerdali \/>_
