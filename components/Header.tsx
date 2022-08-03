@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 import styles from "../styles/components/Header.module.scss";

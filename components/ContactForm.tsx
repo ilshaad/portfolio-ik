@@ -77,7 +77,7 @@ export default function ContactForm({}: Props) {
       <Formik
         validationSchema={schema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
-          console.log(values);
+          // console.log(values);
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },

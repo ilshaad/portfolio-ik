@@ -1,6 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
-import { Button, Nav, Offcanvas } from "react-bootstrap";
+import { Nav, Offcanvas } from "react-bootstrap";
 
 import styles from "../styles/components/NavOffcanv.module.scss";
 

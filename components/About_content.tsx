@@ -1,5 +1,3 @@
-import React from "react";
-
 import styles from "../styles/components/About_content.module.scss";
 
 type Props = {};

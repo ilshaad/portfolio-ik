@@ -1,10 +1,10 @@
+import { Col, Container, Row } from "react-bootstrap";
+import styles from "../styles/components/Contact_content.module.scss";
 import ContactForm from "./ContactForm";
 import Github_svg from "./svgs/Github_svg";
 import LinkedIn_svg from "./svgs/LinkedIn_svg";
 import Resume_svg_anchor from "./svgs/Resume_svg_anchor";
 import Resume_svg_rawElement from "./svgs/Resume_svg_rawElement";
-import styles from "../styles/components/Contact_content.module.scss";
-import { Col, Container, Row } from "react-bootstrap";
 
 type Props = {};
 

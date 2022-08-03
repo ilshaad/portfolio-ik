@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { Badge } from "react-bootstrap";
 
 import styles from "../styles/components/Footer.module.scss";

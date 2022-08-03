@@ -1,12 +1,11 @@
 // the inital content use will see when they visit the site, so making a big impression & clearly stating who you are is crucial
 
-import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 
 import styles from "../styles/components/Landing_content.module.scss";
 
-import picOfMe from "../public/picOfMe/portfolioPic.jpg";
 import Image from "next/image";
+import picOfMe from "../public/picOfMe/portfolioPic.jpg";
 
 // import rss from
 // Welcome!

@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import Link from "next/link";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
 import styles from "../../styles/components/ProjectCards/ProjectCard.module.scss";
 

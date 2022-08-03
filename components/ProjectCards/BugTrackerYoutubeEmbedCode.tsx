@@ -1,7 +1,5 @@
 // I created this component to insert lazy loading to reduce load time
 
-import React from "react";
-
 type Props = {};
 
 export default function BugTrackerYoutubeEmbedCode({}: Props) {

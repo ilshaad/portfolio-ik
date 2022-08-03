@@ -1,5 +1,3 @@
-import Link from "next/link";
-import React from "react";
 import { Button, ListGroup, Modal } from "react-bootstrap";
 
 import styles from "../../styles/components/ProjectCards/AllProjectModals.module.scss";

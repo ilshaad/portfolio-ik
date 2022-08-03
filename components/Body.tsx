@@ -1,6 +1,4 @@
-import Head from "next/head";
-import React, { useState } from "react";
-import BackgroundParticles from "./BackgroundParticles";
+import { useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import SlidingContents from "./SlidingContents";

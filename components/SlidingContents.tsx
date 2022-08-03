@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
-import React, { Suspense, useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Suspense } from "react";
+import { Container } from "react-bootstrap";
 
 import styles from "../styles/components/SlidingConents.module.scss";
 // import About_content from "./About_content";

@@ -1,6 +1,5 @@
 // list the main technologies you can use
 
-import React from "react";
 import { Col, Container, ListGroup, Row } from "react-bootstrap";
 
 import styles from "../styles/components/Techstack_content.module.scss";

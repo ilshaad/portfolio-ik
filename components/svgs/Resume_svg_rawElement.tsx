@@ -1,5 +1,3 @@
-import React from "react";
-
 type Props = { classProps?: string };
 
 export default function Resume_svg_rawElement({ classProps }: Props) {

@@ -1,5 +1,3 @@
-import React from "react";
-
 import styles from "../../styles/components/svgs/Rs_logo_svg.module.scss";
 
 type Props = { classProp?: string };
