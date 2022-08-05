@@ -4,7 +4,7 @@ type Props = { classProps?: string };
 
 export default function LinkedIn_svg({ classProps }: Props) {
   return (
-    <Link href={"https://www.linkedin.com/in/rob-c-a7aa08199/"} passHref>
+    <Link href={"https://www.linkedin.com/in/ilshaad/"} passHref>
       <a target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
