@@ -14,7 +14,7 @@ export default function About_content({}: Props) {
   return (
     <div className={`${About_component}`}>
       <h2>About me</h2>
-      <p>My name is Ilshaad, a humble, but ravenous coder.</p>
+      <p>My name is Ilshaad, I am from London, a humble, but ravenous coder.</p>
       <p>
         I am skilled at building beautiful, sleek, functional web applications
         using <span>JavaScript</span>, <span>React</span>,{" "}
