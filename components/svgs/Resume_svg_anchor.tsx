@@ -5,7 +5,7 @@ type Props = { svgElement: JSX.Element };
 export default function Resume_svg_anchor({ svgElement }: Props) {
   return (
     <Link
-      href={"https://www.dropbox.com/s/lnpk43bw4bj7tjk/testing%20cv.pdf?dl=0"}
+      href={"https://www.dropbox.com/s/zurxdj58vwwdk26/ilshaad-cv.pdf?dl=0"}
       passHref
     >
       <a download target={"_blank"}>
