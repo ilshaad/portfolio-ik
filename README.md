@@ -14,6 +14,7 @@ Portfolio site to inform and showcase some of my work.
 - Sass / Bootstrap / React-Bootstrap
 - Netlify
 - PWA
+- Docker
 - etc...
 
 ## Some key points about the app:

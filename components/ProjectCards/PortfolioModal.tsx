@@ -47,6 +47,7 @@ export default function PortfolioModal({ show, handleClose }: Props) {
           <ListGroup.Item as="li">Next.js</ListGroup.Item>
           <ListGroup.Item as="li">SASS / Bootstrap</ListGroup.Item>
           <ListGroup.Item as="li">PWA</ListGroup.Item>
+          <ListGroup.Item as="li">Docker</ListGroup.Item>
         </ListGroup>
       </Modal.Body>
 

@@ -45,6 +45,7 @@ export default function BlogSiteModal({ show, handleClose }: Props) {
           <ListGroup.Item as="li">React-Testing-Library</ListGroup.Item>
           <ListGroup.Item as="li">SASS / Bootstrap</ListGroup.Item>
           <ListGroup.Item as="li">PWA</ListGroup.Item>
+          <ListGroup.Item as="li">Docker</ListGroup.Item>
         </ListGroup>
       </Modal.Body>
 
