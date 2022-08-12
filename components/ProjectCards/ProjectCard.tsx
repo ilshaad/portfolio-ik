@@ -34,6 +34,7 @@ export default function ProjectCard({
     cardBody,
     projectButtonsContainer,
     projectButtons,
+    techInfo_button,
   } = styles;
 
   // if no youtube tour video for the project than display the project image
@@ -78,7 +79,7 @@ export default function ProjectCard({
                 size="sm"
                 disabled={title === "Portfolio site" ? true : false}
               >
-                <Link href={projectUrl} passHref>
+                <Link href={projectUrl} passHref className={`w-100 h-100 p-0`}>
                   <a target="_blank">Visit site</a>
                 </Link>
               </Button>
@@ -94,7 +95,7 @@ export default function ProjectCard({
 
             <Col xs={4} md={3} className={`p-0`}>
               <Button
-                className={`${projectButtons}`}
+                className={`${projectButtons} ${techInfo_button}`}
                 size="sm"
                 onClick={() => handleShow()}
               >
