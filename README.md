@@ -2,6 +2,12 @@
 
 ###### Frontend / React-Typescript app using Next.js
 
+##### Author: _ilshaad Kheerdali_
+
+##### Live site: [Ilshaad portfolio site](https://www.ilshaad.com/)
+
+##### Github: [ilshaad/portfolio-ik](https://github.com/ilshaad/portfolio-ik)
+
 ## What is the app about?
 
 Portfolio site to inform and showcase some of my work.
@@ -24,9 +30,3 @@ Portfolio site to inform and showcase some of my work.
 - Contact form setup
 
 #### Feel free to contact me if you want to know more about me or the app. Thanks
-
-##### Site: [Ilshaad portfolio site](https://www.ilshaad.com/)
-
-##### Github: [ilshaad/portfolio-ik](https://github.com/ilshaad/portfolio-ik)
-
-##### _< ilshaad Kheerdali \/>_
