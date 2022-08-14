@@ -18,7 +18,7 @@ export default function About_content({}: Props) {
       <p>
         I am skilled at building beautiful, sleek, functional web applications
         using <span>JavaScript</span>, <span>React</span>,{" "}
-        <span>TypeScript</span> and <span>Node.js</span>.
+        <span>TypeScript</span>, <span>Node.js</span> and more.
       </p>
       <p>
         I have been coding for {numberOfYearsCoding} years now and have become

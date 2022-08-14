@@ -11,7 +11,7 @@ import picOfMe from "../public/picOfMe/portfolioPic.jpg";
 // Welcome!
 // I’m ilshaad Kheerdali
 // Frontend / Full stack developer
-// Javascript / React / Typescript / Node.js
+// Specialised in Javascript / React / Typescript / Node.js
 // Always follow your heart but remember to bring your brain along.
 // <Get in Touch>
 

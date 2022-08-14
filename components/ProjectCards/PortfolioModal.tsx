@@ -37,6 +37,7 @@ export default function PortfolioModal({ show, handleClose }: Props) {
           </ListGroup.Item>
           <ListGroup.Item as="li">Mobile first approach.</ListGroup.Item>
           <ListGroup.Item as="li">PWA for downloadable app.</ListGroup.Item>
+          <ListGroup.Item as="li">Etc...</ListGroup.Item>
         </ListGroup>
 
         {/* Main technologies */}

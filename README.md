@@ -21,12 +21,13 @@ Portfolio site to inform and showcase some of my work.
 - Netlify
 - PWA
 - Docker
-- etc...
+- Etc...
 
 ## Some key points about the app:
 
 - I created the site myself, meaning no template was bought except for the use of next.js setup.
 - Mobile first approach, design ranging `320px-1600px`.
 - Contact form setup
+- Etc...
 
 #### Feel free to contact me if you want to know more about me or the app. Thanks

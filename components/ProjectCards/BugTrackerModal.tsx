@@ -42,6 +42,7 @@ export default function BugTrackerModal({ show, handleClose }: Props) {
           <ListGroup.Item as="li">
             Full CI/CD pipeline, using Docker / Github Actions / Heroku.
           </ListGroup.Item>
+          <ListGroup.Item as="li">Etc...</ListGroup.Item>
         </ListGroup>
 
         {/* Main technologies */}
