@@ -68,7 +68,7 @@ export default function Projects_content({}: Props) {
             <ProjectCard
               handleShow={openBugTrackerModal}
               title="Bug tracking web application system"
-              summary="I created this fully functional bug tracker system. It allows developers to
+              summary="I created this fully functional bug tracker system, which took 3 months to build. It allows developers to
               report defects within developing projects."
               // image={bugtrackerImg}
               // imageAlt="Bug Tracker app preview"
