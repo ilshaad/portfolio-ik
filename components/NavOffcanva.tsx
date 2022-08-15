@@ -1,3 +1,5 @@
+// offcanva menu for mobile viewpoint only
+
 import Link from "next/link";
 import { Nav, Offcanvas } from "react-bootstrap";
 
@@ -67,7 +69,7 @@ export default function NavOffcanva({
               handleClose();
             }}
           >
-            Tech stack
+            Tech skills
           </Nav.Item>
           <Nav.Item
             as="li"

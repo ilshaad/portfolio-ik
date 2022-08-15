@@ -11,7 +11,7 @@ export default function Techstack_content({}: Props) {
 
   return (
     <div className={`${Techstack_component}`}>
-      <h2>Primary tech stack</h2>
+      <h2>Main tech skills</h2>
 
       <Container>
         <Row>

@@ -208,7 +208,8 @@ export default function Header({
             className={`${MainListLinks} ${(() =>
               activeLinkFunc("TechstackSlideCss"))()}`}
           >
-            Tech stack
+            {/* cannot add another word because it will not show, unless I re-style again */}
+            Tech
           </Col>
           <Col
             onClick={() => {
