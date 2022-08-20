@@ -29,7 +29,7 @@ export default function Contact_content({}: Props) {
         options below. And I will get back to you.
       </p>
 
-      <p>Or you can leave a friendly message.</p>
+      {/* <p>Or you can leave a friendly message.</p> */}
 
       <Container className={`${svgContainer}`}>
         <Row className={`${svgRowContainer} justify-content-center`}>
