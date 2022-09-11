@@ -8,6 +8,7 @@ import NavOffcanva from "./NavOffcanva";
 import Github_svg from "./svgs/Github_svg";
 import LinkedIn_svg from "./svgs/LinkedIn_svg";
 import Resume_svg_anchor from "./svgs/Resume_svg_anchor";
+import Instagram_svg from "./svgs/Instagram_svg";
 
 import rsLogo from "../public/rs-logo/RS-optimize.jpg";
 import Resume_svg_rawElement from "./svgs/Resume_svg_rawElement";
@@ -80,7 +81,7 @@ export default function Header({
           {/* rs logo image */}
           <Col
             xs={6}
-            sm={9}
+            sm={8}
             // lg={1}
             onClick={() => {
               goToSlide("LandingSlideCss");
@@ -145,6 +146,14 @@ export default function Header({
                 <Resume_svg_rawElement classProps={resumeSvgElement_desktop} />
               }
             />
+          </Col>
+          <Col
+            xs={0}
+            sm={1}
+            // lg={1}
+            className={`${desktopSvgContactLinks} mx-auto`}
+          >
+            <Instagram_svg classProps={`${githubSvg_desktop} text-primary`} />
           </Col>
         </Row>
       </Container>
