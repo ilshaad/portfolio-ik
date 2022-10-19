@@ -43,6 +43,7 @@ export default function Header({
     githubSvgElement_mobile,
     linkedinSvgContainer_desktop,
     resumeSvgContainer_desktop,
+    instagramSvg_desktop,
     // svgContainer,
     activeLink,
   } = styles;
@@ -153,7 +154,9 @@ export default function Header({
             // lg={1}
             className={`${desktopSvgContactLinks} mx-auto`}
           >
-            <Instagram_svg classProps={`${githubSvg_desktop} text-primary`} />
+            <Instagram_svg
+              classProps={`${instagramSvg_desktop} text-primary`}
+            />
           </Col>
         </Row>
       </Container>

@@ -225,15 +225,18 @@ $hover-colours: #00ffd4;
         .linkedinSvg_desktop {
           color: $primary;
           transform: scale(1.6);
+          text-align: center;
 
           &:hover {
             transform: scale(2);
           }
         }
 
-        .githubSvg_desktop {
+        .githubSvg_desktop,
+        .instagramSvg_desktop {
           color: $primary;
           transform: scale(1.5);
+          text-align: center;
 
           &:hover {
             transform: scale(2);
@@ -242,7 +245,9 @@ $hover-colours: #00ffd4;
 
         .resumeSvgElement_desktop {
           color: $primary;
+          text-align: center;
           transform: scale(1.5);
+          text-align: center;
 
           &:hover {
             transform: scale(2);
@@ -320,6 +325,12 @@ $hover-colours: #00ffd4;
       .logoName {
         margin-left: -30px;
       }
+
+      // .desktopSvgContactLinks {
+      //   .instagramSvg_desktop {
+      //     color: red;
+      //   }
+      // }
     }
 
     .secondHeaderContainer {
@@ -348,14 +359,14 @@ $hover-colours: #00ffd4;
     }
 
     // LinkedIn svg
-    .linkedinSvgContainer_desktop {
-      text-align: end;
-    }
+    // .linkedinSvgContainer_desktop {
+    //   text-align: end;
+    // }
 
     // cv svg
-    .resumeSvgContainer_desktop {
-      text-align: start;
-    }
+    // .resumeSvgContainer_desktop {
+    //   text-align: start;
+    // }
 
     .secondHeaderContainer {
       .navLinkButtonsContainer {
