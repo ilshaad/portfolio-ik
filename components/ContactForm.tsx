@@ -18,6 +18,7 @@ export default function ContactForm({}: Props) {
     name_errorMessage,
     email_errorMessage,
     message_errorMessage,
+    messageTextarea_container,
     submitButtonContainer,
     submittedMessage,
     successSubmitMessage,
@@ -187,7 +188,7 @@ export default function ContactForm({}: Props) {
             </Form.Group>
 
             {/* message textarea box */}
-            <Form.Group className={`${formGroup}`}>
+            <Form.Group className={`${formGroup} ${messageTextarea_container}`}>
               <Form.Label>
                 Message <span>*</span>
               </Form.Label>
