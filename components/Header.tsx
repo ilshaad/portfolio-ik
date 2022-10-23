@@ -44,6 +44,7 @@ export default function Header({
     linkedinSvgContainer_desktop,
     resumeSvgContainer_desktop,
     instagramSvg_desktop,
+    instagramCol,
     // svgContainer,
     activeLink,
   } = styles;
@@ -152,7 +153,7 @@ export default function Header({
             xs={0}
             sm={1}
             // lg={1}
-            className={`${desktopSvgContactLinks} mx-auto`}
+            className={`${desktopSvgContactLinks} ${instagramCol} mx-auto`}
           >
             <Instagram_svg
               classProps={`${instagramSvg_desktop} text-primary`}
@@ -171,21 +172,27 @@ export default function Header({
         <Row
           className={`${mobileSvgContactLinks} justify-content-center align-items-center`}
         >
-          <Col xs={4} className={`mx-auto`}>
+          <Col xs={3} className={`mx-auto`}>
             <LinkedIn_svg
               classProps={`${linkedSvgElement_mobile} w-100 text-light`}
             />
           </Col>
-          <Col xs={4} className={`mx-auto`}>
+          <Col xs={3} className={`mx-auto`}>
             <Github_svg
               classProps={`${githubSvgElement_mobile} w-100 text-light`}
             />
           </Col>
-          <Col xs={4} className={`mx-auto`}>
+          <Col xs={3} className={`mx-auto`}>
             <Resume_svg_anchor
               svgElement={
                 <Resume_svg_rawElement classProps={resumeSvgElement_mobile} />
               }
+            />
+          </Col>
+          {/* zzzzzzzzzzzzzzzzzzzzzz IK readjust size */}
+          <Col xs={3} className={`mx-auto`}>
+            <Instagram_svg
+              classProps={`${instagramSvg_desktop} w-100 text-light`}
             />
           </Col>
         </Row>
