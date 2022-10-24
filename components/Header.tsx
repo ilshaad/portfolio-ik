@@ -8,6 +8,7 @@ import NavOffcanva from "./NavOffcanva";
 import Github_svg from "./svgs/Github_svg";
 import LinkedIn_svg from "./svgs/LinkedIn_svg";
 import Resume_svg_anchor from "./svgs/Resume_svg_anchor";
+import Instagram_svg from "./svgs/Instagram_svg";
 
 import rsLogo from "../public/rs-logo/RS-optimize.jpg";
 import Resume_svg_rawElement from "./svgs/Resume_svg_rawElement";
@@ -40,8 +41,11 @@ export default function Header({
     githubSvg_desktop,
     linkedSvgElement_mobile,
     githubSvgElement_mobile,
+    instagramSvgElement_mobile,
     linkedinSvgContainer_desktop,
     resumeSvgContainer_desktop,
+    instagramSvg_desktop,
+    instagramCol,
     // svgContainer,
     activeLink,
   } = styles;
@@ -80,7 +84,7 @@ export default function Header({
           {/* rs logo image */}
           <Col
             xs={6}
-            sm={9}
+            sm={8}
             // lg={1}
             onClick={() => {
               goToSlide("LandingSlideCss");
@@ -146,6 +150,16 @@ export default function Header({
               }
             />
           </Col>
+          <Col
+            xs={0}
+            sm={1}
+            // lg={1}
+            className={`${desktopSvgContactLinks} ${instagramCol} mx-auto`}
+          >
+            <Instagram_svg
+              classProps={`${instagramSvg_desktop} text-primary`}
+            />
+          </Col>
         </Row>
       </Container>
 
@@ -159,21 +173,26 @@ export default function Header({
         <Row
           className={`${mobileSvgContactLinks} justify-content-center align-items-center`}
         >
-          <Col xs={4} className={`mx-auto`}>
+          <Col xs={3} className={`mx-auto`}>
             <LinkedIn_svg
               classProps={`${linkedSvgElement_mobile} w-100 text-light`}
             />
           </Col>
-          <Col xs={4} className={`mx-auto`}>
+          <Col xs={3} className={`mx-auto`}>
             <Github_svg
               classProps={`${githubSvgElement_mobile} w-100 text-light`}
             />
           </Col>
-          <Col xs={4} className={`mx-auto`}>
+          <Col xs={3} className={`mx-auto`}>
             <Resume_svg_anchor
               svgElement={
                 <Resume_svg_rawElement classProps={resumeSvgElement_mobile} />
               }
+            />
+          </Col>
+          <Col xs={3} className={`mx-auto`}>
+            <Instagram_svg
+              classProps={`${instagramSvgElement_mobile} w-100 text-light`}
             />
           </Col>
         </Row>
