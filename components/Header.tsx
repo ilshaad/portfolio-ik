@@ -41,6 +41,7 @@ export default function Header({
     githubSvg_desktop,
     linkedSvgElement_mobile,
     githubSvgElement_mobile,
+    instagramSvgElement_mobile,
     linkedinSvgContainer_desktop,
     resumeSvgContainer_desktop,
     instagramSvg_desktop,
@@ -189,10 +190,9 @@ export default function Header({
               }
             />
           </Col>
-          {/* zzzzzzzzzzzzzzzzzzzzzz IK readjust size */}
           <Col xs={3} className={`mx-auto`}>
             <Instagram_svg
-              classProps={`${instagramSvg_desktop} w-100 text-light`}
+              classProps={`${instagramSvgElement_mobile} w-100 text-light`}
             />
           </Col>
         </Row>

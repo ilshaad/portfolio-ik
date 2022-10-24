@@ -66,13 +66,17 @@ $hover-colours: #00ffd4;
     width: 100%;
     position: absolute;
     bottom: 0;
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
     overflow: hidden;
 
     .linkedSvgElement_mobile,
     .githubSvgElement_mobile {
       transform: scale(1.2);
+    }
+
+    .instagramSvgElement_mobile {
+      transform: scale(1.4);
     }
 
     .resumeSvgElement_mobile {
