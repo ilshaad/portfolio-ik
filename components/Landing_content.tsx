@@ -32,6 +32,7 @@ export default function Landing_content({ setSlidingCssClassName }: Props) {
     specialised_h,
     welcomeName_container,
     picOfMe_img,
+    picOfMe_imgElement,
     blurringAnimation,
   } = styles;
 
@@ -49,7 +50,11 @@ export default function Landing_content({ setSlidingCssClassName }: Props) {
       {/* <div xs={12}></div> */}
 
       <div className={`${picOfMe_img}`}>
-        <Image src={picOfMe} alt="photo of ilshaad" />
+        <Image
+          src={picOfMe}
+          alt="photo of ilshaad"
+          className={picOfMe_imgElement}
+        />
       </div>
 
       <div className={`${role_h_container}`}>

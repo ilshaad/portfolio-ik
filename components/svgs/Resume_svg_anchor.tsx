@@ -7,6 +7,7 @@ export default function Resume_svg_anchor({ svgElement }: Props) {
     <Link
       href={"https://www.dropbox.com/s/zurxdj58vwwdk26/ilshaad-cv.pdf?dl=0"}
       passHref
+      legacyBehavior
     >
       <a download target={"_blank"}>
         {svgElement}

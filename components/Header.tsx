@@ -29,6 +29,7 @@ export default function Header({
     MainListLinks,
     secondHeaderContainer,
     rsLogoContainer,
+    rsLogo_img,
     logoName,
     resumeSvgElement_mobile,
     resumeSvgElement_desktop,
@@ -93,7 +94,11 @@ export default function Header({
             className={`p-0`}
           >
             <div className={`${rsLogoContainer}`}>
-              <Image src={rsLogo} alt="rechad salma logo" />
+              <Image
+                src={rsLogo}
+                alt="rechad salma logo"
+                className={rsLogo_img}
+              />
             </div>
           </Col>
 
@@ -261,7 +266,7 @@ export default function Header({
             Playground
           </Col>
           <Col xs={1} className={`${MainListLinks}`}>
-            <Link href="https://www.ilshaadblog.tk/" passHref>
+            <Link href="https://www.ilshaadblog.tk/" passHref legacyBehavior>
               <a target="_blank">Blog</a>
             </Link>
           </Col>

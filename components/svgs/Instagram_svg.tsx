@@ -4,7 +4,7 @@ type Props = { classProps?: string };
 
 export default function Instagram_svg({ classProps }: Props) {
   return (
-    <Link href={"https://www.instagram.com/ilshaad.k/"} passHref>
+    <Link href={"https://www.instagram.com/ilshaad.k/"} passHref legacyBehavior>
       <a target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
