@@ -79,7 +79,12 @@ export default function ProjectCard({
                 size="sm"
                 disabled={title === "Portfolio site" ? true : false}
               >
-                <Link href={projectUrl} passHref className={`w-100 h-100 p-0`}>
+                <Link
+                  href={projectUrl}
+                  passHref
+                  legacyBehavior
+                  className={`w-100 h-100 p-0`}
+                >
                   <a target="_blank">Visit site</a>
                 </Link>
               </Button>
@@ -87,7 +92,7 @@ export default function ProjectCard({
 
             <Col xs={4} md={3} className={`p-0`}>
               <Button className={`${projectButtons}`} size="sm">
-                <Link href={projectGitRepoUrl} passHref>
+                <Link href={projectGitRepoUrl} passHref legacyBehavior>
                   <a target="_blank">Github repo</a>
                 </Link>
               </Button>

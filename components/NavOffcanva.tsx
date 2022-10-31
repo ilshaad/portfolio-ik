@@ -104,7 +104,7 @@ export default function NavOffcanva({
               handleClose();
             }}
           >
-            <Link href="https://www.ilshaadblog.tk/" passHref>
+            <Link href="https://www.ilshaadblog.tk/" passHref legacyBehavior>
               <a target="_blank">Blog</a>
             </Link>
           </Nav.Item>

@@ -29,6 +29,11 @@ $hover-colours: #00ffd4;
     .rsLogoContainer {
       width: 40px;
       cursor: pointer;
+
+      .rsLogo_img {
+        width: 100%;
+        height: auto;
+      }
     }
 
     .logoName {

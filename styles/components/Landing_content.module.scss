@@ -82,6 +82,11 @@ $gradientBackground: linear-gradient(
 
     animation: picAnimation 3800ms 1 1000ms forwards;
     opacity: 0;
+
+    .picOfMe_imgElement {
+      width: 100%;
+      height: auto;
+    }
   }
 
   @keyframes picAnimation {
