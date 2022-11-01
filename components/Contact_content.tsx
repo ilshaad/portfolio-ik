@@ -5,6 +5,7 @@ import Github_svg from "./svgs/Github_svg";
 import LinkedIn_svg from "./svgs/LinkedIn_svg";
 import Resume_svg_anchor from "./svgs/Resume_svg_anchor";
 import Resume_svg_rawElement from "./svgs/Resume_svg_rawElement";
+import Instagram_svg from "./svgs/Instagram_svg";
 
 type Props = {};
 
@@ -33,21 +34,27 @@ export default function Contact_content({}: Props) {
 
       <Container className={`${svgContainer}`}>
         <Row className={`${svgRowContainer} justify-content-center`}>
-          <Col xs={4} sm={3} md={2} xl={1} className={`${svgColContainer}`}>
+          <Col xs={3} sm={3} md={2} xl={1} className={`${svgColContainer}`}>
             <div className={`${linkedin_container}`}>
               <LinkedIn_svg />
             </div>
           </Col>
 
-          <Col xs={4} sm={3} md={2} xl={1} className={`${svgColContainer}`}>
+          <Col xs={3} sm={3} md={2} xl={1} className={`${svgColContainer}`}>
             <div className={`${github_container}`}>
               <Github_svg />
             </div>
           </Col>
 
-          <Col xs={4} sm={3} md={2} xl={1} className={`${svgColContainer}`}>
+          <Col xs={3} sm={3} md={2} xl={1} className={`${svgColContainer}`}>
             <div className={`${resume_container}`}>
               <Resume_svg_anchor svgElement={<Resume_svg_rawElement />} />
+            </div>
+          </Col>
+
+          <Col xs={3} sm={3} md={2} xl={1} className={`${svgColContainer}`}>
+            <div className={`${github_container}`}>
+              <Instagram_svg />
             </div>
           </Col>
         </Row>
