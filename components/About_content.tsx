@@ -5,7 +5,8 @@ type Props = {};
 export default function About_content({}: Props) {
   const { About_component } = styles;
 
-  const yearStartedCoding = 2018;
+  // const yearStartedCoding = 2018;
+  const yearStartedCoding = 2019;
 
   const currentYear = new Date().getFullYear();
 
