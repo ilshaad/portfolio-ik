@@ -1,0 +1,198 @@
+// IK I WAS MODIFYING MY ORIGNAL FILE TO INCLUDE FROM THE DOCUMENTATED FILE BUT QUIT AFTER i JUST DECIDED TO COPY & PASTE FOR THE options
+
+import { useEffect, useMemo, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import {
+  type Container,
+  type ISourceOptions,
+  MoveDirection,
+  OutMode,
+} from "@tsparticles/engine";
+import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
+// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+// import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+
+export default function BackgroundParticles() {
+  const [init, setInit] = useState(false);
+
+  // this should be run only once per application lifetime
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+      // starting from v2 you can add only the features you need reducing the bundle size
+      //await loadAll(engine);
+      //await loadFull(engine);
+      await loadAll(engine);
+      //await loadBasic(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const particlesLoaded = async (container?: Container): Promise<void> => {
+    console.log(container);
+  };
+
+  // 360  500  576  768  992  1200 1400  1600px
+  // 185 link.distance: 120	150	180
+  // 45 particles.number.limit: 30	40	45
+  // 5 motion.reduce.factor	8	7	5
+
+  // default value set for 320px width or above (really its for 360px)
+  let [linkDistance, setLinkDistance] = useState(130);
+  let [particlesNumberLimit, setParticlesNumberLimit] = useState(23);
+  let [particlesNumberValue, setParticlesNumberValue] = useState(23);
+  let [motionReduceFactor, setMotionReduceFactor] = useState(12);
+
+  // setting the canvas to have more power depending on screen size
+  useEffect(() => {
+    // const mediaQuery30 = window.matchMedia("(min-width: 360px)");
+    const mediaQuery500 = window.matchMedia("(min-width: 500px)");
+    const mediaQuery576 = window.matchMedia("(min-width: 576px)");
+    const mediaQuery992 = window.matchMedia("(min-width: 992px)");
+
+    if (mediaQuery500.matches) {
+      setLinkDistance(145);
+      setParticlesNumberLimit(40);
+      setParticlesNumberValue(29);
+      setMotionReduceFactor(9);
+      // console.log("iK 500");
+    }
+
+    if (mediaQuery576.matches) {
+      setLinkDistance(180);
+      setParticlesNumberLimit(43);
+      setMotionReduceFactor(7);
+      // console.log("iK 576");
+    }
+
+    if (mediaQuery992.matches) {
+      setLinkDistance(200);
+      setParticlesNumberLimit(45);
+      setMotionReduceFactor(7);
+      // console.log("iK 992");
+    }
+  }, []);
+
+  const options: ISourceOptions = useMemo(
+    () => ({
+      autoPlay: true,
+      background: {
+        color: {
+          value: "red", // ! iK COME BACK TO WHITE COLOUR #fff
+        },
+        image: "",
+        position: "50% 50%",
+        repeat: "no-repeat",
+        size: "cover",
+        opacity: 1,
+      },
+
+      backgroundMask: {
+        composite: "destination-out",
+        cover: {
+          color: {
+            value: "#000",
+          },
+          opacity: 1,
+        },
+        enable: false,
+      },
+      fullScreen: {
+        enable: true,
+        zIndex: -1,
+      },
+      detectRetina: true,
+      duration: 0,
+      fpsLimit: 50, // ! zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+      interactivity: {
+        detectsOn: "window",
+        events: {
+          onClick: {
+            enable: true,
+            mode: "push",
+          },
+          onDiv: {
+            selectors: ["#Header"],
+            enable: true,
+            mode: ["bounce"],
+            type: "rectangle",
+          },
+          onHover: {
+            enable: true,
+            mode: "grab",
+            parallax: {
+              enable: true,
+              force: 60,
+              smooth: 20,
+            },
+          },
+          resize: true, // ! iK comeback to this if not working  // resize: { enable: true },
+        },
+        modes: {
+          // ! continue from here copy & paste from backgroundParticles copy.tsx
+          push: {
+            quantity: 4,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "#ffffff",
+        },
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.5,
+          width: 1,
+        },
+        move: {
+          direction: MoveDirection.none,
+          enable: true,
+          outModes: {
+            default: OutMode.out,
+          },
+          random: false,
+          speed: 6,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 80,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: { min: 1, max: 5 },
+        },
+      },
+      detectRetina: true,
+    }),
+    []
+  );
+
+  if (init) {
+    return (
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
+    );
+  }
+
+  return <></>;
+}
