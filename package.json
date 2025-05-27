@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "ikclean": "rm -fr node_modules/ package-lock.json .next/ && npm cache clean -vf && npm i && npm outdated && npx npm-check-updates",
-    "ikcleanci": "rm -fr node_modules/ .next/ && npm cache clean -vf && npm ci && npm outdated"
+    "ikcleanci": "rm -fr node_modules/ .next/ && npm cache clean -vf && npm ci && npm outdated",
+    "ikserver": "npm run build && npm run start"
   },
   "dependencies": {
     "@tsparticles/all": "^3.8.1",

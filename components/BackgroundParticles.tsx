@@ -46,32 +46,49 @@ export default function BackgroundParticles() {
 
   // setting the canvas to have more power depending on screen size
   useEffect(() => {
-    // const mediaQuery30 = window.matchMedia("(min-width: 360px)");
     const mediaQuery500 = window.matchMedia("(min-width: 500px)");
     const mediaQuery576 = window.matchMedia("(min-width: 576px)");
     const mediaQuery992 = window.matchMedia("(min-width: 992px)");
 
-    if (mediaQuery500.matches) {
-      setLinkDistance(145);
-      setParticlesNumberLimit(40);
-      setParticlesNumberValue(29);
-      setMotionReduceFactor(9);
-      // console.log("iK 500");
-    }
+    const updateParticles = () => {
+      // Reset to default first
+      setLinkDistance(130);
+      setParticlesNumberLimit(23);
+      setParticlesNumberValue(23);
+      setMotionReduceFactor(12);
 
-    if (mediaQuery576.matches) {
-      setLinkDistance(180);
-      setParticlesNumberLimit(43);
-      setMotionReduceFactor(7);
-      // console.log("iK 576");
-    }
+      if (mediaQuery500.matches) {
+        setLinkDistance(145);
+        setParticlesNumberLimit(40);
+        setParticlesNumberValue(99);
+        setMotionReduceFactor(9);
+      }
+      if (mediaQuery576.matches) {
+        setLinkDistance(180);
+        setParticlesNumberLimit(43);
+        setMotionReduceFactor(7);
+      }
+      if (mediaQuery992.matches) {
+        setLinkDistance(900);
+        setParticlesNumberLimit(95);
+        setMotionReduceFactor(99);
+      }
+    };
 
-    if (mediaQuery992.matches) {
-      setLinkDistance(200);
-      setParticlesNumberLimit(45);
-      setMotionReduceFactor(7);
-      // console.log("iK 992");
-    }
+    // Initial check
+    updateParticles();
+
+    // Add listeners
+    mediaQuery500.addEventListener("change", updateParticles);
+    mediaQuery576.addEventListener("change", updateParticles);
+    mediaQuery992.addEventListener("change", updateParticles);
+
+    // Cleanup
+    return () => {
+      mediaQuery500.removeEventListener("change", updateParticles);
+      mediaQuery576.removeEventListener("change", updateParticles);
+      mediaQuery992.removeEventListener("change", updateParticles);
+    };
   }, []);
 
   const options: ISourceOptions = useMemo(
