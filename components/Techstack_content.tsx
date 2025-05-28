@@ -2,7 +2,7 @@
 
 import { Col, Container, ListGroup, Row } from "react-bootstrap";
 
-import styles from "../styles/components/Techstack_content.module.scss";
+import styles from "../styles/components/Techstack_content.module.css";
 
 type Props = {};
 

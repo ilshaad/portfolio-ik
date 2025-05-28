@@ -2,10 +2,11 @@
 
 import { Button, Container } from "react-bootstrap";
 
-import styles from "../styles/components/Landing_content.module.scss";
+import styles from "../styles/components/Landing_content.module.css";
 
 import Image from "next/image";
 import picOfMe from "../public/picOfMe/portfolioPic.jpg";
+import { useEffect } from "react";
 
 // import rss from
 // Welcome!
@@ -39,6 +40,10 @@ export default function Landing_content({ setSlidingCssClassName }: Props) {
   const goToSlide = (cssClassName: string) => {
     setSlidingCssClassName(cssClassName);
   };
+
+  useEffect(() => {
+    console.log("ik styles", styles);
+  }, [styles]);
 
   return (
     <Container fluid className={`${LandingPage_component}`}>

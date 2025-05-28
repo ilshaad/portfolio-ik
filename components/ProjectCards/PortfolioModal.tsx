@@ -1,6 +1,6 @@
 import { Button, ListGroup, Modal } from "react-bootstrap";
 
-import styles from "../../styles/components/ProjectCards/AllProjectModals.module.scss";
+import styles from "../../styles/components/ProjectCards/AllProjectModals.module.css";
 
 type Props = { show: boolean; handleClose: Function };
 

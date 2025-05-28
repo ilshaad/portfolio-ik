@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Nav, Offcanvas } from "react-bootstrap";
 
-import styles from "../styles/components/NavOffcanv.module.scss";
+import styles from "../styles/components/NavOffcanv.module.css";
 
 type Props = {
   show: boolean;

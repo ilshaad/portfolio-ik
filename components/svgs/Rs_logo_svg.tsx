@@ -1,4 +1,4 @@
-import styles from "../../styles/components/svgs/Rs_logo_svg.module.scss";
+import styles from "../../styles/components/svgs/Rs_logo_svg.module.css";
 
 type Props = { classProp?: string };
 

@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { Suspense, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-import styles from "../styles/components/Projects_content.module.scss";
+import styles from "../styles/components/Projects_content.module.css";
 import ProjectCard from "./ProjectCards/ProjectCard";
 
 // bug tracker project

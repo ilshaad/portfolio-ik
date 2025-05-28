@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
-import styles from "../styles/components/Header.module.scss";
+import styles from "../styles/components/Header.module.css";
 import NavOffcanva from "./NavOffcanva";
 import Github_svg from "./svgs/Github_svg";
 import LinkedIn_svg from "./svgs/LinkedIn_svg";

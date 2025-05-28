@@ -1,4 +1,4 @@
-import styles from "../styles/components/About_content.module.scss";
+import styles from "../styles/components/About_content.module.css";
 
 type Props = {};
 

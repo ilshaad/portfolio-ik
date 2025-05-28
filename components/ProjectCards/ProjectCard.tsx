@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
-import styles from "../../styles/components/ProjectCards/ProjectCard.module.scss";
+import styles from "../../styles/components/ProjectCards/ProjectCard.module.css";
 
 type Props = {
   handleShow: Function;

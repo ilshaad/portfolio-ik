@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import { Container } from "react-bootstrap";
 
-import styles from "../styles/components/SlidingConents.module.scss";
+import styles from "../styles/components/SlidingContents.module.css";
 // import About_content from "./About_content";
 // import Contact_content from "./Contact_content";
 import Landing_content from "./Landing_content";

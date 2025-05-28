@@ -1,7 +1,7 @@
 import React from "react";
 
 import Rs_logo_svg from "./svgs/Rs_logo_svg";
-import styles from "../styles/components/LoadingFullScreen.module.scss";
+import styles from "../styles/components/LoadingFullScreen.module.css";
 
 type Props = {};
 

@@ -6,7 +6,7 @@ import * as yup from "yup";
 import { Formik } from "formik";
 import { Button, Form } from "react-bootstrap";
 
-import styles from "../styles/components/ContactForm.module.scss";
+import styles from "../styles/components/ContactForm.module.css";
 
 type Props = {};
 

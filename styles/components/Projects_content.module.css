@@ -1,0 +1,47 @@
+/* font-family: 'Edu TAS Beginner', cursive; */
+/* font-family: 'Mukta', sans-serif; */
+
+/* iK? begin from 320px & up for starting breakpoint */
+.Projects_component {
+  width: inherit;
+
+  h2 {
+    background: var(--bs-gradient-background), var(--bs-primary);
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  /* * breakpint of > 360px */
+  /* // @media screen and (min-width: 360px) {
+  // } // breakpoint of > 360px */
+
+  /* * breakpint of > 400px */
+  /* // @media screen and (min-width: 400px) {
+  // } // breakpoint of > 400px */
+
+  /* * breakpint of > 500px */
+  /* // @media screen and (min-width: 500px) {
+  // } // breakpoint of > 500px */
+
+  /* * breakpint of > 576px */
+  /* // @media screen and (min-width: 576px) {
+  // } // breakpoint of > 576px */
+
+  /* * breakpint of > 768px */
+  /* // @media screen and (min-width: 768px) {
+  // } // breakpoint of > 768px */
+
+  /* * breakpint of > 992px */
+  /* // @media screen and (min-width: 992px) {
+  // } // breakpoint of > 992px */
+
+  /* * breakpint of > 1200px */
+  /* // @media screen and (min-width: 1200px) {
+  // } // breakpoint of > 1200px */
+
+  /* * breakpint of > 1400px */
+  /* // @media screen and (min-width: 1400px) {
+  // } // breakpoint of > 1400px */
+}

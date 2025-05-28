@@ -1,0 +1,250 @@
+/* ! iK this sass bootstrap is a setup for Outer-grid : header / main / footer
+  You will need to create the component/element first & add the id's within
+ Outer-grid uses css grid & consist of header / main / footer
+
+ iK? xx-small small phones (above 360px)
+ X-Small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap
+ No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+
+ #####################################################
+ x-Small devices (small phones, 320px and up)
+STARTING BREAKPOINT
+ #####################################################
+ iK font options I am using from google font
+ font-family: 'Edu TAS Beginner', cursive;
+ font-family: 'Mukta', sans-serif;
+ ! cancelled font below line
+ font-family: 'Edu SA Beginner', cursive; */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Mukta" -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/* // font-family: 'Mukta', sans-serif; */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* * to get react component full 100 width & height of the screen */
+root,
+html,
+body,
+#root {
+  /* BOOTSTRAP CUSTOMIZATION FOR ITS CLASSES */
+  /* Primary color */
+  --bs-primary: #004aad;
+  --bs-primary-rgb: 0, 74, 173;
+
+  /* Secondary color */
+  --bs-secondary: #ffffff;
+  --bs-secondary-rgb: 255, 255, 255;
+
+  /* Light background color */
+  --bs-light-background: #f1f8ff;
+  --bs-light-background-rgb: 241, 248, 255;
+
+  /* Hover color using hex value */
+  --bs-hover-colours: #00ffd4;
+  /* Corresponding RGB value: 0, 255, 212 */
+  --bs-hover-colours-rgb: 0, 55, 212;
+
+  /* Gradient colors */
+  --bs-gradient-background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 74, 173, 1) 54%,
+    rgba(3, 176, 212, 1) 100%
+  );
+
+  /* iK custom css */
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Mukta", sans-serif;
+
+  /* // scrollbars */
+  /* width */
+  ::-webkit-scrollbar {
+    width: auto;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px var(--bs-primary);
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--bs-gradient-background), var(--bs-primary);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-primary);
+  }
+}
+
+/* * Setup up Outer-grid of the screen (OuterGrid.tsx component) */
+#divBody {
+  display: grid;
+  grid-template-columns: 100%; /* 1fr is a bit dodgy when it comes to navbar sandwich & does not take the 100% width like it is suppose to */
+  grid-template-rows: 85px minmax(max-content, 1fr) 27px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  row-gap: 15px;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+
+  /* // position: relative;
+  // background-color: aquamarine; */
+}
+
+#Header {
+  grid-area: header;
+
+  /* // background-color: red; */
+  border-bottom: black 2px solid;
+}
+
+#Main {
+  grid-area: main;
+  overflow-x: auto; /* prevents main from shifting any aside grid to make x unscrollable */
+
+  height: 100%;
+  /* // min-height: 50vh; */
+  width: 70%;
+  margin: auto; /* center the box */
+
+  transition: opacity 1s ease;
+  background-color: transparent;
+}
+
+#Footer {
+  grid-area: footer;
+  margin-top: -7px;
+  /* // background-color: yellow; */
+}
+
+/* all the sliding contents, */
+.LandingSlideCss {
+  transform: translateX(0%) !important;
+}
+.AboutSlideCss {
+  transform: translateX(0%) !important;
+}
+.TechstackSlideCss {
+  transform: translateX(0%) !important;
+}
+.ProjectsSlideCss {
+  transform: translateX(0%) !important;
+}
+.ContactSlideCss {
+  transform: translateX(0%) !important;
+}
+
+/* move landing content appropriately with other slides, as this is the main default content to come back to */
+.NotLandingContent {
+  transform: translateX(-100%) !important;
+}
+
+/* if PlaygroundSlideCss css is triggered for the slidingCssClassName state, than that means use wants to see the play with the background canvas. Display the main and footer tag only */
+.PlaygroundSlideCss {
+  /* display: none; */
+  opacity: 0;
+}
+
+/* ! iK Beware I notice media query does not work accordingly unless your elements have higher specificity than < 576px. Not sure if this is a one off or not? */
+/* * However the other breakpoints are working fine with each other so you do not have to compete for specificity there */
+
+/* * breakpint of > 360px
+ @media screen and (min-width: 360px) {
+ } // breakpoint of > 360px
+
+ * breakpint of > 400px
+ @media screen and (min-width: 400px) {
+ } // breakpoint of > 400px
+
+ * breakpint of > 500px
+ @media screen and (min-width: 500px) {
+ } // breakpoint of > 500px
+
+ #####################################################
+ Small devices (landscape phones, 576px and up)
+ ##################################################### */
+@media (min-width: 576px) {
+  /* @include media-breakpoint-up(sm) { */
+  #Main {
+    width: 65%;
+  }
+
+  /* // // when link is currently active, meaning we are on the current slide content
+  // .activeLink {
+  //   color: $hover-colours;
+  // } */
+}
+
+/* // * breakpint of > 576px
+// @media screen and (min-width: 576px) {
+// } // breakpoint of > 576px
+
+// #####################################################
+// Medium devices (tablets, 768px and up)
+// #####################################################
+// @include media-breakpoint-up(md) {
+// }
+
+// * breakpint of > 768px
+// @media screen and (min-width: 768px) {
+// } // breakpoint of > 768px
+
+// #####################################################
+// Large devices (desktops, 992px and up)
+// #####################################################
+// @include media-breakpoint-up(lg) {
+// }
+ */
+/* * breakpint of > 992px */
+@media screen and (min-width: 992px) {
+  #Main {
+    width: 60%;
+  }
+} /* breakpoint of > 992px */
+
+/* // #####################################################
+// X-Large devices (large desktops, 1200px and up)
+// #####################################################
+// @include media-breakpoint-up(xl) {
+// }
+
+// * breakpint of > 1200px
+// @media screen and (min-width: 1200px) {
+// } // breakpoint of > 1200px
+
+// #####################################################
+// XX-Large devices (larger desktops, 1400px and up)
+// #####################################################
+// @include media-breakpoint-up(xxl) {
+// }
+
+// * breakpint of > 1400px
+// @media screen and (min-width: 1400px) {
+// } // breakpoint of > 1400px */

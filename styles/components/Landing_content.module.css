@@ -1,0 +1,431 @@
+/* font-family: 'Edu TAS Beginner', cursive; */
+
+.LandingPage_component {
+  /* iK? begin from 320px & up for starting breakpoint */
+  /* width: inherit; */
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 9rem 3rem 4rem 5rem 1fr;
+  /* grid-auto-rows: auto; */
+  grid-template-areas:
+    "welcomeName picOfMe_img"
+    "role_h role_h"
+    "specialised_h specialised_h"
+    "blockquote blockquote"
+    "getInTouchButton getInTouchButton";
+  /* padding: 0.5rem; */
+  /* color: $primary; */
+
+  /* border: red 1px solid; */
+
+  .welcomeName_container {
+    grid-area: welcomeName;
+
+    .welcome_h {
+      font-size: 1.3rem;
+      font-family: "Edu TAS Beginner", cursive;
+      /* margin-bottom: 0.2rem; */
+
+      animation: welcomeAnimation 1000ms 1 100ms forwards;
+      /* opacity: 0; */
+    }
+
+    @keyframes welcomeAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .name_h {
+      display: inline-block;
+      background: var(--bs-gradient-background), var(--bs-primary);
+      background-clip: text;
+      color: transparent;
+      font-size: 2rem;
+      font-family: "Edu TAS Beginner", cursive;
+
+      animation: nameAnimation 3000ms 1 700ms forwards;
+      /* opacity: 0; */
+    }
+
+    @keyframes nameAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  .picOfMe_img {
+    grid-area: picOfMe_img;
+    display: inline-block;
+    width: 100%;
+
+    animation: picAnimation 3800ms 1 1000ms forwards;
+    /* opacity: 0; */
+
+    .picOfMe_imgElement {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @keyframes picAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .role_h_container {
+    grid-area: role_h;
+    align-self: center;
+
+    .role_h {
+      font-size: 1rem;
+      font-weight: 700;
+
+      animation: roleAnimation 2500ms 1 1200ms forwards;
+      /* opacity: 0; */
+    }
+  }
+
+  @keyframes roleAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .specialised_h_container {
+    grid-area: specialised_h;
+    align-self: center;
+
+    .specialised_h {
+      font-size: 0.9rem;
+
+      animation: specialisedAnimation 2500ms 1 1400ms forwards;
+      /* opacity: 0; */
+
+      span {
+        font-style: italic;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @keyframes specialisedAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .blockquote_p_container {
+    grid-area: blockquote;
+    font-size: 1rem;
+    /* font-family: "Edu SA Beginner", cursive; */
+    font-family: "Edu TAS Beginner", cursive;
+
+    color: black;
+
+    animation: blockquoteAnimation 2500ms 1 1700ms forwards;
+    /* opacity: 0; */
+  }
+
+  @keyframes blockquoteAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .getInTouchButtonContainer {
+    grid-area: getInTouchButton;
+
+    animation: buttonAnimation 2500ms 1 1900ms forwards;
+    /* opacity: 0; */
+
+    button {
+      background: var(--bs-gradient-background), var(--bs-primary);
+      border-radius: 8% / 50%;
+
+      &:hover {
+        /* background: $primary; */
+        color: var(--bs-hover-colours);
+      }
+    }
+  }
+
+  @keyframes buttonAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* * breakpint of > 360px */
+  @media screen and (min-width: 360px) {
+    grid-template-rows: 9rem 3rem 4rem 4rem 1fr;
+
+    .welcomeName_container {
+      align-self: center;
+      padding-left: 0.5rem;
+    }
+
+    .role_h_container {
+      align-self: flex-end;
+
+      .role_h {
+        font-size: 1.1rem;
+      }
+    }
+  } /* breakpoint of > 360px */
+
+  /* * breakpint of > 400px */
+  @media screen and (min-width: 400px) {
+    grid-template-rows: 11rem 3rem 4rem 4rem 1fr;
+
+    .welcomeName_container {
+      padding-left: 0;
+      padding-top: 1rem;
+
+      .name_h {
+        font-size: 2.7rem;
+      }
+    }
+  } /* breakpoint of > 400px */
+
+  /* * breakpint of > 500px */
+  @media screen and (min-width: 500px) {
+    grid-template-rows: 13.5rem 3rem 4rem 4rem 1fr;
+    /* padding: 1rem; */
+
+    .welcomeName_container {
+      padding-left: 1.5rem;
+      padding-top: 0;
+    }
+
+    .role_h_container {
+      align-self: center;
+
+      .role_h {
+        font-size: 1.2rem;
+      }
+    }
+
+    .specialised_h_container {
+      .specialised_h {
+        font-size: 1rem;
+      }
+    }
+
+    .blockquote_p_container {
+      font-size: 1.1rem;
+    }
+  } /* breakpoint of > 500px */
+
+  /* * breakpint of > 576px */
+  @media screen and (min-width: 576px) {
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-rows: 8rem 6rem 3rem 3rem 1fr; */
+    grid-template-rows: 7rem 6rem 3rem 4rem 1fr;
+    grid-template-areas:
+      "welcomeName welcomeName welcomeName picOfMe_img picOfMe_img"
+      "role_h role_h role_h picOfMe_img picOfMe_img"
+      "specialised_h specialised_h specialised_h specialised_h specialised_h"
+      "blockquote blockquote blockquote blockquote blockquote"
+      "getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton";
+    /* padding: 1.5rem; */
+
+    .welcomeName_container {
+      align-self: flex-start;
+      justify-self: flex-start;
+      padding-left: 0;
+
+      .welcome_h {
+        font-size: 1.4rem;
+      }
+
+      .name_h {
+        font-size: 2.4rem;
+      }
+    }
+
+    .role_h_container {
+      align-self: auto;
+      justify-self: center;
+
+      /* // .role_h {
+      //   font-size: 1.3rem;
+      // } */
+    }
+  } /* breakpoint of > 576px */
+
+  /* * breakpint of > 768px */
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-rows: 6rem 5rem 3.5rem 5rem 1fr; */
+    grid-template-rows: 6rem 6rem 3.5rem 6.5rem 1fr;
+    grid-template-areas:
+      "welcomeName welcomeName welcomeName picOfMe_img picOfMe_img"
+      "role_h role_h role_h picOfMe_img picOfMe_img"
+      "specialised_h specialised_h specialised_h picOfMe_img picOfMe_img"
+      "blockquote blockquote blockquote blockquote blockquote"
+      "getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton";
+
+    .welcomeName_container {
+      .welcome_h {
+        font-size: 1.8rem;
+      }
+
+      .name_h {
+        font-size: 2.8rem;
+      }
+
+      .name_h {
+        font-size: 3.3rem;
+      }
+    }
+
+    .role_h_container {
+      align-self: center;
+    }
+
+    .specialised_h_container {
+      justify-self: center;
+
+      .specialised_h {
+        font-size: 0.9rem;
+      }
+    }
+
+    .blockquote_p_container {
+      align-self: flex-end;
+      justify-self: center;
+
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .getInTouchButtonContainer {
+      margin-top: -1rem;
+    }
+  } /* breakpoint of > 768px */
+
+  /* * breakpint of > 992px */
+  @media screen and (min-width: 992px) {
+    grid-template-rows: 7rem 6rem 5.5rem 3.5rem 1fr;
+    /* padding: 2.5rem; */
+
+    .welcomeName_container {
+      justify-self: flex-start;
+
+      .welcome_h {
+        font-size: 2.3rem;
+      }
+
+      .name_h {
+        font-size: 3.3rem;
+      }
+    }
+
+    .role_h_container {
+      .role_h {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .specialised_h_container {
+      .specialised_h {
+        font-size: 1rem;
+      }
+    }
+
+    .blockquote_p_container {
+      align-self: center;
+      font-size: 1.2rem;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .getInTouchButtonContainer {
+      margin-top: 0rem;
+    }
+  } /* breakpoint of > 992px */
+
+  /* * breakpint of > 1200px */
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(7, 1fr);
+    /* grid-template-rows: 7rem 5rem 3.5rem 6.5rem 1fr; */
+    grid-template-rows: 7rem 6rem 3.5rem 6.5rem 1fr;
+    grid-template-areas:
+      "welcomeName welcomeName welcomeName welcomeName welcomeName picOfMe_img picOfMe_img"
+      "role_h role_h role_h role_h role_h picOfMe_img picOfMe_img"
+      "specialised_h specialised_h specialised_h specialised_h specialised_h picOfMe_img picOfMe_img"
+      "blockquote blockquote blockquote blockquote blockquote blockquote blockquote"
+      "getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton getInTouchButton";
+
+    .welcomeName_container {
+      .welcome_h {
+        font-size: 2.3rem;
+      }
+
+      .name_h {
+        font-size: 4.3rem;
+        margin-left: 1rem;
+      }
+    }
+
+    .role_h_container {
+      align-self: flex-end;
+
+      .role_h {
+        font-size: 2rem;
+      }
+    }
+
+    .specialised_h_container {
+      align-self: flex-end;
+
+      .specialised_h {
+        font-size: 1.1rem;
+      }
+    }
+
+    .blockquote_p_container {
+      align-self: center;
+
+      /* margin-bottom: 3rem; */
+    }
+  } /* breakpoint of > 1200px */
+
+  /* * breakpint of > 1400px */
+  @media screen and (min-width: 1400px) {
+    .blockquote_p_container {
+      p {
+        margin-left: -111px;
+      }
+    }
+  } /* breakpoint of > 1400px */
+}

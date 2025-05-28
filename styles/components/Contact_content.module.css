@@ -1,0 +1,130 @@
+/* $primary: #004aad;
+$secondary: #ffffff;
+$light-background: #f1f8ff;
+$hover-colours: #00ffd4;
+$gradientBackground: linear-gradient(
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(0, 74, 173, 1) 54%,
+  rgba(3, 176, 212, 1) 100%
+);
+
+// font-family: 'Edu TAS Beginner', cursive;
+// font-family: 'Mukta', sans-serif; */
+
+.Contact_content_component {
+  /* iK? begin from 320px & up for starting breakpoint */
+  width: inherit;
+
+  h2 {
+    background: var(--bs-gradient-background), var(--bs-primary);
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  p {
+    color: black;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .svgContainer {
+    margin-bottom: 0.5rem;
+
+    .svgRowContainer {
+      text-align: center;
+
+      .svgColContainer {
+        align-self: center;
+
+        .linkedin_container svg,
+        .github_container svg {
+          width: 35px;
+          height: auto;
+          color: var(--vs-primary);
+
+          &:hover,
+          &:active {
+            transform: scale(1.2);
+          }
+        }
+
+        .resume_container {
+          display: inline-block;
+
+          svg {
+            width: 45px;
+            height: auto;
+            /* // background-color: red; */
+            color: var(--bs-primary);
+
+            &:hover,
+            &:active {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+
+    .contactFormContainer {
+      margin: auto;
+    }
+  }
+
+  /* * breakpint of > 360px */
+  @media screen and (min-width: 360px) {
+    .svgContainer {
+      margin-bottom: 1rem;
+    }
+  } /* breakpoint of > 360px */
+
+  /* // * breakpint of > 400px
+  // @media screen and (min-width: 400px) {
+  // } // breakpoint of > 400px
+
+  // * breakpint of > 500px
+  // @media screen and (min-width: 500px) {
+  // } // breakpoint of > 500px */
+
+  /* * breakpint of > 576px */
+  @media screen and (min-width: 576px) {
+    .contactFormContainer {
+      padding: 0 1.5rem;
+    }
+  } /* breakpoint of > 576px */
+
+  /* * breakpint of > 768px */
+  @media screen and (min-width: 768px) {
+    .contactFormContainer {
+      padding: 0 3rem;
+    }
+  } /* breakpoint of > 768px */
+
+  /* * breakpint of > 992px */
+  @media screen and (min-width: 992px) {
+    .contactFormContainer {
+      padding: 0 4rem;
+    }
+  } /* breakpoint of > 992px */
+
+  /* * breakpint of > 1200px */
+  @media screen and (min-width: 1200px) {
+    p {
+      font-size: 1rem;
+    }
+
+    .contactFormContainer {
+      padding: 0 5rem;
+    }
+  } /* breakpoint of > 1200px */
+
+  /* * breakpint of > 1400px */
+  @media screen and (min-width: 1400px) {
+    .contactFormContainer {
+      padding: 0 6.5rem;
+    }
+  } /* breakpoint of > 1400px */
+}

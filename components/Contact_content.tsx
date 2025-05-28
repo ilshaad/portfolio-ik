@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import styles from "../styles/components/Contact_content.module.scss";
+import styles from "../styles/components/Contact_content.module.css";
 import ContactForm from "./ContactForm";
 import Github_svg from "./svgs/Github_svg";
 import LinkedIn_svg from "./svgs/LinkedIn_svg";
