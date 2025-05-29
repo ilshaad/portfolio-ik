@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
 import styles from "../../styles/components/ProjectCards/ProjectCard.module.css";
+import { JSX } from "react";
 
 type Props = {
   handleShow: Function;

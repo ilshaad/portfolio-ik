@@ -8,31 +8,21 @@ import styles from "../styles/components/Projects_content.module.css";
 import ProjectCard from "./ProjectCards/ProjectCard";
 
 // bug tracker project
-const BugTrackerModal = dynamic(
-  () => import("./ProjectCards/BugTrackerModal"),
-  { suspense: true }
-);
+const BugTrackerModal = dynamic(() => import("./ProjectCards/BugTrackerModal"));
 // import BugTrackerModal from "./ProjectCards/BugTrackerModal";
 
 const BugTrackerYoutubeEmbedCode = dynamic(
-  () => import("./ProjectCards/BugTrackerYoutubeEmbedCode"),
-  {
-    suspense: true,
-  }
+  () => import("./ProjectCards/BugTrackerYoutubeEmbedCode")
 );
 
 // blog site
-const BlogSiteModal = dynamic(() => import("./ProjectCards/BlogSiteModal"), {
-  suspense: true,
-});
+const BlogSiteModal = dynamic(() => import("./ProjectCards/BlogSiteModal"));
 // import BlogSiteModal from "./ProjectCards/BlogSiteModal";
 
 import blogPreviewImg from "../public/projectsPreview/ilshaadBlogSite.jpg";
 
 // portfolio site
-const PortfolioModal = dynamic(() => import("./ProjectCards/PortfolioModal"), {
-  suspense: true,
-});
+const PortfolioModal = dynamic(() => import("./ProjectCards/PortfolioModal"));
 // import PortfolioModal from "./ProjectCards/PortfolioModal";
 
 import PortfolioPreviewImg from "../public/projectsPreview/portfolioSite.jpg";

@@ -9,21 +9,13 @@ import Landing_content from "./Landing_content";
 // import Projects_content from "./Projects_content";
 // import Techstack_content from "./Techstack_content";
 
-const About_content = dynamic(() => import("./About_content"), {
-  suspense: true,
-});
+const About_content = dynamic(() => import("./About_content"));
 
-const Techstack_content = dynamic(() => import("./Techstack_content"), {
-  suspense: true,
-});
+const Techstack_content = dynamic(() => import("./Techstack_content"));
 
-const Projects_content = dynamic(() => import("./Projects_content"), {
-  suspense: true,
-});
+const Projects_content = dynamic(() => import("./Projects_content"));
 
-const Contact_content = dynamic(() => import("./Contact_content"), {
-  suspense: true,
-});
+const Contact_content = dynamic(() => import("./Contact_content"));
 
 type Props = { slidingCssClassName: string; setSlidingCssClassName: Function };
 
