@@ -17,33 +17,34 @@ $gradientBackground: linear-gradient(
 /* // font-family: 'Edu TAS Beginner', cursive;
 // font-family: 'Mukta', sans-serif; */
 
-/* // iK? begin from 320px & up for starting breakpoint */
+/*  iK? begin from 320px & up for starting breakpoint */
 .About_component {
   width: inherit;
+}
 
-  h2 {
-    font-family: "Mukta", sans-serif;
-    font-weight: 600;
-    background: var(--bs-gradient-background), var(--bs-primary);
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-  }
+.About_component h2 {
+  font-family: "Mukta", sans-serif;
+  font-weight: 600;
+  background: var(--bs-gradient-background), var(--bs-primary);
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
 
-  p {
-    /* // font-weight: 600;
+.About_component p {
+  /* // font-weight: 600;
     // color: $primary; */
-    color: black;
+  color: black;
+}
 
-    span {
-      /* // background:  $primary;
+.About_component span {
+  /* // background:  $primary;
       // background-clip: text;
       // color: transparent; */
-      color: var(--bs-primary);
-    }
-  }
+  color: var(--bs-primary);
+}
 
-  /* // * breakpint of > 360px
+/* // * breakpint of > 360px
   // @media screen and (min-width: 360px) {
   // } // breakpoint of > 360px
 
@@ -74,4 +75,3 @@ $gradientBackground: linear-gradient(
   // * breakpint of > 1400px
   // @media screen and (min-width: 1400px) {
   // } // breakpoint of > 1400px */
-}

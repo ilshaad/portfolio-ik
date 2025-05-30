@@ -6,323 +6,306 @@
   border: var(--bs-primary) solid 1px;
   padding: 0.5rem;
   margin-bottom: 1rem;
+}
 
-  .titleHeader {
-    text-align: center;
-    font-weight: 600;
-    font-size: 1rem;
-  }
+.titleHeader {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
 
-  .cardBody {
-    /* margin: auto; */
-    text-align: center;
+.cardBody {
+  /* margin: auto; */
+  text-align: center;
+}
 
-    .mediaContainer {
-      /* // border: 1px $primary solid;
+.mediaContainer {
+  /*   
+  border: 1px $primary solid;
 
-      // width: 960px;
-      // height: 540px;
-      // width: 158px;
-      // height: 88.875px; */
+  width: 960px;
+  height: 540px;
+  width: 158px;
+  height: 88.875px; */
 
-      width: 143px;
-      height: 87.6375px;
-      display: inline-block;
-      /* margin: auto; */
+  width: 143px;
+  height: 87.6375px;
+  display: inline-block;
+  /* margin: auto; */
 
-      margin-bottom: 0.2rem;
-      height: auto;
+  margin-bottom: 0.2rem;
+  height: auto;
+}
 
-      & > img {
-        width: 100%;
-        height: auto;
-      }
+.mediaContainer > img {
+  width: 100%;
+  height: auto;
+}
 
-      iframe {
-        /* // width: 100%;
+.mediaContainer iframe {
+  /* // width: 100%;
         // height: auto;
         // width: 960px;
         // height: 540px;
         // width: 158px;
         // height: 88.875px;
         // width: 143px; */
-        height: 80px;
+  height: 80px;
 
-        width: 100%;
-      }
-    }
+  width: 100%;
+}
 
-    .summaryText {
-      color: black;
-      text-align: center;
-      font-size: 0.9rem;
-      /* padding: 0.2rem; */
-      padding-left: 0.3rem;
-      padding-right: 0.3rem;
-      /* margin-top: 0.5rem; */
-    }
+.summaryText {
+  color: black;
+  text-align: center;
+  font-size: 0.9rem;
+  /* padding: 0.2rem; */
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  /* margin-top: 0.5rem; */
+}
 
-    .projectButtonsContainer {
-      .projectButtons {
-        background: var(--bs-gradient-background), var(--bs-primary);
-        /* border-radius: 8% / 50%; */
-        color: white;
-        margin: -0.5rem 0.1rem 0.1rem 0.1rem;
-        font-size: 0.7rem;
-        /* padding: 0.5rem; */
-        padding: 0rem;
-        height: 3rem;
-        min-height: auto;
-        min-width: fit-content;
-        overflow: hidden;
+.projectButtons {
+  background: var(--bs-gradient-background), var(--bs-primary);
+  /* border-radius: 8% / 50%; */
+  color: white;
+  margin: -0.5rem 0.1rem 0.1rem 0.1rem;
+  font-size: 0.7rem;
+  /* padding: 0.5rem; */
+  padding: 0rem;
+  height: 3rem;
+  min-height: auto;
+  min-width: fit-content;
+  overflow: hidden;
+}
 
-        &:hover {
-          color: var(--bs-hover-colours);
-        }
+.projectButtons:hover {
+  color: var(--bs-hover-colours);
+}
 
-        a {
-          text-decoration: none;
-          padding: 1rem 0.1rem;
-        }
+.projectButtons a {
+  text-decoration: none;
+  padding: 1rem 0.1rem;
+}
 
-        &:visited {
-          color: white;
-        }
+.projectButtons:visited {
+  color: white;
+}
 
-        a:hover {
-          color: var(--bs-hover-colours);
-        }
-      }
-    }
+.projectButtons a:hover {
+  color: var(--bs-hover-colours);
+}
+
+/* * breakpint of > 360px */
+@media screen and (min-width: 360px) {
+  .projectButtons {
+    margin: -0.5rem -0.4rem 0.1rem -0.4rem;
+    height: 2rem;
   }
 
-  /* * breakpint of > 360px */
-  @media screen and (min-width: 360px) {
-    .cardBody {
-      .projectButtonsContainer {
-        .projectButtons {
-          margin: -0.5rem -0.4rem 0.1rem -0.4rem;
-          height: 2rem;
+  .projectButtons a {
+    padding: 1rem 0.2rem;
+  }
 
-          a {
-            padding: 1rem 0.2rem;
-          }
-        }
+  .techInfo_button {
+    padding: 0rem 0.2rem;
+  }
 
-        .techInfo_button {
-          padding: 0rem 0.2rem;
-        }
-      }
+  .mediaContainer {
+    /* width: 184px; */
+    /* height: 110.7px; */
+    width: 170px;
+    /* height: 87.63px; */
+    height: auto;
+  }
 
-      .mediaContainer {
-        /* width: 184px; */
-        /* height: 110.7px; */
-        width: 170px;
-        /* height: 87.63px; */
-        height: auto;
+  .mediaContainer iframe {
+    /* width: 184px; */
+    /* height: 110.7px; */
+    width: 170px;
+    height: 95px;
+  }
+} /* breakpoint of > 360px */
 
-        iframe {
-          /* width: 184px; */
-          /* height: 110.7px; */
-          width: 170px;
-          height: 95px;
-        }
-      }
-    }
-  } /* breakpoint of > 360px */
-
-  /* * breakpint of > 400px */
-  @media screen and (min-width: 400px) {
+/* * breakpint of > 400px */
+@media screen and (min-width: 400px) {
+  .ProjectCard_component {
     margin-bottom: 1.25rem;
+  }
 
-    .cardBody {
-      .mediaContainer {
-        /* width: 209px; */
-        /* height: 124.762px; */
-        width: 200px;
-        /* height: 87.62px; */
-        height: auto;
+  .mediaContainer {
+    /* width: 209px; */
+    /* height: 124.762px; */
+    width: 200px;
+    /* height: 87.62px; */
+    height: auto;
+  }
 
-        iframe {
-          /* width: 209px; */
-          /* height: 124.762px; */
-          width: 200px;
-          height: 112.5px;
-        }
-      }
+  .mediaContainer iframe {
+    /* width: 209px; */
+    /* height: 124.762px; */
+    width: 200px;
+    height: 112.5px;
+  }
 
-      .summaryText {
-        padding-left: 0.8rem;
-        padding-right: 0.8rem;
-      }
+  .summaryText {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
 
-      .projectButtonsContainer {
-        .projectButtons {
-          font-size: 0.8rem;
-        }
+  .projectButtons {
+    font-size: 0.8rem;
+  }
 
-        .techInfo_button {
-          padding: 0.2rem;
-        }
-      }
-    }
-  } /* breakpoint of > 400px */
+  .techInfo_button {
+    padding: 0.2rem;
+  }
+} /* breakpoint of > 400px */
 
-  /* * breakpint of > 500px */
-  @media screen and (min-width: 500px) {
-    .cardBody {
-      .mediaContainer {
-        /* width: 268px; */
-        /* height: 157.95px; */
-        width: 253px;
-        /* height: 87.61px; */
-        height: auto;
+/* * breakpint of > 500px */
+@media screen and (min-width: 500px) {
+  .mediaContainer {
+    /* width: 268px; */
+    /* height: 157.95px; */
+    width: 253px;
+    /* height: 87.61px; */
+    height: auto;
+  }
 
-        iframe {
-          /* width: 268px; */
-          /* height: 157.95px; */
-          width: 253px;
-          height: 142.312px;
-        }
-      }
+  .mediaContainer iframe {
+    /* width: 268px; */
+    /* height: 157.95px; */
+    width: 253px;
+    height: 142.312px;
+  }
 
-      .summaryText {
-        padding: 0 1.4rem;
-      }
+  .summaryText {
+    padding: 0 1.4rem;
+  }
 
-      .projectButtonsContainer {
-        padding: 0 1.5rem;
-      }
-    }
-  } /* breakpoint of > 500px */
+  .projectButtonsContainer {
+    padding: 0 1.5rem;
+  }
+} /* breakpoint of > 500px */
 
-  /* * breakpint of > 576px */
-  @media screen and (min-width: 576px) {
+/* * breakpint of > 576px */
+@media screen and (min-width: 576px) {
+  .ProjectCard_component {
     margin-bottom: 1.5rem;
+  }
 
-    .titleHeader {
-      font-size: 1.1rem;
-    }
+  .titleHeader {
+    font-size: 1.1rem;
+  }
 
-    .cardBody {
-      .mediaContainer {
-        width: 252px;
-        /* height: 148.95px; */
-        height: auto;
+  .mediaContainer {
+    width: 252px;
+    /* height: 148.95px; */
+    height: auto;
+  }
 
-        iframe {
-          width: 252px;
-          height: 148.95px;
-        }
-      }
+  .mediaContainer iframe {
+    width: 252px;
+    height: 148.95px;
+  }
 
-      .projectButtonsContainer {
-        padding: 0 1.6rem;
-      }
-    }
-  } /* breakpoint of > 576px */
+  .projectButtonsContainer {
+    padding: 0 1.6rem;
+  }
+} /* breakpoint of > 576px */
 
-  /* * breakpint of > 768px */
-  @media screen and (min-width: 768px) {
-    .cardBody {
-      .mediaContainer {
-        width: 349px;
-        /* height: 203.512px; */
-        height: auto;
+/* * breakpint of > 768px */
+@media screen and (min-width: 768px) {
+  .mediaContainer {
+    width: 349px;
+    /* height: 203.512px; */
+    height: auto;
+  }
 
-        iframe {
-          width: 349px;
-          height: 203.512px;
-        }
-      }
+  .mediaContainer iframe {
+    width: 349px;
+    height: 203.512px;
+  }
 
-      .projectButtonsContainer {
-        .projectButtons {
-          /* padding: revert; */
-          height: 2rem;
+  .projectButtons {
+    /* padding: revert; */
+    height: 2rem;
+  }
 
-          a {
-            padding: 1rem 0.7rem;
-          }
-        }
+  .projectButtons a {
+    padding: 1rem 0.7rem;
+  }
 
-        .techInfo_button {
-          padding: 0 0.7rem;
-        }
-      }
-    }
-  } /* breakpoint of > 768px */
+  .techInfo_button {
+    padding: 0 0.7rem;
+  }
+} /* breakpoint of > 768px */
 
-  /* * breakpint of > 992px */
-  @media screen and (min-width: 992px) {
+/* * breakpint of > 992px */
+@media screen and (min-width: 992px) {
+  .ProjectCard_component {
     margin-bottom: 1.75rem;
+  }
 
-    .titleHeader {
-      font-size: 1.2rem;
-    }
+  .titleHeader {
+    font-size: 1.2rem;
+  }
 
-    .cardBody {
-      .mediaContainer {
-        width: 400px;
-        /* height: 232.2px; */
-        height: auto;
+  .mediaContainer {
+    width: 400px;
+    /* height: 232.2px; */
+    height: auto;
+  }
 
-        iframe {
-          width: 400px;
-          height: 232.2px;
-        }
-      }
+  .mediaContainer iframe {
+    width: 400px;
+    height: 232.2px;
+  }
 
-      .projectButtonsContainer {
-        .projectButtons {
-          width: 78px;
+  .projectButtons {
+    width: 78px;
+  }
 
-          a {
-            padding: 1rem 1rem;
-          }
-        }
+  .projectButtons a {
+    padding: 1rem 1rem;
+  }
 
-        .techInfo_button {
-          padding: 0 1rem;
-        }
-      }
-    }
-  } /* breakpoint of > 992px */
+  .techInfo_button {
+    padding: 0 1rem;
+  }
+} /* breakpoint of > 992px */
 
-  /* * breakpint of > 1200px */
-  @media screen and (min-width: 1200px) {
-    .titleHeader {
-      font-size: 1.3rem;
-    }
-    .cardBody {
-      .summaryText {
-        font-size: 1rem;
-      }
+/* * breakpint of > 1200px */
+@media screen and (min-width: 1200px) {
+  .titleHeader {
+    font-size: 1.3rem;
+  }
 
-      .projectButtonsContainer {
-        padding: 0 6.6rem;
-      }
-    }
-  } /* breakpoint of > 1200px */
+  .summaryText {
+    font-size: 1rem;
+  }
 
-  /* * breakpint of > 1400px */
-  @media screen and (min-width: 1400px) {
+  .projectButtonsContainer {
+    padding: 0 6.6rem;
+  }
+} /* breakpoint of > 1200px */
+
+/* * breakpint of > 1400px */
+@media screen and (min-width: 1400px) {
+  .ProjectCard_component {
     margin-bottom: 2rem;
+  }
+  .titleHeader {
+    font-size: 1.4rem;
+  }
 
-    .titleHeader {
-      font-size: 1.4rem;
-    }
+  .projectButtonsContainer {
+    /* padding: 0 10.6rem; */
+    padding: 0 9.3rem;
+  }
 
-    .cardBody {
-      .projectButtonsContainer {
-        /* padding: 0 10.6rem; */
-        padding: 0 9.3rem;
-
-        .projectButtons {
-          font-size: 0.9rem;
-          width: 85px;
-        }
-      }
-    }
-  } /* breakpoint of > 1400px */
-}
+  .projectButtons {
+    font-size: 0.9rem;
+    width: 85px;
+  }
+} /* breakpoint of > 1400px */

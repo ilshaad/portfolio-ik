@@ -1,67 +1,65 @@
 /* font-family: 'Edu TAS Beginner', cursive; */
 /* font-family: 'Mukta', sans-serif; */
 
-.Techstack_component {
-  /* iK? begin from 320px & up for starting breakpoint */
-  h2 {
-    background: var(--bs-gradient-background), var(--bs-primary);
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-    font-weight: 600;
-    margin-bottom: 0rem;
-  }
+/* iK? begin from 320px & up for starting breakpoint */
+.Techstack_component h2 {
+  background: var(--bs-gradient-background), var(--bs-primary);
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 0rem;
+}
 
-  h4 {
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 0;
+.Techstack_component h4 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0;
 
-    /* &:not(:nth-of-type(1)) {
+  /* &:not(:nth-of-type(1)) {
        padding-top: 0.5rem;
      } */
-  }
+}
 
-  li {
-    text-align: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+.Techstack_component li {
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 
-    &:not(:nth-of-type(1n + 2)) {
-      padding-top: 0.25rem;
-      /* border: red 4px solid; */
-    }
-  }
+.Techstack_component li:not(:nth-of-type(1n + 2)) {
+  padding-top: 0.25rem;
+  /* border: red 4px solid; */
+}
 
-  /* * breakpint of > 360px */
-  /* // @media screen and (min-width: 360px) {
+/* * breakpint of > 360px */
+/* // @media screen and (min-width: 360px) {
   // } // breakpoint of > 360px */
 
-  /* * breakpint of > 400px */
-  /* // @media screen and (min-width: 400px) {
+/* * breakpint of > 400px */
+/* // @media screen and (min-width: 400px) {
   // } // breakpoint of > 400px */
 
-  /* * breakpint of > 500px */
-  /* // @media screen and (min-width: 500px) {
+/* * breakpint of > 500px */
+/* // @media screen and (min-width: 500px) {
   // } // breakpoint of > 500px */
 
-  /* * breakpint of > 576px */
-  /* // @media screen and (min-width: 576px) {
+/* * breakpint of > 576px */
+/* // @media screen and (min-width: 576px) {
   // } // breakpoint of > 576px */
 
-  /* * breakpint of > 768px */
-  /* // @media screen and (min-width: 768px) {
+/* * breakpint of > 768px */
+/* // @media screen and (min-width: 768px) {
   // } // breakpoint of > 768px */
 
-  /* * breakpint of > 992px */
-  /* // @media screen and (min-width: 992px) {
+/* * breakpint of > 992px */
+/* // @media screen and (min-width: 992px) {
   // } // breakpoint of > 992px */
 
-  /* * breakpint of > 1200px */
-  /* // @media screen and (min-width: 1200px) {
+/* * breakpint of > 1200px */
+/* // @media screen and (min-width: 1200px) {
   // } // breakpoint of > 1200px */
 
-  /* * breakpint of > 1400px */
-  /* // @media screen and (min-width: 1400px) {
+/* * breakpint of > 1400px */
+/* // @media screen and (min-width: 1400px) {
   // } // breakpoint of > 1400px */
-}

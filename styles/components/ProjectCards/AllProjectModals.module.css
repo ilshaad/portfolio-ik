@@ -4,102 +4,100 @@
 /* iK? begin from 320px & up for starting breakpoint */
 .AllProjectModals {
   padding: 0 !important;
+}
 
-  .modalHeader {
-    border-bottom: none;
+.modalHeader {
+  border-bottom: none;
+}
 
-    /* top right close button */
-    button {
-      align-self: flex-start;
-      z-index: 1;
-    }
+/* top right close button */
+.modalHeader button {
+  align-self: flex-start;
+  z-index: 1;
+}
 
-    h2 {
-      background: var(--bs-gradient-background), var(--bs-primary);
-      background-clip: text;
-      color: transparent;
-      display: inline-block;
-      font-weight: 600;
-    }
+.modalHeader h2 {
+  background: var(--bs-gradient-background), var(--bs-primary);
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.modalBody {
+  margin-top: -1rem;
+}
+
+.modalBody h4 {
+  color: var(--bs-primary);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0rem;
+}
+
+.modalBody ul {
+  margin-bottom: 1rem;
+}
+
+.modalBody ul li {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.modalFooter {
+  margin-top: -2.5rem;
+  border: none;
+}
+
+.bottomCloseButton {
+  background: var(--bs-gradient-background), var(--bs-primary);
+  border-radius: 8% / 50%;
+  z-index: 1;
+}
+
+.bottomCloseButton:hover {
+  color: var(--bs-hover-colours);
+}
+
+/* * breakpoint of > 360px */
+/* // @media screen and (min-width: 360px) {
+  // } // breakpoint of > 360px */
+
+/* * breakpoint of > 400px */
+/* // @media screen and (min-width: 400px) {
+  // } // breakpoint of > 400px */
+
+/* * breakpoint of > 500px */
+/* // @media screen and (min-width: 500px) {
+  // } // breakpoint of > 500px */
+
+/* * breakpoint of > 576px */
+/* // @media screen and (min-width: 576px) {
+  // } // breakpoint of > 576px */
+
+/* * breakpoint of > 768px */
+/* // @media screen and (min-width: 768px) {
+  // } // breakpoint of > 768px */
+
+/* * breakpoint of > 992px */
+@media screen and (min-width: 992px) {
+  .modalBody {
+    margin-top: -2rem;
   }
 
-  .modalBody {
-    margin-top: -1rem;
-
-    h4 {
-      color: var(--bs-primary);
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 0rem;
-    }
-
-    ul {
-      margin-bottom: 1rem;
-
-      li {
-        text-align: center;
-        font-size: 0.9rem;
-      }
-    }
+  .modalBody ul li {
+    font-size: 1rem;
   }
 
   .modalFooter {
-    margin-top: -2.5rem;
-    border: none;
-
-    .bottomCloseButton {
-      background: var(--bs-gradient-background), var(--bs-primary);
-      border-radius: 8% / 50%;
-      z-index: 1;
-
-      &:hover {
-        color: var(--bs-hover-colours);
-      }
-    }
+    margin-top: -3rem;
   }
+} /* breakpoint of > 992px */
 
-  /* * breakpoint of > 360px */
-  /* // @media screen and (min-width: 360px) {
-  // } // breakpoint of > 360px */
-
-  /* * breakpoint of > 400px */
-  /* // @media screen and (min-width: 400px) {
-  // } // breakpoint of > 400px */
-
-  /* * breakpoint of > 500px */
-  /* // @media screen and (min-width: 500px) {
-  // } // breakpoint of > 500px */
-
-  /* * breakpoint of > 576px */
-  /* // @media screen and (min-width: 576px) {
-  // } // breakpoint of > 576px */
-
-  /* * breakpoint of > 768px */
-  /* // @media screen and (min-width: 768px) {
-  // } // breakpoint of > 768px */
-
-  /* * breakpoint of > 992px */
-  @media screen and (min-width: 992px) {
-    .modalBody {
-      margin-top: -2rem;
-
-      ul {
-        li {
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .modalFooter {
-      margin-top: -3rem;
-    }
-  } /* breakpoint of > 992px */
-
-  /* * breakpoint of > 1200px */
-  /* // @media screen and (min-width: 1200px) {
+/* * breakpoint of > 1200px */
+/* // @media screen and (min-width: 1200px) {
   // } // breakpoint of > 1200px */
 
-  /* * breakpoint of > 1400px */
-  /* // @media screen and (min-width: 1400px) {
+/* * breakpoint of > 1400px */
+/* // @media screen and (min-width: 1400px) {
   // } // breakpoint of > 1400px */
-}

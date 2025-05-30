@@ -3,78 +3,78 @@
 .NavOffcanva_component {
   width: 55% !important;
   padding-left: 1rem;
+}
 
-  /* bs offcanvas header */
-  .bs_offcanvas_header {
-    padding-bottom: 0 !important;
-  }
+/* bs offcanvas header */
+.bs_offcanvas_header {
+  padding-bottom: 0 !important;
+}
 
-  /* bs offcanvas title */
+/* bs offcanvas title */
+.bs_offcanvas_header h4 {
+  color: var(--bs-primary);
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+/* bs offcanvas close button */
+.bs_offcanvas_header button {
+  margin-top: -50px;
+}
+
+.navUlContainer li {
+  font-size: 1.1rem;
+  color: var(--bs-primary);
+  padding: 0.25rem;
+}
+
+.navUlContainer li:hover,
+.navUlContainer li:active {
+  color: var(--bs-hover-colours);
+}
+
+/* * breakpint of > 360px */
+@media screen and (min-width: 360px) {
+  /* / bs offcanvas title */
   .bs_offcanvas_header h4 {
-    color: var(--bs-primary);
-    margin-top: 25px;
-    font-weight: bold;
+    font-size: 1.5rem;
   }
 
-  /* bs offcanvas close button */
-  .bs_offcanvas_header button {
-    margin-top: -50px;
+  .navUlContainer li {
+    font-size: 1.2rem;
   }
+} /* breakpoint of > 360px */
 
-  .navUlContainer {
-    li {
-      font-size: 1.1rem;
-      color: var(--bs-primary);
-      padding: 0.25rem;
-
-      &:hover,
-      &:active {
-        color: var(--bs-hover-colours);
-      }
-    }
-  }
-
-  /* * breakpint of > 360px */
-  @media screen and (min-width: 360px) {
-    /* / bs offcanvas title */
-    .bs_offcanvas_header h4 {
-      font-size: 1.5rem;
-    }
-
-    .navUlContainer {
-      li {
-        font-size: 1.2rem;
-      }
-    }
-  } /* breakpoint of > 360px */
-
-  /* * breakpint of > 400px */
-  /* // @media screen and (min-width: 400px) {
+/* * breakpint of > 400px */
+/* // @media screen and (min-width: 400px) {
   // } // breakpoint of > 400px */
 
-  /* * breakpint of > 500px */
-  @media screen and (min-width: 500px) {
+/* * breakpint of > 500px */
+@media screen and (min-width: 500px) {
+  .NavOffcanva_component {
     width: 45% !important;
-  } /* breakpoint of > 500px */
+  }
+} /* breakpoint of > 500px */
 
-  /* * breakpint of > 576px */
-  @media screen and (min-width: 576px) {
+/* * breakpint of > 576px */
+@media screen and (min-width: 576px) {
+  .NavOffcanva_component {
     display: none !important;
-  } /* breakpoint of > 576px */
+  }
+} /* breakpoint of > 576px */
 
-  /* * breakpint of > 768px */
-  /* // @media screen and (min-width: 768px) {
+/* * breakpint of > 768px */
+/* // @media screen and (min-width: 768px) {
   // } // breakpoint of > 768px */
 
-  /* * breakpint of > 992px */
-  /* // @media screen and (min-width: 992px) {
+/* * breakpint of > 992px */
+/* // @media screen and (min-width: 992px) {
   // } // breakpoint of > 992px */
 
-  /* * breakpint of > 1200px */
-  /* // @media screen and (min-width: 1200px) {
+/* * breakpint of > 1200px */
+/* // @media screen and (min-width: 1200px) {
   // } // breakpoint of > 1200px */
 
-  /* * breakpint of > 1400px */
-  /* // @media screen and (min-width: 1400px) {
+/* * breakpint of > 1400px */
+/* // @media screen and (min-width: 1400px) {
   // } // breakpoint of > 1400px */
-}

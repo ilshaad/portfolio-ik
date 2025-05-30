@@ -41,10 +41,6 @@ export default function Landing_content({ setSlidingCssClassName }: Props) {
     setSlidingCssClassName(cssClassName);
   };
 
-  useEffect(() => {
-    console.log("ik styles", styles);
-  }, [styles]);
-
   return (
     <Container fluid className={`${LandingPage_component}`}>
       <div className={`${welcomeName_container}`}>

@@ -5,57 +5,58 @@
   /* iK? begin from 320px & up for starting breakpoint */
   width: inherit;
   font-size: 0.9rem;
+}
 
-  .formGroup {
-    margin-bottom: 0.5rem;
-  }
+.formGroup {
+  margin-bottom: 0.5rem;
+}
 
-  label {
-    font-weight: 600;
-  }
+.ContactForm_component label {
+  font-weight: 600;
+}
 
-  span {
-    color: red;
-  }
+.ContactForm_component span {
+  color: red;
+}
 
-  .formControl {
-    width: 100%;
-    /* margin-bottom: 0.5rem; */
+.formControl {
+  width: 100%;
+  /* margin-bottom: 0.5rem; */
+}
 
-    &:focus {
-      outline-color: var(--bs-primary);
-    }
-  }
+.formControl:focus {
+  outline-color: var(--bs-primary);
+}
 
-  .name_errorMessage,
-  .email_errorMessage,
-  .message_errorMessage {
-    color: red;
-  }
+.name_errorMessage,
+.email_errorMessage,
+.message_errorMessage {
+  color: red;
+}
 
-  .message_errorMessage {
-    margin-top: -0.5rem;
-  }
+/* .message_errorMessage {
+  margin-top: -0.5rem;
+} */
 
-  .messageTextarea_container {
-    margin-bottom: 1rem;
-  }
+.messageTextarea_container {
+  margin-bottom: 1rem;
+}
 
-  .submitButtonContainer {
-    display: flex;
-    justify-content: flex-end;
-  }
+.submitButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
 
-  button {
-    background: var(--bs-gradient-background), var(--bs-primary);
-    border-radius: 8% / 50%;
+.ContactForm_component button {
+  background: var(--bs-gradient-background), var(--bs-primary);
+  border-radius: 8% / 50%;
+}
 
-    &:hover {
-      color: var(--vs-hover-colours);
-    }
-  }
+.ContactForm_component:hover {
+  color: var(--vs-hover-colours);
+}
 
-  /* // * breakpint of > 360px
+/* // * breakpint of > 360px
   // @media screen and (min-width: 360px) {
   // } // breakpoint of > 360px
 
@@ -67,25 +68,27 @@
   // @media screen and (min-width: 500px) {
   // } // breakpoint of > 500px */
 
-  /* * breakpint of > 576px */
-  @media screen and (min-width: 576px) {
+/* * breakpint of > 576px */
+@media screen and (min-width: 576px) {
+  .ContactForm_component {
     padding: inherit;
+  }
 
-    .submitButtonContainer {
-      margin-top: 1rem;
-    }
-  } /* breakpoint of > 576px */
+  .submitButtonContainer {
+    margin-top: 1rem;
+  }
+} /* breakpoint of > 576px */
 
-  /* * breakpint of > 768px */
-  @media screen and (min-width: 768px) {
-    /* padding: 3rem; */
+/* * breakpint of > 768px */
+@media screen and (min-width: 768px) {
+  /* padding: 3rem; */
 
-    .svgContainer {
-      margin-bottom: -5rem;
-    }
-  } /* breakpoint of > 768px */
+  .svgContainer {
+    margin-bottom: -5rem;
+  }
+} /* breakpoint of > 768px */
 
-  /* // * breakpint of > 992px
+/* // * breakpint of > 992px
   // @media screen and (min-width: 992px) {
   // } // breakpoint of > 992px
 
@@ -96,4 +99,3 @@
   // * breakpint of > 1400px
   // @media screen and (min-width: 1400px) {
   // } // breakpoint of > 1400px */
-}

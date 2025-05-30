@@ -1,138 +1,140 @@
 /* iK? begin from 320px & up for starting breakpoint */
 .Header_component {
   position: relative;
+}
 
-  .firstHeaderContainer {
-    position: absolute;
-    height: 60%;
-    top: 0;
+.firstHeaderContainer {
+  position: absolute;
+  height: 60%;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding: 0.25rem 3rem;
+  /* padding: 0.25rem 1rem; */
+}
+
+/* hidden links for only > 576px */
+.MainListLinks {
+  display: none;
+}
+
+.rsLogoContainer {
+  width: 40px;
+  cursor: pointer;
+}
+
+.rsLogo_img {
+  width: 100%;
+  height: auto;
+}
+
+.logoName {
+  /* font-family: "Edu SA Beginner", cursive; */
+  font-size: 2.2rem;
+  letter-spacing: 4px;
+
+  background: var(--bs-gradient-background), var(--bs-primary);
+
+  background-clip: text;
+  color: rgb(0, 0, 0, 0);
+  margin-top: -3px;
+  padding-left: 53px;
+}
+
+.mobileNavButton {
+  background: var(--bs-gradient-background), var(--bs-primary);
+  /* border-radius: 8% / 50%; */
+}
+
+.desktopSvgContactLinks {
+  display: none;
+}
+
+.secondHeaderContainer {
+  background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(0, 74, 173, 1) 54%,
+      rgba(3, 176, 212, 1) 100%
+    ),
+    var(--bs-primary);
+  height: 40%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-left: 5.5rem;
+  padding-right: 5.5rem;
+  overflow: hidden;
+}
+
+.linkedSvgElement_mobile,
+.githubSvgElement_mobile {
+  transform: scale(1.2);
+}
+
+.instagramSvgElement_mobile {
+  transform: scale(1.4);
+}
+
+.resumeSvgElement_mobile {
+  color: white;
+  height: auto;
+  width: 22px;
+  transform: scale(1.2);
+  /* margin-left: 1.5rem; */
+}
+
+.shineAnimation {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  height: 100%;
+  transform: skew(-25deg, 0deg);
+
+  background: inherit;
+  filter: blur(3px);
+
+  animation: move 6s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  /* animation-timing-function: cubic-bezier(0.42, 0, 1, 1); */
+  /* animation-timing-function: cubic-bezier(0.57, -0.14, 1, 1); */
+  animation-timing-function: ease-in;
+}
+
+@keyframes move {
+  0% {
     left: 0;
-    right: 0;
-    overflow: hidden;
-    padding: 0.25rem 3rem;
-    /* padding: 0.25rem 1rem; */
-
-    /* hidden links for only > 576px */
-    .MainListLinks {
-      display: none;
-    }
-
-    .rsLogoContainer {
-      width: 40px;
-      cursor: pointer;
-
-      .rsLogo_img {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    .logoName {
-      /* font-family: "Edu SA Beginner", cursive; */
-      font-size: 2.2rem;
-      letter-spacing: 4px;
-
-      background: var(--bs-gradient-background), var(--bs-primary);
-
-      background-clip: text;
-      color: rgb(0, 0, 0, 0);
-      margin-top: -3px;
-      padding-left: 53px;
-    }
-
-    .mobileNavButton {
-      background: var(--bs-gradient-background), var(--bs-primary);
-      /* border-radius: 8% / 50%; */
-    }
-
-    .desktopSvgContactLinks {
-      display: none;
-    }
   }
 
-  .secondHeaderContainer {
-    background: linear-gradient(
-        90deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(0, 74, 173, 1) 54%,
-        rgba(3, 176, 212, 1) 100%
-      ),
-      var(--bs-primary);
-    height: 40%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    padding-left: 5.5rem;
-    padding-right: 5.5rem;
-    overflow: hidden;
-
-    .linkedSvgElement_mobile,
-    .githubSvgElement_mobile {
-      transform: scale(1.2);
-    }
-
-    .instagramSvgElement_mobile {
-      transform: scale(1.4);
-    }
-
-    .resumeSvgElement_mobile {
-      color: white;
-      height: auto;
-      width: 22px;
-      transform: scale(1.2);
-      /* margin-left: 1.5rem; */
-    }
-
-    .shineAnimation {
-      position: absolute;
-      opacity: 0;
-      left: 0;
-      bottom: 0;
-      width: 10%;
-      height: 100%;
-      transform: skew(-25deg, 0deg);
-
-      background: inherit;
-      filter: blur(3px);
-
-      animation: move 6s;
-      animation-iteration-count: infinite;
-      animation-delay: 2s;
-      /* animation-timing-function: cubic-bezier(0.42, 0, 1, 1); */
-      /* animation-timing-function: cubic-bezier(0.57, -0.14, 1, 1); */
-      animation-timing-function: ease-in;
-    }
-
-    @keyframes move {
-      0% {
-        left: 0;
-      }
-
-      15% {
-        left: 0;
-        opacity: 1;
-      }
-      20% {
-        opacity: 0.4;
-      }
-      25% {
-        opacity: 0.5;
-      }
-      48% {
-        opacity: 0.3;
-      }
-      60% {
-        opacity: 0;
-        left: 80%;
-      }
-      60% {
-        left: 100%;
-      }
-      100% {
-        left: 100%;
-      }
-    }
-    /* // @keyframes move {
+  15% {
+    left: 0;
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  48% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0;
+    left: 80%;
+  }
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+/* // @keyframes move {
     //   0% {
     //     left: -10;
     //     opacity: 1;
@@ -154,217 +156,216 @@
     //   }
     // } */
 
-    .navLinkButtonsContainer {
-      display: none;
-    }
-  }
+.navLinkButtonsContainer {
+  display: none;
+}
 
-  /* // .svgContainer {
+/* // .svgContainer {
   //   padding-right: 0;
   // } */
 
-  /* * breakpint of > 360px */
-  @media screen and (min-width: 360px) {
-    .firstHeaderContainer {
-      padding: 0.25rem 3rem;
-      /* padding: 0.25rem 2rem; */
+/* * breakpint of > 360px */
+@media screen and (min-width: 360px) {
+  .firstHeaderContainer {
+    padding: 0.25rem 3rem;
+    /* padding: 0.25rem 2rem; */
+  }
 
-      .logoName {
-        font-size: 2.3rem !important;
-        padding-left: 58px;
-      }
-    }
-  } /* breakpoint of > 360px */
+  .logoName {
+    font-size: 2.3rem !important;
+    padding-left: 58px;
+  }
+} /* breakpoint of > 360px */
 
-  /* * breakpint of > 400px */
-  @media screen and (min-width: 400px) {
-    .firstHeaderContainer {
-      /* padding: 0.25rem 3rem; */
-      padding: 0.25rem 4rem;
-    }
-  } /* breakpoint of > 400px */
+/* * breakpint of > 400px */
+@media screen and (min-width: 400px) {
+  .firstHeaderContainer {
+    /* padding: 0.25rem 3rem; */
+    padding: 0.25rem 4rem;
+  }
+} /* breakpoint of > 400px */
 
-  /* * breakpint of > 500px */
-  @media screen and (min-width: 500px) {
-    .firstHeaderContainer {
-      padding: 0.25rem 5rem;
+/* * breakpint of > 500px */
+@media screen and (min-width: 500px) {
+  .firstHeaderContainer {
+    padding: 0.25rem 5rem;
+  }
 
-      .logoName {
-        padding-left: 56px;
-      }
-    }
-  } /* breakpoint of > 500px */
+  .logoName {
+    padding-left: 56px;
+  }
+} /* breakpoint of > 500px */
 
-  /* * breakpint of > 576px */
-  @media screen and (min-width: 576px) {
-    .firstHeaderContainer {
-      /* padding: 0 5rem; */
-      padding: 0 7rem;
+/* * breakpint of > 576px */
+@media screen and (min-width: 576px) {
+  .firstHeaderContainer {
+    /* padding: 0 5rem; */
+    padding: 0 7rem;
+  }
 
-      .MobileBarList {
-        display: none;
-      }
+  .MobileBarList {
+    display: none;
+  }
 
-      .rsLogoContainer {
-        width: 42px;
-      }
+  .rsLogoContainer {
+    width: 42px;
+  }
 
-      .logoName {
-        font-size: 3rem !important;
-        margin-top: -6px;
-        display: flex;
-        justify-content: flex-start;
-        padding: 0;
-        margin-left: -12px;
-      }
+  .logoName {
+    font-size: 3rem !important;
+    margin-top: -6px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin-left: -12px;
+  }
 
-      .desktopSvgContactLinks {
-        display: block;
-        padding: 0.5rem;
+  .desktopSvgContactLinks {
+    display: block;
+    padding: 0.5rem;
+  }
 
-        .linkedinSvg_desktop {
-          color: var(--bs-primary);
-          transform: scale(1.6);
-          text-align: center;
+  .linkedinSvg_desktop {
+    color: var(--bs-primary);
+    transform: scale(1.6);
+    text-align: center;
+  }
 
-          &:hover {
-            transform: scale(2);
-          }
-        }
+  .linkedinSvg_desktop:hover {
+    transform: scale(2);
+  }
 
-        .githubSvg_desktop,
-        .instagramSvg_desktop {
-          color: var(--bs-primary);
-          transform: scale(1.5);
-          text-align: center;
+  .githubSvg_desktop,
+  .instagramSvg_desktop {
+    color: var(--bs-primary);
+    transform: scale(1.5);
+    text-align: center;
+  }
 
-          &:hover {
-            transform: scale(2);
-          }
-        }
+  .githubSvg_desktop:hover,
+  .instagramSvg_desktop:hover {
+    transform: scale(2);
+  }
 
-        .resumeSvgElement_desktop {
-          color: var(--bs-primary);
-          text-align: center;
-          transform: scale(1.5);
-          text-align: center;
+  .resumeSvgElement_desktop {
+    color: var(--bs-primary);
+    text-align: center;
+    transform: scale(1.5);
+    text-align: center;
 
-          &:hover {
-            transform: scale(2);
-          }
+    /* color: white; */
+    height: auto;
+    width: 22px;
+  }
 
-          /* color: white; */
-          height: auto;
-          width: 22px;
-        }
-      }
+  .resumeSvgElement_desktop:hover {
+    transform: scale(2);
+  }
 
-      /* instagram col container */
-      .instagramCol {
-        /* border: red 0.1rem solid; */
-        padding-left: 1rem;
-      }
-    }
+  /* instagram col container */
+  .instagramCol {
+    /* border: red 0.1rem solid; */
+    padding-left: 1rem;
+  }
 
-    .secondHeaderContainer {
-      padding: 0;
-      flex-direction: row;
+  .secondHeaderContainer {
+    padding: 0;
+    flex-direction: row;
+  }
 
-      /* links to navigate */
-      .navLinkButtonsContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        overflow: hidden;
-        height: 100%;
-        width: 89%;
-        /* margin: auto; */
-        color: white;
-        padding-top: 4px;
+  /* links to navigate */
+  .navLinkButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 100%;
+    width: 89%;
+    /* margin: auto; */
+    color: white;
+    padding-top: 4px;
+  }
 
-        .MainListLinks {
-          text-align: start;
-          font-size: 1rem;
-          padding: 0 13px;
-          /* width: 20px !important; */
-          cursor: pointer;
-          /* background-color: pink; */
+  .MainListLinks {
+    display: block;
+    text-align: start;
+    font-size: 1rem;
+    padding: 0 13px;
+    /* width: 20px !important; */
+    cursor: pointer;
+    /* background-color: pink; */
+  }
 
-          &:hover,
-          & a:hover {
-            color: var(--hover-colours) !important;
-          }
-        }
+  .MainListLinks:hover,
+  .MainListLinks a:hover {
+    color: var(--bs-hover-colours) !important;
+  }
 
-        /* project link */
-        .MainListLinks:nth-of-type(4) {
-          padding-left: 3px;
-        }
+  /* project link */
+  .MainListLinks:nth-of-type(4) {
+    padding-left: 3px;
+  }
 
-        /* contact link */
-        .MainListLinks:nth-of-type(5) {
-          padding-left: 3px;
-        }
+  /* contact link */
+  .MainListLinks:nth-of-type(5) {
+    padding-left: 3px;
+  }
 
-        /* Playground link */
-        .MainListLinks:nth-of-type(6) {
-          padding-left: 0px;
-        }
+  /* Playground link */
+  .MainListLinks:nth-of-type(6) {
+    padding-left: 0px;
+  }
 
-        /* when link is currently active, meaning we are on the current slide content */
-        .activeLink {
-          color: var(--bs-hover-colours);
-        }
-      }
+  /* when link is currently active, meaning we are on the current slide content */
+  .activeLink {
+    color: var(--bs-hover-colours);
+  }
 
-      .mobileSvgContactLinks {
-        display: none;
-      }
-    }
-  } /* breakpoint of > 576px */
+  .mobileSvgContactLinks {
+    display: none;
+  }
+} /* breakpoint of > 576px */
 
-  /* * breakpint of > 768px */
-  @media screen and (min-width: 768px) {
-    .firstHeaderContainer {
-      padding: 0 8.5rem;
+/* * breakpint of > 768px */
+@media screen and (min-width: 768px) {
+  .firstHeaderContainer {
+    padding: 0 8.5rem;
+  }
 
-      .logoName {
-        margin-left: -30px;
-      }
+  .logoName {
+    margin-left: -30px;
+  }
 
-      /* // .desktopSvgContactLinks {
+  /* // .desktopSvgContactLinks {
       //   .instagramSvg_desktop {
       //     color: red;
       //   }
       // } */
-    }
 
-    .secondHeaderContainer {
-      .navLinkButtonsContainer {
-        width: 71%;
+  .navLinkButtonsContainer {
+    width: 71%;
+  }
 
-        .MainListLinks {
-          font-size: 1.1rem;
-        }
-      }
-    }
-  } /* breakpoint of > 768px */
+  .MainListLinks {
+    font-size: 1.1rem;
+  }
+} /* breakpoint of > 768px */
 
-  /* * breakpint of > 992px */
-  @media screen and (min-width: 992px) {
-    .firstHeaderContainer {
-      padding: 0 10rem;
+/* * breakpint of > 992px */
+@media screen and (min-width: 992px) {
+  .firstHeaderContainer {
+    padding: 0 10rem;
+  }
 
-      .rsLogoContainer {
-        margin-left: 1.7rem;
-      }
+  .rsLogoContainer {
+    margin-left: 1.7rem;
+  }
 
-      .logoName {
-        margin-left: 0;
-      }
-    }
+  .logoName {
+    margin-left: 0;
+  }
 
-    /* // LinkedIn svg
+  /* // LinkedIn svg
     // .linkedinSvgContainer_desktop {
     //   text-align: end;
     // }
@@ -374,37 +375,34 @@
     //   text-align: start;
     // } */
 
-    .secondHeaderContainer {
-      .navLinkButtonsContainer {
-        width: 60%;
-      }
-    }
-  } /* breakpoint of > 992px */
+  .navLinkButtonsContainer {
+    width: 60%;
+  }
+} /* breakpoint of > 992px */
 
-  /* * breakpint of > 1200px */
-  @media screen and (min-width: 1200px) {
-    .firstHeaderContainer {
-      padding: 0 11rem;
+/* * breakpint of > 1200px */
+@media screen and (min-width: 1200px) {
+  .firstHeaderContainer {
+    padding: 0 11rem;
+  }
 
-      .rsLogoContainer {
-        /* margin-left: 15px; */
-        margin-left: 3.5rem;
-      }
+  .rsLogoContainer {
+    /* margin-left: 15px; */
+    margin-left: 3.5rem;
+  }
 
-      .logoName {
-        margin-left: 10px;
-      }
-    }
-  } /* breakpoint of > 1200px */
+  .logoName {
+    margin-left: 10px;
+  }
+} /* breakpoint of > 1200px */
 
-  /* * breakpint of > 1400px */
-  @media screen and (min-width: 1400px) {
-    .firstHeaderContainer {
-      padding: 0 14rem;
+/* * breakpint of > 1400px */
+@media screen and (min-width: 1400px) {
+  .firstHeaderContainer {
+    padding: 0 14rem;
+  }
 
-      .rsLogoContainer {
-        margin-left: 2.3rem;
-      }
-    }
-  } /* breakpoint of > 1400px */
-}
+  .rsLogoContainer {
+    margin-left: 2.3rem;
+  }
+} /* breakpoint of > 1400px */

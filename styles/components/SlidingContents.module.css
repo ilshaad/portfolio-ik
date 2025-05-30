@@ -7,117 +7,111 @@
   padding: 0.2rem;
   display: flex;
   background-color: transparent;
+}
 
-  .SlidingContent_container {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-  }
+.SlidingContent_container {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
 
-  .sliderItems {
-    width: 100% !important;
-    position: absolute;
+.sliderItems {
+  width: 100% !important;
+  position: absolute;
 
-    height: 100%;
-    overflow-y: auto;
+  height: 100%;
+  overflow-y: auto;
 
-    background-color: darkgrey;
-    border: var(--bs-primary) solid 1px;
-    padding: 9px 0;
+  background-color: darkgrey;
+  border: var(--bs-primary) solid 1px;
+  padding: 9px 0;
+}
 
-    /* * to all slide content component directly so they all have roughly the same look */
-    & > * {
-      width: inherit;
-      height: 100%;
-      padding: 0.5rem;
-      color: var(--bs-primary);
-      background-color: white;
-    }
-  }
+/* * to all slide content component directly so they all have roughly the same look */
+.sliderItems > * {
+  width: inherit;
+  height: 100%;
+  padding: 0.5rem;
+  color: var(--bs-primary);
+  background-color: white;
+}
 
-  .landingSlide {
-    /* transform: translateX(0%); // no need to set this as it is already default */
-    transition: transform 1s ease;
+.landingSlide {
+  /* transform: translateX(0%); // no need to set this as it is already default */
+  transition: transform 1s ease;
 
-    background-color: white;
-  }
+  background-color: white;
+}
 
-  .aboutSlide {
-    transform: translateX(100%);
-    transition: transform 1s ease;
+.aboutSlide {
+  transform: translateX(100%);
+  transition: transform 1s ease;
 
-    background-color: white;
-  }
+  background-color: white;
+}
 
-  .techstackSlide {
-    transform: translateX(100%);
-    transition: transform 1s ease;
+.techstackSlide {
+  transform: translateX(100%);
+  transition: transform 1s ease;
 
-    background-color: white;
-  }
+  background-color: white;
+}
 
-  .projectSlide {
-    transform: translateX(100%);
-    transition: transform 1s ease;
+.projectSlide {
+  transform: translateX(100%);
+  transition: transform 1s ease;
 
-    background-color: white;
-  }
+  background-color: white;
+}
 
-  .contactSlide {
-    transform: translateX(100%);
-    transition: transform 1s ease;
+.contactSlide {
+  transform: translateX(100%);
+  transition: transform 1s ease;
 
-    background-color: white;
-  }
+  background-color: white;
+}
 
-  /* * breakpint of > 360px */
-  /* // @media screen and (min-width: 360px) {
+/* * breakpint of > 360px */
+/* // @media screen and (min-width: 360px) {
   // } // breakpoint of > 360px */
 
-  /* * breakpint of > 400px */
-  /* // @media screen and (min-width: 400px) {
+/* * breakpint of > 400px */
+/* // @media screen and (min-width: 400px) {
   // } // breakpoint of > 400px
  */
-  /* * breakpint of > 500px */
-  @media screen and (min-width: 500px) {
-    .sliderItems {
-      & > * {
-        padding: 1rem;
-      }
-    }
-  } /* breakpoint of > 500px */
+/* * breakpint of > 500px */
+@media screen and (min-width: 500px) {
+  .sliderItems > * {
+    padding: 1rem;
+  }
+} /* breakpoint of > 500px */
 
-  /* * breakpint of > 576px */
-  @media screen and (min-width: 576px) {
-    .sliderItems {
-      & > * {
-        padding: 1.5rem;
-      }
-    }
-  } /* breakpoint of > 576px */
+/* * breakpint of > 576px */
+@media screen and (min-width: 576px) {
+  .sliderItems > * {
+    padding: 1.5rem;
+  }
+} /* breakpoint of > 576px */
 
-  /* * breakpint of > 768px */
-  /* // @media screen and (min-width: 768px) {
+/* * breakpint of > 768px */
+/* // @media screen and (min-width: 768px) {
   // } // breakpoint of > 768px */
 
-  /* * breakpint of > 992px */
-  @media screen and (min-width: 992px) {
-    .sliderItems {
-      & > * {
-        padding: 2.5rem;
-      }
-    }
-  } /* breakpoint of > 992px */
+/* * breakpint of > 992px */
+@media screen and (min-width: 992px) {
+  .sliderItems > * {
+    padding: 2.5rem;
+  }
+} /* breakpoint of > 992px */
 
-  /* * breakpint of > 1200px */
-  /* // @media screen and (min-width: 1200px) {
+/* * breakpint of > 1200px */
+/* // @media screen and (min-width: 1200px) {
   // } // breakpoint of > 1200px */
 
-  /* * breakpint of > 1400px */
-  /* // @media screen and (min-width: 1400px) {
+/* * breakpint of > 1400px */
+/* // @media screen and (min-width: 1400px) {
   // } // breakpoint of > 1400px */
-}
