@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
-import SlidingContents from "./SlidingContents";
-// import One from "../unusedPagesiK/One";
+// import SlidingContents from "./SlidingContents";
+import One from "../unusedPagesiK/One";
 // import Two from "../unusedPagesiK/Two";
 
 type Props = {};
@@ -28,11 +28,11 @@ export default function Body({}: Props) {
             : ""
         }
       >
-        <SlidingContents
+        {/* <SlidingContents
           slidingCssClassName={slidingCssClassName}
           setSlidingCssClassName={setSlidingCssClassName}
-        />
-        {/* <One /> */}
+        /> */}
+        <One />
         {/* <Two /> */}
       </main>
 

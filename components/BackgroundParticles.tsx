@@ -69,9 +69,9 @@ export default function BackgroundParticles() {
         setMotionReduceFactor(7);
       }
       if (mediaQuery992.matches) {
-        setLinkDistance(900);
-        setParticlesNumberLimit(95);
-        setMotionReduceFactor(99);
+        setLinkDistance(200);
+        setParticlesNumberLimit(45);
+        setMotionReduceFactor(7);
       }
     };
 
