@@ -62,37 +62,44 @@ export default function BackgroundParticles() {
 
   // setting the canvas to have more power depending on screen size
   useEffect(() => {
+    const mediaQuery360 = window.matchMedia("(min-width: 360px)");
     const mediaQuery500 = window.matchMedia("(min-width: 500px)");
     const mediaQuery576 = window.matchMedia("(min-width: 576px)");
     const mediaQuery992 = window.matchMedia("(min-width: 992px)");
 
     const updateParticles = () => {
-      // Reset to default first
-      // setLinkDistance(130);
-      // setParticlesNumberLimit(23);
-      // setParticlesNumberValue(23);
-      // setMotionReduceFactor(12);
-
-      if (mediaQuery500.matches) {
-        setLinkDistance(145);
-        setParticlesNumberLimit(40);
-        setParticlesNumberValue(29);
-        setMotionReduceFactor(9);
-        // console.log("iK 500");
+      if (mediaQuery992.matches) {
+        setLinkDistance(200);
+        setParticlesNumberLimit(45);
+        setMotionReduceFactor(7);
+        console.log("iK 992");
+        return;
       }
 
       if (mediaQuery576.matches) {
         setLinkDistance(180);
         setParticlesNumberLimit(43);
         setMotionReduceFactor(7);
-        // console.log("iK 576");
+        console.log("iK 576");
+        return;
       }
 
-      if (mediaQuery992.matches) {
-        setLinkDistance(200);
-        setParticlesNumberLimit(45);
-        setMotionReduceFactor(7);
-        // console.log("iK 992");
+      if (mediaQuery500.matches) {
+        setLinkDistance(145);
+        setParticlesNumberLimit(40);
+        setParticlesNumberValue(29);
+        setMotionReduceFactor(9);
+        console.log("iK 500");
+        return;
+      }
+
+      if (mediaQuery360.matches) {
+        setLinkDistance(130);
+        setParticlesNumberLimit(23);
+        setParticlesNumberValue(23);
+        setMotionReduceFactor(12);
+        console.log("iK 360");
+        return;
       }
     };
 
@@ -100,12 +107,14 @@ export default function BackgroundParticles() {
     updateParticles();
 
     // Add listeners
+    mediaQuery360.addEventListener("change", updateParticles);
     mediaQuery500.addEventListener("change", updateParticles);
     mediaQuery576.addEventListener("change", updateParticles);
     mediaQuery992.addEventListener("change", updateParticles);
 
     // Cleanup
     return () => {
+      mediaQuery360.removeEventListener("change", updateParticles);
       mediaQuery500.removeEventListener("change", updateParticles);
       mediaQuery576.removeEventListener("change", updateParticles);
       mediaQuery992.removeEventListener("change", updateParticles);
