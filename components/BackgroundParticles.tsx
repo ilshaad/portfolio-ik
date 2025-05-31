@@ -27,11 +27,27 @@ export default function BackgroundParticles() {
     }).then(() => {
       setInit(true);
     });
-  }, []);
+  }, []); // END useEffect
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
     console.log(container);
-  };
+    const distance = (container?.actualOptions?.particles?.links as any)
+      ?.distance;
+    console.log("🚀 ~ particlesLoaded ~ distance:", distance);
+    const numberLimit = (
+      container?.actualOptions?.particles?.number?.limit as any
+    )?.value;
+    console.log("🚀 ~ particlesLoaded ~ numberLimit:", numberLimit);
+
+    const numberValue = (container?.actualOptions?.particles?.number as any)
+      ?.value;
+    console.log("🚀 ~ particlesLoaded ~ numberValue:", numberValue);
+
+    const motionFactor: number | undefined = (
+      container?.actualOptions?.motion?.reduce as any
+    )?.factor;
+    console.log("🚀 ~ particlesLoaded ~ motionFactor:", motionFactor);
+  }; // END particlesLoaded
 
   // 360  500  576  768  992  1200 1400  1600px
   // 185 link.distance: 120	150	180
@@ -94,7 +110,7 @@ export default function BackgroundParticles() {
       mediaQuery576.removeEventListener("change", updateParticles);
       mediaQuery992.removeEventListener("change", updateParticles);
     };
-  }, []);
+  }, []); // END useEffect
 
   const options: ISourceOptions = useMemo(
     () => ({
@@ -554,7 +570,7 @@ export default function BackgroundParticles() {
       zLayers: 100,
     }),
     []
-  );
+  ); // END options
 
   if (init) {
     return (
