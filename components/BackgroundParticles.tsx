@@ -55,10 +55,10 @@ export default function BackgroundParticles() {
   // 5 motion.reduce.factor	8	7	5
 
   // default value set for 320px width or above (really its for 360px)
-  let [linkDistance, setLinkDistance] = useState(130);
-  let [particlesNumberLimit, setParticlesNumberLimit] = useState(23);
-  let [particlesNumberValue, setParticlesNumberValue] = useState(23);
-  let [motionReduceFactor, setMotionReduceFactor] = useState(12);
+  let [linkDistance, setLinkDistance] = useState(200);
+  let [particlesNumberValue, setParticlesNumberValue] = useState(33);
+  let [particlesNumberLimit, setParticlesNumberLimit] = useState(53);
+  let [motionReduceFactor, setMotionReduceFactor] = useState(3);
 
   // setting the canvas to have more power depending on screen size
   useEffect(() => {
@@ -93,11 +93,12 @@ export default function BackgroundParticles() {
         return;
       }
 
+      // iK I added because it would be wise to add settings for 360px width too, but this was not here before
       if (mediaQuery360.matches) {
-        setLinkDistance(130);
-        setParticlesNumberLimit(23);
-        setParticlesNumberValue(23);
-        setMotionReduceFactor(12);
+        setLinkDistance(180);
+        setParticlesNumberLimit(53);
+        setParticlesNumberValue(53);
+        setMotionReduceFactor(2);
         console.log("iK 360");
         return;
       }
