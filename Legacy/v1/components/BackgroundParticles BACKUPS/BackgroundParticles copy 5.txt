@@ -1,3 +1,5 @@
+// IK THIS VERSION IS HAVING ALL THE UPDATED MODIFICATION INCLUDING THE ORIGINAL SETTING NUMBER CHANGE TO FIT THE APPROPRIATE NUMBER. / I DECIDED NOT TO BOTHER TRYING TO FIX THE MEDIA QUERIES BECAUSE THE NEW SETTINGS NUMBER SEEM GOOD TO ME FOR ALL BREAKPOINTS, ALSO i MIGHT SUSPECT TSPARTICLES TAKES CARE OF THAT THEMSELVES BECAUSE IT SEEMS LESS PARTICLES WHEN SMALLER BREAKPOINT / ADD ALL CONSOLE LOG & ETC BUT YOU WILL NOTICE PROPERTY OPTIONS DOES NOT CHANGE SO YOU WILL HAVE TO FIGURE WHY THAT IS IF YOU WANT TO MANAUALLY CHANGE THE BREAKPOINT YOURSELF
+
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
@@ -29,23 +31,98 @@ export default function BackgroundParticles() {
     });
   }, []); // END useEffect
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {}; // END particlesLoaded
+  const particlesLoaded = async (container?: Container): Promise<void> => {
+    console.log(container);
+    const distance = (container?.actualOptions?.particles?.links as any)
+      ?.distance;
+    console.log("🚀 ~ particlesLoaded ~ distance:", distance);
+    const numberLimit = (
+      container?.actualOptions?.particles?.number?.limit as any
+    )?.value;
+    console.log("🚀 ~ particlesLoaded ~ numberLimit:", numberLimit);
+
+    const numberValue = (container?.actualOptions?.particles?.number as any)
+      ?.value;
+    console.log("🚀 ~ particlesLoaded ~ numberValue:", numberValue);
+
+    const motionFactor: number | undefined = (
+      container?.actualOptions?.motion?.reduce as any
+    )?.factor;
+    console.log("🚀 ~ particlesLoaded ~ motionFactor:", motionFactor);
+  }; // END particlesLoaded
 
   // 360  500  576  768  992  1200 1400  1600px
+  // 185 link.distance: 120	150	180
+  // 45 particles.number.limit: 30	40	45
+  // 5 motion.reduce.factor	8	7	5
 
   // default value set for 320px width or above (really its for 360px)
-  // length of the link between particles
-  // let [linkDistance, setLinkDistance] = useState(200);
-  const linkDistance = 200;
-  // number of particles to be displayed
-  // let [particlesNumberValue, setParticlesNumberValue] = useState(33);
-  const particlesNumberValue = 33;
-  // number of particles to be displayed at maximum
-  // let [particlesNumberLimit, setParticlesNumberLimit] = useState(53);
-  const particlesNumberLimit = 53;
-  // the speed of the particles motion
-  // let [motionReduceFactor, setMotionReduceFactor] = useState(3);
-  const motionReduceFactor = 3;
+  let [linkDistance, setLinkDistance] = useState(200);
+  let [particlesNumberValue, setParticlesNumberValue] = useState(33);
+  let [particlesNumberLimit, setParticlesNumberLimit] = useState(53);
+  let [motionReduceFactor, setMotionReduceFactor] = useState(3);
+
+  // setting the canvas to have more power depending on screen size
+  useEffect(() => {
+    const mediaQuery360 = window.matchMedia("(min-width: 360px)");
+    const mediaQuery500 = window.matchMedia("(min-width: 500px)");
+    const mediaQuery576 = window.matchMedia("(min-width: 576px)");
+    const mediaQuery992 = window.matchMedia("(min-width: 992px)");
+
+    const updateParticles = () => {
+      if (mediaQuery992.matches) {
+        setLinkDistance(200);
+        setParticlesNumberLimit(45);
+        setMotionReduceFactor(7);
+        console.log("iK 992");
+        return;
+      }
+
+      if (mediaQuery576.matches) {
+        setLinkDistance(180);
+        setParticlesNumberLimit(43);
+        setMotionReduceFactor(7);
+        console.log("iK 576");
+        return;
+      }
+
+      if (mediaQuery500.matches) {
+        setLinkDistance(145);
+        setParticlesNumberLimit(40);
+        setParticlesNumberValue(29);
+        setMotionReduceFactor(9);
+        console.log("iK 500");
+        return;
+      }
+
+      // iK I added because it would be wise to add settings for 360px width too, but this was not here before
+      if (mediaQuery360.matches) {
+        setLinkDistance(180);
+        setParticlesNumberLimit(53);
+        setParticlesNumberValue(53);
+        setMotionReduceFactor(2);
+        console.log("iK 360");
+        return;
+      }
+    };
+
+    // Initial check
+    updateParticles();
+
+    // Add listeners
+    mediaQuery360.addEventListener("change", updateParticles);
+    mediaQuery500.addEventListener("change", updateParticles);
+    mediaQuery576.addEventListener("change", updateParticles);
+    mediaQuery992.addEventListener("change", updateParticles);
+
+    // Cleanup
+    return () => {
+      mediaQuery360.removeEventListener("change", updateParticles);
+      mediaQuery500.removeEventListener("change", updateParticles);
+      mediaQuery576.removeEventListener("change", updateParticles);
+      mediaQuery992.removeEventListener("change", updateParticles);
+    };
+  }, []); // END useEffect
 
   const options: ISourceOptions = useMemo(
     () => ({
@@ -518,4 +595,4 @@ export default function BackgroundParticles() {
   }
 
   return <></>;
-} // END BackgroundParticles
+}
