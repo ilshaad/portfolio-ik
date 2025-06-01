@@ -9,6 +9,7 @@ import Github_svg from "./svgs/Github_svg";
 import LinkedIn_svg from "./svgs/LinkedIn_svg";
 import Resume_svg_anchor from "./svgs/Resume_svg_anchor";
 import Instagram_svg from "./svgs/Instagram_svg";
+import urls from "../config/urls";
 
 import rsLogo from "../public/rs-logo/RS-optimize.jpg";
 import Resume_svg_rawElement from "./svgs/Resume_svg_rawElement";
@@ -266,8 +267,8 @@ export default function Header({
             Playground
           </Col>
           <Col xs={1} className={`${MainListLinks}`}>
-            <Link href="https://www.ilshaadblog.tk/" passHref legacyBehavior>
-              <a target="_blank">Blog</a>
+            <Link href={urls.blogSite} passHref target="_blank">
+              Blog
             </Link>
           </Col>
         </Row>

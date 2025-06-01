@@ -6,6 +6,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 import styles from "../styles/components/Projects_content.module.css";
 import ProjectCard from "./ProjectCards/ProjectCard";
+import urls from "../config/urls";
 
 // bug tracker project
 const BugTrackerModal = dynamic(() => import("./ProjectCards/BugTrackerModal"));
@@ -67,8 +68,8 @@ export default function Projects_content({}: Props) {
                   <BugTrackerYoutubeEmbedCode />
                 </Suspense>
               }
-              projectUrl="https://bug-tracker-frontend-ik-202203.herokuapp.com/"
-              projectGitRepoUrl="https://github.com/ilshaad/bug-tracker-ik"
+              projectUrl={urls.bugTrackerSite}
+              projectGitRepoUrl={urls.bugTrackerGitRepo}
             />
           </Col>
 
@@ -86,8 +87,8 @@ export default function Projects_content({}: Props) {
               //     <BlogYoutubeEmbedCode />
               //   </Suspense>
               // }
-              projectUrl="https://www.ilshaadblog.tk/"
-              projectGitRepoUrl="https://github.com/ilshaad/my-blog-site-ik"
+              projectUrl={urls.blogSite}
+              projectGitRepoUrl={urls.blogGitRepo}
             />
           </Col>
 
@@ -106,7 +107,7 @@ export default function Projects_content({}: Props) {
               //   </Suspense>
               // }
               projectUrl="/"
-              projectGitRepoUrl="https://github.com/ilshaad/portfolio-ik"
+              projectGitRepoUrl={urls.portfolioGitRepo}
             />
           </Col>
         </Row>

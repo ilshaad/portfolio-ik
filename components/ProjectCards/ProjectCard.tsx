@@ -83,18 +83,18 @@ export default function ProjectCard({
                 <Link
                   href={projectUrl}
                   passHref
-                  legacyBehavior
+                  target="_blank"
                   className={`w-100 h-100 p-0`}
                 >
-                  <a target="_blank">Visit site</a>
+                  Visit site
                 </Link>
               </Button>
             </Col>
 
             <Col xs={4} md={3} className={`p-0`}>
               <Button className={`${projectButtons}`} size="sm">
-                <Link href={projectGitRepoUrl} passHref legacyBehavior>
-                  <a target="_blank">Github repo</a>
+                <Link href={projectGitRepoUrl} passHref target="_blank">
+                  Github repo
                 </Link>
               </Button>
             </Col>
