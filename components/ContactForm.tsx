@@ -134,9 +134,10 @@ export default function ContactForm({}: Props) {
             name="iKportfolioContactForm"
             method="POST"
             action="/?success=true"
-            // data-netlify="true"
-            // netlify-honeypot="bot-field"
             className={`${ContactForm_component}`}
+            // uncomment this to use netlify form submission
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
             <input
               type="hidden"
