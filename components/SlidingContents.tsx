@@ -15,7 +15,8 @@ const Techstack_content = dynamic(() => import("./Techstack_content"));
 
 const Projects_content = dynamic(() => import("./Projects_content"));
 
-const Contact_content = dynamic(() => import("./Contact_content"));
+// const Contact_content = dynamic(() => import("./Contact_content"));
+import Contact_content from "./Contact_content";
 
 type Props = { slidingCssClassName: string; setSlidingCssClassName: Function };
 
