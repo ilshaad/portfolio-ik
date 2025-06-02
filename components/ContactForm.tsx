@@ -1,3 +1,5 @@
+"use client";
+
 // contact form to netlify form submission
 import React, { useState } from "react";
 import { useRouter } from "next/router";
