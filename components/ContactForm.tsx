@@ -133,7 +133,7 @@ export default function ContactForm({}: Props) {
           <Form
             noValidate
             onSubmit={handleSubmit}
-            name="iKportfolioContactForm"
+            name="iknetlifyform"
             method="POST"
             action="/?success=true"
             className={`${ContactForm_component}`}
@@ -142,11 +142,7 @@ export default function ContactForm({}: Props) {
             // netlify-honeypot="bot-field"
             data-netlify-honeypot="bot-field"
           >
-            <input
-              type="hidden"
-              name="form-name"
-              value="iKportfolioContactForm"
-            />
+            <input type="hidden" name="form-name" value="iknetlifyform" />
 
             {/* name text box */}
             <Form.Group className={`${formGroup}`}>
