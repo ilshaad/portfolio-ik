@@ -138,8 +138,8 @@ export default function ContactForm({}: Props) {
             action="/?success=true"
             className={`${ContactForm_component}`}
             // uncomment this to use netlify form submission
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            // data-netlify="true"
+            // data-netlify-honeypot="bot-field"
           >
             <input
               type="hidden"
