@@ -142,7 +142,7 @@ export default function ContactForm({}: Props) {
             // netlify-honeypot="bot-field"
             data-netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="iknetlifyform" />
+            {/* <input type="hidden" name="form-name" value="iknetlifyform" /> */}
 
             {/* name text box */}
             <Form.Group className={`${formGroup}`}>
