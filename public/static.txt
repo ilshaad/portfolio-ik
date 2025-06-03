@@ -1,3 +1,4 @@
+// ik use for netlify form as it needs to detect the form, but this was chatgpt solution which still did not work for form submission
 <!DOCTYPE html>
 <html>
   <body>
