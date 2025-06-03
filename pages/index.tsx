@@ -33,13 +33,15 @@ const Home: NextPage = () => {
       ) : (
         <>
           <Body />
-          <form name="iknetlifyform" data-netlify="true" hidden>
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <textarea name="message"></textarea>
-          </form>
         </>
       )}
+
+      {/* for Netlify to detect form in my app */}
+      <form name="iknetlifyform" data-netlify="true" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
 
       <BackgroundParticles />
     </>
