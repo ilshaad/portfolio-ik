@@ -81,7 +81,8 @@ export default function ContactForm({}: Props) {
         validationSchema={schema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           // console.log(values);
-          fetch("/", {
+          // fetch("/", {
+          fetch("/?no-cache=1", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
