@@ -37,11 +37,11 @@ const Home: NextPage = () => {
       )}
 
       {/* for Netlify to detect form in my app */}
-      <form name="iknetlifyform" data-netlify="true" hidden>
+      {/* <form name="iknetlifyform" data-netlify="true" hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
         <textarea name="message"></textarea>
-      </form>
+      </form> */}
 
       <BackgroundParticles />
     </>

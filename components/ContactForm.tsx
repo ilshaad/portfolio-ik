@@ -81,8 +81,8 @@ export default function ContactForm({}: Props) {
         validationSchema={schema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           // console.log(values);
-          // fetch("/", {
-          fetch("/?no-cache=1", {
+          fetch("/", {
+            // fetch("/?no-cache=1", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
@@ -95,8 +95,7 @@ export default function ContactForm({}: Props) {
               // setSubmitting(false);
 
               // keep the route at home page because netlify will show its confirm submit form page instead
-              // ! zzzzzzzzz/
-              // router.push("/");
+              router.push("/");
               // router.push("/?success=true");
 
               // set success true because now we know user has submitted form & we can confirm for them

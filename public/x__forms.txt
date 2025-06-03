@@ -1,3 +1,4 @@
+// iK this was copilot recommendations for netlify form to work, it did help build but still form not working as expected
 <!DOCTYPE html>
 <html>
   <head>
