@@ -133,14 +133,13 @@ export default function ContactForm({}: Props) {
           <Form
             noValidate
             onSubmit={handleSubmit}
-            name="iknetlifyform"
             method="POST"
             action="/?success=true"
             className={`${ContactForm_component}`}
-            // uncomment this to use netlify form submission
+            name="iknetlifyform"
             data-netlify="true"
             // netlify-honeypot="bot-field"
-            data-netlify-honeypot="bot-field"
+            // data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="iknetlifyform" />
 
