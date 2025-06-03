@@ -85,7 +85,7 @@ export default function ContactForm({}: Props) {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
-              "form-name": "iKportfolioContactForm",
+              "form-name": "iknetlifyform",
               ...values,
             }),
           })
