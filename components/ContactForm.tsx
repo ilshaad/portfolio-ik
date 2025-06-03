@@ -94,7 +94,9 @@ export default function ContactForm({}: Props) {
               // setSubmitting(false);
 
               // keep the route at home page because netlify will show its confirm submit form page instead
-              router.push("/");
+              // ! zzzzzzzzz/
+              // router.push("/");
+              router.push("/?success=true");
 
               // set success true because now we know user has submitted form & we can confirm for them
               // setSuccess(true);
