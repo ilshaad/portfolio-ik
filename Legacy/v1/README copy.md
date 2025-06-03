@@ -17,6 +17,10 @@ iK20250601
 
 - Place all urls within config files, so now I just need to change that from now on for the future
 
+- IK NETLIFY FUNCTION IS NOW BEING USED INSTEAD NETLIFY FORM
+  - I tried but netlify form does not working when upgraded, but I have to accept it for now & use netlify function. But come back later to use netlify forms, & see if it works by using the original contactform.tsx file.
+    - perhaps consider removing @netlify/functions package if you succeed in getting netlify forms to work, because I notice an error warning message turns up on tsconfig.json file, & I am not keen on it despite everything working fine
+
 # Ilshaad portfolio site
 
 ###### Frontend / React-Typescript app using Next.js
