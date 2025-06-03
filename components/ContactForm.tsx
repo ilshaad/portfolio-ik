@@ -1,4 +1,5 @@
 "use client";
+// ik THIS FORM USES NETLIFY FUNCTION TO SUBMIT THE FORM, BECAUSE i CANNOT GET NETLIFY FORM TO WORK AT THE MOMENT, BUT MAYBE LATER WHEN NETLIFY FORM WORKS WITH A DIFFERENT SOLUTION OR SOEMTHING THAN COMEBACK TO THE ContactForm copy.tsx (original netlify form submission) FILE & USE THAT INSTEAD OF THIS FILE.
 
 import React, { useState } from "react";
 import { useRouter } from "next/router";
@@ -125,7 +126,9 @@ export default function ContactForm({}: Props) {
 
             {/* Email Field */}
             <Form.Group className={formGroup}>
-              <Form.Label>Email</Form.Label>
+              <Form.Label>
+                Email <span>*</span>
+              </Form.Label>
               <Form.Control
                 type="email"
                 name="email"

@@ -1,3 +1,5 @@
+// iK THIS IS NEEDED FOR NETLIFY FUNCTIONS, BUT WHEN YOU START USING NETLIFY FORM AGAIN, THEN YOU CAN REMOVE THIS OR NULL THIS FILE.
+
 // netlify/functions/submit-form.ts
 
 import { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";

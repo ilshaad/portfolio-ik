@@ -1,3 +1,4 @@
+// ! iK  I have been getting this error because of @netlify/functions package, but when you no longer using netlify functions, then this error should disappear.
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
