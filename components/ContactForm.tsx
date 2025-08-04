@@ -1,5 +1,5 @@
 "use client";
-// ik THIS FORM USES NETLIFY FUNCTION TO SUBMIT THE FORM, BECAUSE i CANNOT GET NETLIFY FORM TO WORK AT THE MOMENT, BUT MAYBE LATER WHEN NETLIFY FORM WORKS WITH A DIFFERENT SOLUTION OR SOEMTHING THAN COMEBACK TO THE ContactForm copy.tsx (original netlify form submission) FILE & USE THAT INSTEAD OF THIS FILE.
+// Updated to use Netlify Forms with static HTML detection file
 
 import React, { useState } from "react";
 import { useRouter } from "next/router";
@@ -38,6 +38,13 @@ export default function ContactForm({}: Props) {
   const [submittedStatus, setSubmittedStatus] = useState<string>("");
   const [submittedFormMessage, setSubmittedFormMessage] = useState<string>("");
 
+  // Netlify form encoding function
+  const encode = (data: Record<string, string>) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const displaySubmittedFormStatusMessage = () => {
     if (submittedStatus === "success") {
       return (
@@ -60,26 +67,24 @@ export default function ContactForm({}: Props) {
       <Formik
         validationSchema={schema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
-          // Instead of posting data to Netlify's native form handler,
-          // we send the JSON payload to our Netlify Function endpoint.
-          fetch("/.netlify/functions/submit-form", {
+          // Submit to Netlify Forms
+          fetch("/", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(values),
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({
+              "form-name": "iknetlifyform",
+              ...values,
+            }),
           })
             .then((response) => {
               if (!response.ok) {
                 throw new Error("Submission failed");
               }
-              return response.json();
-            })
-            .then((data) => {
-              console.log("Function response:", data);
+              console.log("Form submitted successfully");
               setSubmittedFormMessage("Message sent! Thank you.");
               setSubmittedStatus("success");
               resetForm();
               setSubmitting(false);
-              // Redirect or perform any additional action if needed
               router.push("/");
             })
             .catch((error) => {
@@ -102,9 +107,10 @@ export default function ContactForm({}: Props) {
             noValidate
             onSubmit={handleSubmit}
             className={ContactForm_component}
+            name="iknetlifyform"
+            data-netlify="true"
           >
-            {/* The hidden input is not needed anymore since we're not using the native form submission */}
-            {/* <input type="hidden" name="form-name" value="iknetlifyform" /> */}
+            <input type="hidden" name="form-name" value="iknetlifyform" />
 
             {/* Name Field */}
             <Form.Group className={formGroup}>
