@@ -16,7 +16,7 @@
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
     "bootstrap": "^5.3.7",
-    "formik": "^2.4.6",
+    "formik": "^2.4.9",
     "next": "^15.4.5",
     "next-pwa": "^5.6.0",
     "react": "19.1.1",
